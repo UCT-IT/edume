@@ -1,3 +1,4 @@
+import HeroSection from '@/components/HeroSection/HeroSection'
 import { Text } from '@chakra-ui/react'
 import type { Metadata } from 'next'
 
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <Text>Hello World</Text>
+    <>
+    <HeroSection/>
+    </>
   )
 }
