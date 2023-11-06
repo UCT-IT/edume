@@ -1,11 +1,14 @@
 import React from 'react';
+import Feature from './Feature/Feature';
+import PaidSection from './PaidSection/PaidSection';
 
 const Features = () => {
     return (
-        <div>
-            <h1>Features</h1>
-        </div>
+        <>
+          <Feature /> 
+          <PaidSection></PaidSection> 
+        </>
     );
 };
 
-export default Features;<h1>Features</h1>
+export default Features;
