@@ -3,6 +3,7 @@ import Feature from "./Feature/Feature";
 import PaidSection from "./PaidSection/PaidSection";
 import Clients from "./Clients/Clients";
 import Communication from "./Communication/Communication";
+import TutorTeacher from "./TutorTeacher/TutorTeacher";
 
 const Features = () => {
   return (
@@ -11,6 +12,7 @@ const Features = () => {
       <PaidSection />
       <Clients />
       <Communication />
+      <TutorTeacher />
     </>
   );
 };
