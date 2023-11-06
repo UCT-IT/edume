@@ -42,23 +42,19 @@ const PaidSection = () => {
           >
             <ListItem mb={"10px"}>
               <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas.
+              Offer flexible billing options including hourly billing, package billing, flat fees or a combination to accommodate your clients’ needs
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
+              Generate single invoices, multiple invoices, or automate your invoicing.
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
+              Send automatic Invoice Due Reminders and Low Package Balance Alerts to your clients
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
+              Allow your clients to pay online, or process payments on their behalf.
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />

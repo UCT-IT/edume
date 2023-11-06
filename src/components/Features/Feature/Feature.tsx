@@ -49,18 +49,15 @@ const Feature = () => {
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
+              Allow your tutors & teachers to manage their own schedules and complete lessons with ease.
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
+              Allow your clients to easily book, request, join and reschedule their own lessons.
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
+              Quickly switch between various calendars and views, spot conflicts, copy lessons, drag-and-drop lessons to update lesson data and more
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
