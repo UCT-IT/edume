@@ -20,7 +20,7 @@ import Link from "next/link";
 const PaidSection = () => {
   return (
     <Container maxW="container.xl ">
-      <Grid  placeItems={"center"} templateColumns="repeat(2, 1fr)" gap={6} paddingY="50px">
+      <Grid  placeItems={"center"} templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' , lg: 'repeat(2, 1fr)' }} gap={6} paddingY="50px">
         <GridItem pos={"relative"}>
           <Image
             width={"400px"}

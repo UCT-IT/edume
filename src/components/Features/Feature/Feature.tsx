@@ -21,7 +21,7 @@ import './Feature.css'
 const Feature = () => {
   return (
     <Container maxW="container.xl ">
-      <Grid templateColumns="repeat(2, 1fr)" gap={6} paddingY="50px">
+      <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' , lg: 'repeat(2, 1fr)' }} gap={7} paddingY="50px">
         <GridItem>
           <Text
             fontWeight="bold"
@@ -71,11 +71,11 @@ const Feature = () => {
               </Link>
             </ListItem>
           </List>
-          <Button bg="primary" color="#ffffff" p={7} textTransform={"capitalize"} _hover={{bg: "#5AA8EC"}} mt={6}>Start your free trial</Button>
+          <Button bg="primary" color="#ffffff" p={7} textTransform={"capitalize"} _hover={{bg: "#5AA8EC"}} mt={4}>Start your free trial</Button>
         </GridItem>
-        <GridItem pos={"relative"}>
-        <Box fontSize={"20px"} fontWeight={"bold"} borderRadius={"10px"} textAlign={"center"} zIndex={1} w={"50%"} p={4} pos={"absolute"} left={"25%"} top={"-25px"} bg={"#F4D12F"} color={"#ffffff"}>Hightlighted Feature</Box>
-          <Box mb="90px" className="clip-path" bg={"#FDF7DA"} p={10} textAlign={"center"} position={"relative"}>
+        <GridItem pos={"relative"} >
+        <Box fontSize={"20px"} fontWeight={"bold"} borderRadius={"10px"} textAlign={"center"} zIndex={1} w={"50%"} p={{base:"5px", md: "16px", lg: "16px"}} pos={"absolute"} left={"25%"} top={"-25px"} bg={"#F4D12F"} color={"#ffffff"}>Hightlighted Feature</Box>
+          <Box mb="90px" className="clip-path" bg={"#FDF7DA"} p={10} py={"50px"} textAlign={"center"} position={"relative"}>
             <Text fontWeight={"bold"}  mb={"10px"} fontSize={"20px"}>2-Factor Authentication Add-on</Text>
             <Text color={"#555"}   mb={"10px"}>
               Strengthened Security: The <span><Link href={"/"}>
@@ -88,7 +88,7 @@ const Feature = () => {
               <span style={{ color: "#3898ec" }}>See More New Features</span>
             </Link>
           </Box>
-          <Image width={"400px"} margin="auto" alt="image" src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a5012dc0098d648d34a23e_cal.svg"></Image>
+          <Image width={{base: "100%", sm:"75%", lg:"400px"}} margin="auto" alt="image" src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a5012dc0098d648d34a23e_cal.svg"></Image>
         </GridItem>
       </Grid>
     </Container>

@@ -20,7 +20,7 @@ import Link from "next/link";
 const TutorTeacher = () => {
   return (
     <Container maxW="container.xl ">
-      <Grid templateColumns="repeat(2, 1fr)" paddingY="50px">
+      <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' , lg: 'repeat(2, 1fr)' }} paddingY="50px">
         <GridItem>
           <Text
             fontWeight={"medium"}
@@ -79,7 +79,7 @@ const TutorTeacher = () => {
         </GridItem>
         <GridItem pos={"relative"}>
           <Image
-            width={"400px"}
+            width={{base: "100%", sm:"75%", lg:"400px"}}
             margin="auto"
             alt="image"
             src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a5409d9377f47c5ce18b62_teachers.svg"
