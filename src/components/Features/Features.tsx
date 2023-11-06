@@ -4,6 +4,7 @@ import PaidSection from "./PaidSection/PaidSection";
 import Clients from "./Clients/Clients";
 import Communication from "./Communication/Communication";
 import TutorTeacher from "./TutorTeacher/TutorTeacher";
+import Business from "./Business/Business";
 
 const Features = () => {
   return (
@@ -13,6 +14,7 @@ const Features = () => {
       <Clients />
       <Communication />
       <TutorTeacher />
+      <Business />
     </>
   );
 };
