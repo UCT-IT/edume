@@ -29,7 +29,7 @@ const TutorTeacher = () => {
         }}
         paddingY="50px"
       >
-        <GridItem>
+        <GridItem order={[2, 1, 1]}>
           <Text
             fontWeight={"medium"}
             textTransform="capitalize"
@@ -71,7 +71,7 @@ const TutorTeacher = () => {
             Start your free trial
           </Button>
         </GridItem>
-        <GridItem pos={"relative"}>
+        <GridItem pos={"relative"} order={[1, 2, 2]}>
           <Image
             width={{ base: "100%", sm: "75%", lg: "400px" }}
             margin="auto"

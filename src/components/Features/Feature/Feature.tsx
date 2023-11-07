@@ -32,7 +32,7 @@ const Feature = () => {
         gap={7}
         paddingY="50px"
       >
-        <GridItem>
+        <GridItem order={[2, 1, 1]}>
           <Text
             fontWeight="bold"
             mb={"17px"}
@@ -78,7 +78,7 @@ const Feature = () => {
             Start your free trial
           </Button>
         </GridItem>
-        <GridItem pos={"relative"}>
+        <GridItem pos={"relative"} order={[1, 2, 2]}>
           <Box
             fontSize={"20px"}
             fontWeight={"bold"}
