@@ -20,7 +20,7 @@ import { business } from "@/assets/Data/Data";
 
 const Business = () => {
   return (
-    <Container maxW="container.xl ">
+    <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
         placeItems={"center"}
         templateColumns={{

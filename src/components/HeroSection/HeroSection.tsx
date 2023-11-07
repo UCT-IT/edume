@@ -1,14 +1,39 @@
+"use client";
 import { Box, Button, Container, Text } from "@chakra-ui/react";
 import React from "react";
 import "./HeroSection.css";
 import heroBg from "../../assets/heroSectionImage.svg";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [fadeOut, setFadeOut] = useState(false);
+  const textArray = [
+    "Driving School",
+    "Music school",
+    "Language School",
+    "Test Prep center",
+    "Tutoring Company",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFadeOut(true);
+      setTimeout(() => {
+        setCurrentTextIndex((prevIndex) =>
+          prevIndex === textArray.length - 1 ? 0 : prevIndex + 1
+        );
+        setFadeOut(false);
+      }, 1000);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [textArray.length]);
   return (
     <>
       <Box pos={"relative"}>
-        <Box pos="absolute" right="0px" top="90px" zIndex={2}>
+        <Box pos="absolute" right="-30px" top="90px">
           <Image src={heroBg} alt="Hero Banner Image"></Image>
         </Box>
         <Box
@@ -37,7 +62,13 @@ const HeroSection = () => {
               >
                 Organize & <br /> Automate Your
               </Text>
-              <Text fontSize="45px">Driving School</Text>
+              <Text
+                transition="opacity 0.5s"
+                opacity={fadeOut ? 0 : 1}
+                fontSize="45px"
+              >
+                {textArray[currentTextIndex]}
+              </Text>
               <Text textColor="white" my="20px">
                 Teachworks is the #1 choice for managing your tutoring or <br />{" "}
                 teaching business. Easily manage scheduling, students, billing{" "}

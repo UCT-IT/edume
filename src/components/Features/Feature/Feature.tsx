@@ -20,9 +20,8 @@ import "./Feature.css";
 import { feature } from "@/assets/Data/Data";
 
 const Feature = () => {
-  console.log(feature);
   return (
-    <Container maxW="container.xl ">
+    <Container maxW="container.xl" px={["20px", "", ""]}>
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -96,7 +95,7 @@ const Feature = () => {
             Hightlighted Feature
           </Box>
           <Box
-            mb="90px"
+            mb={["", "", "60px"]}
             className="clip-path"
             bg={"#FDF7DA"}
             p={10}

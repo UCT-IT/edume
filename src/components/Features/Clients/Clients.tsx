@@ -20,7 +20,7 @@ import { client } from "@/assets/Data/Data";
 
 const Clients = () => {
   return (
-    <Container maxW="container.xl ">
+    <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
