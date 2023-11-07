@@ -8,6 +8,9 @@ const HeroSection = () => {
   return (
     <>
       <Box pos={"relative"}>
+        <Box pos="absolute" right="0px" top="90px" zIndex={2}>
+          <Image src={heroBg} alt="Hero Banner Image"></Image>
+        </Box>
         <Box
           bgImage="url('https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61856827909fb72472abfc6c_601da34bc4b63f405a9e97f1_bg-test2.svg')"
           bgSize={"cover"}
@@ -54,9 +57,6 @@ const HeroSection = () => {
                 Try It for Free
               </Button>
               <Text textColor="white">or Take a Quick Tour</Text>
-            </Box>
-            <Box pos="absolute" right="-30px" top="90px">
-              <Image src={heroBg} alt="Hero Banner Image"></Image>
             </Box>
           </Container>
         </Box>

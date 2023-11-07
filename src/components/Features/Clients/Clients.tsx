@@ -16,12 +16,17 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
+import { client } from "@/assets/Data/Data";
 
 const Clients = () => {
   return (
     <Container maxW="container.xl ">
       <Grid
-        templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' , lg: 'repeat(2, 1fr)' }}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(2, 1fr)",
+        }}
         paddingY="50px"
       >
         <GridItem>
@@ -40,26 +45,12 @@ const Clients = () => {
             mt={"18px"}
             fontWeight={"normal"}
           >
-            <ListItem mb={"10px"}>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas.
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
+            {client.map((item: { list: string }, index) => (
+              <ListItem key={index} mb={"10px"}>
+                <ListIcon as={CheckIcon} color="black" />
+                {item.list}
+              </ListItem>
+            ))}
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
               <Link href={"/"}>
