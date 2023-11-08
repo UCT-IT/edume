@@ -16,11 +16,21 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
+import { getPaid } from "@/assets/Data/Data";
 
 const PaidSection = () => {
   return (
-    <Container maxW="container.xl ">
-      <Grid  placeItems={"center"} templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' , lg: 'repeat(2, 1fr)' }} gap={6} paddingY="50px">
+    <Container maxW="container.xl" px={["20px", "", ""]}>
+      <Grid
+        placeItems={"center"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(2, 1fr)",
+        }}
+        gap={6}
+        paddingY="50px"
+      >
         <GridItem pos={"relative"}>
           <Image
             width={"400px"}
@@ -30,7 +40,12 @@ const PaidSection = () => {
           ></Image>
         </GridItem>
         <GridItem>
-          <Text fontWeight={"medium"} textTransform="capitalize" fontSize={"22px"} mt={"10px"}>
+          <Text
+            fontWeight={"medium"}
+            textTransform="capitalize"
+            fontSize={"22px"}
+            mt={"10px"}
+          >
             get paid faster
           </Text>
           <List
@@ -40,22 +55,12 @@ const PaidSection = () => {
             mt={"18px"}
             fontWeight={"normal"}
           >
-            <ListItem mb={"10px"}>
-              <ListIcon as={CheckIcon} color="black" />
-              Offer flexible billing options including hourly billing, package billing, flat fees or a combination to accommodate your clients’ needs
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Generate single invoices, multiple invoices, or automate your invoicing.
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Send automatic Invoice Due Reminders and Low Package Balance Alerts to your clients
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your clients to pay online, or process payments on their behalf.
-            </ListItem>
+            {getPaid.map((item: { list: string }, index) => (
+              <ListItem key={index} mb={"10px"}>
+                <ListIcon as={CheckIcon} color="black" />
+                {item.list}
+              </ListItem>
+            ))}
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
               <Link href={"/"}>

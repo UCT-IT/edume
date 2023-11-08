@@ -16,12 +16,22 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
+import { business } from "@/assets/Data/Data";
 
 const Business = () => {
   return (
-    <Container maxW="container.xl ">
-      <Grid  placeItems={"center"} templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' , lg: 'repeat(2, 1fr)' }} gap={6} paddingY="50px">
-      <GridItem pos={"relative"}>
+    <Container maxW="container.xl " px={["20px", "", ""]}>
+      <Grid
+        placeItems={"center"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(2, 1fr)",
+        }}
+        gap={6}
+        paddingY="50px"
+      >
+        <GridItem pos={"relative"}>
           <Image
             width={"400px"}
             margin="auto"
@@ -30,8 +40,13 @@ const Business = () => {
           ></Image>
         </GridItem>
         <GridItem>
-          <Text fontWeight={"medium"} textTransform="capitalize" fontSize={"22px"} mt={"10px"}>
-          Improve Communication
+          <Text
+            fontWeight={"medium"}
+            textTransform="capitalize"
+            fontSize={"22px"}
+            mt={"10px"}
+          >
+            Grow Your Business
           </Text>
           <List
             spacing={6}
@@ -40,26 +55,12 @@ const Business = () => {
             mt={"18px"}
             fontWeight={"normal"}
           >
-            <ListItem mb={"10px"}>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas.
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
+            {business.map((item: { list: string }, index) => (
+              <ListItem key={index} mb={"10px"}>
+                <ListIcon as={CheckIcon} color="black" />
+                {item.list}
+              </ListItem>
+            ))}
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
               <Link href={"/"}>

@@ -16,12 +16,20 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
+import { tutorTeacher } from "@/assets/Data/Data";
 
 const TutorTeacher = () => {
   return (
-    <Container maxW="container.xl ">
-      <Grid templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' , lg: 'repeat(2, 1fr)' }} paddingY="50px">
-        <GridItem>
+    <Container maxW="container.xl " px={["20px", "", ""]}>
+      <Grid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(2, 1fr)",
+        }}
+        paddingY="50px"
+      >
+        <GridItem order={[2, 1, 1]}>
           <Text
             fontWeight={"medium"}
             textTransform="capitalize"
@@ -37,26 +45,12 @@ const TutorTeacher = () => {
             mt={"18px"}
             fontWeight={"normal"}
           >
-            <ListItem mb={"10px"}>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas.
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              Allow your tutors & teachers to manage their own schedules and
-              complete lessons with eas
-            </ListItem>
+            {tutorTeacher.map((item: { list: string }, index) => (
+              <ListItem key={index} mb={"10px"}>
+                <ListIcon as={CheckIcon} color="black" />
+                {item.list}
+              </ListItem>
+            ))}
             <ListItem>
               <ListIcon as={CheckIcon} color="black" />
               <Link href={"/"}>
@@ -77,9 +71,9 @@ const TutorTeacher = () => {
             Start your free trial
           </Button>
         </GridItem>
-        <GridItem pos={"relative"}>
+        <GridItem pos={"relative"} order={[1, 2, 2]}>
           <Image
-            width={{base: "100%", sm:"75%", lg:"400px"}}
+            width={{ base: "100%", sm: "75%", lg: "400px" }}
             margin="auto"
             alt="image"
             src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a5409d9377f47c5ce18b62_teachers.svg"
