@@ -33,7 +33,7 @@ const HeroSection = () => {
   return (
     <>
       <Box pos={"relative"}>
-        <Box pos="absolute" right="-30px" top="90px">
+        <Box pos="absolute" right="0px" top="90px" zIndex={1}>
           <Image src={heroBg} alt="Hero Banner Image"></Image>
         </Box>
         <Box
