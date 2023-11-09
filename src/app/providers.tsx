@@ -11,8 +11,16 @@ const colors = {
   buttonHoverd: "#5AA8EC",
   textColor: "#555",
 };
+const breakpoints = {
+  base: "0px",
+  sm: "576px",
+  md: "768px",
+  lg: "992px",
+  xl: "1280px",
+  "2xl": "1536px",
+};
 
-export const theme = extendTheme({ colors });
+export const theme = extendTheme({ colors, breakpoints });
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
