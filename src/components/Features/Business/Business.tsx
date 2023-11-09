@@ -16,13 +16,15 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
-import { business } from "@/assets/Data/Data";
+import { strings } from "@/assets/locales/locales";
+import businessImage from "@/assets/images/business.svg";
 
 const Business = () => {
+  const data: string[] = strings.business?.slice() || [];
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
-        placeItems={"center"}
+        placeItems="center"
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
@@ -31,51 +33,49 @@ const Business = () => {
         gap={6}
         paddingY="50px"
       >
-        <GridItem pos={"relative"}>
+        <GridItem pos="relative">
           <Image
-            width={"400px"}
+            width="400px"
             margin="auto"
-            alt="image"
-            src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a542194310eb1879b1d805_stats.svg"
+            alt="business image"
+            src={businessImage}
           ></Image>
         </GridItem>
         <GridItem>
           <Text
-            fontWeight={"medium"}
+            fontWeight="medium"
             textTransform="capitalize"
-            fontSize={"22px"}
-            mt={"10px"}
+            fontSize="22px"
+            mt="10px"
           >
             Grow Your Business
           </Text>
           <List
             spacing={6}
-            color={"#555"}
-            fontSize={"18px"}
-            mt={"18px"}
-            fontWeight={"normal"}
+            color="textColor"
+            fontSize="18px"
+            mt="18px"
+            fontWeight="normal"
           >
-            {business.map((item: { list: string }, index) => (
-              <ListItem key={index} mb={"10px"}>
+            {data.map((item: string, index: number) => (
+              <ListItem key={index} mb="10px">
                 <ListIcon as={CheckIcon} color="black" />
-                {item.list}
+                {item}
               </ListItem>
             ))}
-            <ListItem>
+            <ListItem color="primary">
               <ListIcon as={CheckIcon} color="black" />
               <Link href={"/"}>
-                <span style={{ color: "#3898ec" }}>
-                  More Scheduling Feature.
-                </span>
+                <span>More Reporting Features</span>
               </Link>
             </ListItem>
           </List>
           <Button
             bg="primary"
-            color="#ffffff"
+            color="secondary"
             p={7}
-            textTransform={"capitalize"}
-            _hover={{ bg: "#5AA8EC" }}
+            textTransform="capitalize"
+            _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
             Start your free trial

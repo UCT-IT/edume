@@ -2,7 +2,7 @@
 import { Box, Button, Container, Text } from "@chakra-ui/react";
 import React from "react";
 import "./HeroSection.css";
-import heroBg from "../../assets/heroSectionImage.svg";
+import heroBg from "../../assets/images/heroSectionImage.svg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -32,25 +32,20 @@ const HeroSection = () => {
   }, [textArray.length]);
   return (
     <>
-      <Box pos={"relative"}>
+      <Box pos="relative">
         <Box pos="absolute" right="0px" top="90px" zIndex={1}>
           <Image src={heroBg} alt="Hero Banner Image"></Image>
         </Box>
         <Box
           bgImage="url('https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61856827909fb72472abfc6c_601da34bc4b63f405a9e97f1_bg-test2.svg')"
-          bgSize={"cover"}
-          bgPos={"center"}
+          bgSize="cover"
+          bgPos="center"
           h="100vh"
-          bgRepeat={"repeat"}
-          bgColor={"primary"}
+          bgRepeat="repeat"
+          bgColor="primary"
           className="clip"
         >
-          <Container
-            maxW={"container.xl"}
-            paddingTop="150px"
-            pl="80px"
-            pr="50px"
-          >
+          <Container maxW="container.xl" paddingTop="150px" pl="80px" pr="50px">
             <Box>
               <Text
                 as="h1"
@@ -70,8 +65,8 @@ const HeroSection = () => {
                 {textArray[currentTextIndex]}
               </Text>
               <Text textColor="white" my="20px">
-                Teachworks is the #1 choice for managing your tutoring or <br />{" "}
-                teaching business. Easily manage scheduling, students, billing{" "}
+                Teachworks is the #1 choice for managing your tutoring or <br />
+                teaching business. Easily manage scheduling, students, billing
                 <br /> and more!
               </Text>
               <Button

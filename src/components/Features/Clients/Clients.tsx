@@ -16,9 +16,11 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
-import { client } from "@/assets/Data/Data";
+import { strings } from "@/assets/locales/locales";
+import clientImage from "@/assets/images/clients.svg";
 
 const Clients = () => {
+  const data: string[] = strings.client?.slice() || [];
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
@@ -31,52 +33,50 @@ const Clients = () => {
       >
         <GridItem order={[2, 1, 1]}>
           <Text
-            fontWeight={"medium"}
+            fontWeight="medium"
             textTransform="capitalize"
-            fontSize={"22px"}
+            fontSize="22px"
             mt={"10px"}
           >
             Get More Clients
           </Text>
           <List
             spacing={6}
-            color={"#555"}
-            fontSize={"18px"}
-            mt={"18px"}
-            fontWeight={"normal"}
+            color="textColor"
+            fontSize="18px"
+            mt="18px"
+            fontWeight="normal"
           >
-            {client.map((item: { list: string }, index) => (
-              <ListItem key={index} mb={"10px"}>
+            {data.map((item: string, index: number) => (
+              <ListItem key={index} mb="10px">
                 <ListIcon as={CheckIcon} color="black" />
-                {item.list}
+                {item}
               </ListItem>
             ))}
-            <ListItem>
+            <ListItem color="primary">
               <ListIcon as={CheckIcon} color="black" />
-              <Link href={"/"}>
-                <span style={{ color: "#3898ec" }}>
-                  More Scheduling Feature.
-                </span>
+              <Link href="/">
+                <span>More Features For Attracting Clients.</span>
               </Link>
             </ListItem>
           </List>
           <Button
             bg="primary"
-            color="#ffffff"
+            color="secondary"
             p={7}
-            textTransform={"capitalize"}
-            _hover={{ bg: "#5AA8EC" }}
+            textTransform="capitalize"
+            _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
             Start your free trial
           </Button>
         </GridItem>
-        <GridItem pos={"relative"} order={[1, 2, 2]}>
+        <GridItem pos="relative" order={[1, 2, 2]}>
           <Image
-            width={"400px"}
+            width="400px"
             margin="auto"
             alt="image"
-            src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a68bcd1c9d9ffe724d8f13_clients.svg"
+            src={clientImage}
           ></Image>
         </GridItem>
       </Grid>
