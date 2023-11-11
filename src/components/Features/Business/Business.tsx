@@ -11,16 +11,21 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
 import { strings } from "@/assets/locales/locales";
 import businessImage from "@/assets/images/business.svg";
+import Image from "next/image";
 
 const Business = () => {
-  const data: string[] = strings.business?.slice() || [];
+  const businessData = {
+    businessTitle: strings?.features?.business?.title,
+    businessContent: strings?.features?.business?.content,
+    businessLink: strings?.features?.business?.link,
+    businessBtn: strings?.features?.business?.btn,
+  };
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
@@ -34,12 +39,7 @@ const Business = () => {
         paddingY="50px"
       >
         <GridItem pos="relative">
-          <Image
-            width="400px"
-            margin="auto"
-            alt="business image"
-            src={businessImage}
-          ></Image>
+          <Image alt="business image" src={businessImage}></Image>
         </GridItem>
         <GridItem>
           <Text
@@ -48,7 +48,7 @@ const Business = () => {
             fontSize="22px"
             mt="10px"
           >
-            Grow Your Business
+            {businessData.businessTitle}
           </Text>
           <List
             spacing={6}
@@ -57,16 +57,18 @@ const Business = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {data.map((item: string, index: number) => (
-              <ListItem key={index} mb="10px">
-                <ListIcon as={CheckIcon} color="black" />
-                {item}
-              </ListItem>
-            ))}
-            <ListItem color="primary">
-              <ListIcon as={CheckIcon} color="black" />
-              <Link href={"/"}>
-                <span>More Reporting Features</span>
+            {businessData?.businessContent?.map(
+              (item: string, index: number) => (
+                <ListItem key={index} mb="10px" display="flex" gap="16px">
+                  <ListIcon as={CheckIcon} color="black" mt="5px" />
+                  {item}
+                </ListItem>
+              )
+            )}
+            <ListItem color="primary" display="flex" gap="16px">
+              <ListIcon as={CheckIcon} color="black" mt="5px" />
+              <Link href="/">
+                <span>{businessData.businessLink}</span>
               </Link>
             </ListItem>
           </List>
@@ -78,7 +80,7 @@ const Business = () => {
             _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {businessData.businessBtn}
           </Button>
         </GridItem>
       </Grid>

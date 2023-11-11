@@ -11,7 +11,6 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
@@ -19,9 +18,17 @@ import Link from "next/link";
 import "./Feature.css";
 import { strings } from "@/assets/locales/locales";
 import featureImage from "@/assets/images/feature.svg";
+import Image from "next/image";
 
 const Feature = () => {
-  const data: string[] = strings.feature?.slice() || [];
+  const featureData = {
+    title: strings?.features?.title,
+    subTitle: strings?.features?.subTitle,
+    featureTitle: strings?.features?.feature?.title,
+    featureContent: strings?.features?.feature?.content,
+    featureLink: strings?.features?.feature?.link,
+    featureBtn: strings?.features?.feature?.btn,
+  };
   return (
     <Container maxW="container.xl" px={["20px", "", ""]}>
       <Grid
@@ -40,11 +47,11 @@ const Feature = () => {
             color="tertiary"
             textTransform="uppercase"
           >
-            Our features
+            {featureData.title}
           </Text>
-          <Heading>How Teachworks can Help Your Teaching Business</Heading>
+          <Heading>{featureData.subTitle}</Heading>
           <Text fontWeight="medium" fontSize="22px" mt="10px">
-            Simplifying Scheduling
+            {featureData.featureTitle}
           </Text>
           <List
             spacing={6}
@@ -53,16 +60,21 @@ const Feature = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {data.map((item: string, index: number) => (
-              <ListItem key={index} mb="10px">
-                <ListIcon as={CheckIcon} color="black" />
-                {item}
+            {featureData?.featureContent?.map((item: string, index: number) => (
+              <ListItem key={index} display="flex" gap="16px" mb="10px">
+                <ListIcon mt="5px" as={CheckIcon} color="black" />
+                <Text>{item}</Text>
               </ListItem>
             ))}
-            <ListItem color="primary">
+            <ListItem
+              color="primary"
+              display="flex"
+              alignItems="center"
+              gap="16px"
+            >
               <ListIcon as={CheckIcon} color="black" />
               <Link href="/">
-                <span>More Scheduling Feature.</span>
+                <span>{featureData.featureLink}</span>
               </Link>
             </ListItem>
           </List>
@@ -74,7 +86,7 @@ const Feature = () => {
             _hover={{ bg: "buttonHoverd" }}
             mt={4}
           >
-            Start your free trial
+            {featureData.featureBtn}
           </Button>
         </GridItem>
         <GridItem pos="relative" order={[1, 2, 2]}>
@@ -122,12 +134,7 @@ const Feature = () => {
               <Text color="primary">See More New Features</Text>
             </Link>
           </Box>
-          <Image
-            width={{ base: "100%", sm: "75%", lg: "400px" }}
-            margin="auto"
-            alt="Feature image"
-            src={featureImage}
-          ></Image>
+          <Image alt="Feature image" src={featureImage}></Image>
         </GridItem>
       </Grid>
     </Container>

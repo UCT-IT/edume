@@ -6,8 +6,8 @@ const DropdownMenu = ({
   title,
   dropdownMenus,
 }: {
-  title: string;
-  dropdownMenus: string[];
+  title: string | undefined;
+  dropdownMenus: string[] | undefined;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -39,7 +39,7 @@ const DropdownMenu = ({
           py={["null", "10px", "15px", "20px"]}
           backgroundColor="secondary"
         >
-          {dropdownMenus.map((menu, i) => (
+          {dropdownMenus?.map((menu, i) => (
             <Text
               key={i}
               as="a"

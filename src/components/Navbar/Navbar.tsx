@@ -11,50 +11,41 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DropdownMenu from "./DropdownMenu";
+import { strings } from "@/assets/locales/locales";
 
 // Now you can use NextLink in your code
 
 const Navbar = () => {
   const dropdownFeatures = {
-    title: "Features",
-    dropdownMenus: [
-      "Overview",
-      "Calendar & Scheduling",
-      "Communication",
-      "Billing & Payroll",
-      "Records & Analytics",
-      "Customize & secondary Label",
-      "Automation",
-      "Multiple Branches",
-      "Integrations & Add-Ons",
-      "Website Plugins Demo",
-    ],
+    title: strings?.dropdownFeatures?.title,
+    dropdownMenus: strings?.dropdownFeatures?.dropdownMenus,
   };
   const dropdownSolution = {
-    title: "Solution",
-    dropdownMenus: [
-      "Tutoring",
-      "Language Schools",
-      "Test Preparation",
-      "Music Schools",
-      "Driving Schools",
-    ],
+    title: strings?.dropdownSolution?.title,
+    dropdownMenus: strings?.dropdownSolution?.dropdownMenus,
   };
+
   const dropdownSupport = {
-    title: "Support",
-    dropdownMenus: [
-      "Tutorials",
-      "Getting Started Guide",
-      "Knowledge Base",
-      "Contact Us",
-      "FAQs",
-      "Blog",
-    ],
+    title: strings?.dropdownSupport?.title,
+    dropdownMenus: strings?.dropdownSupport?.dropdownMenus,
   };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    setIsScrolled(scrollPosition > 200);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -64,8 +55,9 @@ const Navbar = () => {
         py="20px"
         pos="fixed"
         w="100%"
-        zIndex={2}
+        zIndex={10}
         display={{ base: "none", sm: "block" }}
+        bgColor={isScrolled ? "tertiary" : "transparent"}
       >
         <Container
           maxW="container.xl"
@@ -141,6 +133,7 @@ const Navbar = () => {
         pos="fixed"
         zIndex={2}
         display={{ base: "block", sm: "none" }}
+        bgColor={isScrolled ? "tertiary" : "transparent"}
       >
         <Container
           maxW="container.sm"

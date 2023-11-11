@@ -11,16 +11,21 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
 import { strings } from "@/assets/locales/locales";
 import tutorImage from "@/assets/images/tutor.svg";
+import Image from "next/image";
 
 const TutorTeacher = () => {
-  const data: string[] = strings.tutor?.slice() || [];
+  const tutorData = {
+    tutorTitle: strings?.features?.tutor?.title,
+    tutorContent: strings?.features?.tutor?.content,
+    tutorLink: strings?.features?.tutor?.link,
+    tutorBtn: strings?.features?.tutor?.btn,
+  };
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
@@ -38,7 +43,7 @@ const TutorTeacher = () => {
             fontSize="22px"
             mt="10px"
           >
-            Equip Your Tutors & Teachers
+            {tutorData.tutorTitle}
           </Text>
           <List
             spacing={6}
@@ -47,16 +52,16 @@ const TutorTeacher = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {data.map((item: string, index: number) => (
-              <ListItem key={index} mb="10px">
-                <ListIcon as={CheckIcon} color="black" />
+            {tutorData?.tutorContent?.map((item: string, index: number) => (
+              <ListItem key={index} mb="10px" display="flex" gap="16px">
+                <ListIcon as={CheckIcon} color="black" mt="5px" />
                 {item}
               </ListItem>
             ))}
-            <ListItem color="primary">
-              <ListIcon as={CheckIcon} color="black" />
+            <ListItem color="primary" display="flex" gap="16px">
+              <ListIcon as={CheckIcon} color="black" mt="5px" />
               <Link href="/">
-                <span>Explore More Features.</span>
+                <span>{tutorData.tutorLink}</span>
               </Link>
             </ListItem>
           </List>
@@ -68,16 +73,11 @@ const TutorTeacher = () => {
             _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {tutorData.tutorBtn}
           </Button>
         </GridItem>
         <GridItem pos="relative" order={[1, 2, 2]}>
-          <Image
-            width={{ base: "100%", sm: "75%", lg: "400px" }}
-            margin="auto"
-            alt="Tutor image"
-            src={tutorImage}
-          ></Image>
+          <Image alt="Tutor image" src={tutorImage}></Image>
         </GridItem>
       </Grid>
     </Container>

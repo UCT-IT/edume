@@ -11,16 +11,21 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
 import { strings } from "@/assets/locales/locales";
 import clientImage from "@/assets/images/clients.svg";
+import Image from "next/image";
 
 const Clients = () => {
-  const data: string[] = strings.client?.slice() || [];
+  const clientData = {
+    clientTitle: strings?.features?.client?.title,
+    clientContent: strings?.features?.client?.content,
+    clientLink: strings?.features?.client?.link,
+    clientBtn: strings?.features?.client?.btn,
+  };
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
@@ -38,7 +43,7 @@ const Clients = () => {
             fontSize="22px"
             mt={"10px"}
           >
-            Get More Clients
+            {clientData.clientTitle}
           </Text>
           <List
             spacing={6}
@@ -47,16 +52,16 @@ const Clients = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {data.map((item: string, index: number) => (
-              <ListItem key={index} mb="10px">
-                <ListIcon as={CheckIcon} color="black" />
+            {clientData?.clientContent?.map((item: string, index: number) => (
+              <ListItem key={index} mb="10px" display="flex" gap="16px">
+                <ListIcon as={CheckIcon} color="black" mt="5px" />
                 {item}
               </ListItem>
             ))}
-            <ListItem color="primary">
-              <ListIcon as={CheckIcon} color="black" />
+            <ListItem color="primary" display="flex" gap="16px">
+              <ListIcon as={CheckIcon} color="black" mt="5px" />
               <Link href="/">
-                <span>More Features For Attracting Clients.</span>
+                <span>{clientData.clientLink}</span>
               </Link>
             </ListItem>
           </List>
@@ -68,16 +73,11 @@ const Clients = () => {
             _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {clientData.clientBtn}
           </Button>
         </GridItem>
         <GridItem pos="relative" order={[1, 2, 2]}>
-          <Image
-            width="400px"
-            margin="auto"
-            alt="image"
-            src={clientImage}
-          ></Image>
+          <Image alt="client image" src={clientImage}></Image>
         </GridItem>
       </Grid>
     </Container>

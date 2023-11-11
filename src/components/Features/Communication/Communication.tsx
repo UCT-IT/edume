@@ -11,16 +11,21 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
 import { strings } from "@/assets/locales/locales";
 import communitionImage from "@/assets/images/communication.svg";
+import Image from "next/image";
 
 const Communication = () => {
-  const data: string[] = strings.communication?.slice() || [];
+  const communicationData = {
+    communicationTitle: strings?.features?.communication?.title,
+    communicationContent: strings?.features?.communication?.content,
+    communicationLink: strings?.features?.communication?.link,
+    communicationBtn: strings?.features?.communication?.btn,
+  };
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
@@ -34,12 +39,7 @@ const Communication = () => {
         paddingY="50px"
       >
         <GridItem pos="relative">
-          <Image
-            width="400px"
-            margin="auto"
-            alt="Communication Image"
-            src={communitionImage}
-          ></Image>
+          <Image alt="Communication Image" src={communitionImage}></Image>
         </GridItem>
         <GridItem>
           <Text
@@ -48,7 +48,7 @@ const Communication = () => {
             fontSize="22px"
             mt="10px"
           >
-            More Communication Features
+            {communicationData.communicationTitle}
           </Text>
           <List
             spacing={6}
@@ -57,16 +57,18 @@ const Communication = () => {
             mt={"18px"}
             fontWeight="normal"
           >
-            {data.map((item: string, index: number) => (
-              <ListItem key={index} mb="10px">
-                <ListIcon as={CheckIcon} color="black" />
-                {item}
-              </ListItem>
-            ))}
-            <ListItem color="primary">
-              <ListIcon as={CheckIcon} color="black" />
+            {communicationData?.communicationContent?.map(
+              (item: string, index: number) => (
+                <ListItem key={index} mb="10px" display="flex" gap="16px">
+                  <ListIcon as={CheckIcon} color="black" mt="5px" />
+                  {item}
+                </ListItem>
+              )
+            )}
+            <ListItem color="primary" display="flex" gap="16px">
+              <ListIcon as={CheckIcon} color="black" mt="5px" />
               <Link href="/">
-                <span>More Scheduling Feature.</span>
+                <span>{communicationData.communicationLink}</span>
               </Link>
             </ListItem>
           </List>
@@ -78,7 +80,7 @@ const Communication = () => {
             _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {communicationData.communicationBtn}
           </Button>
         </GridItem>
       </Grid>

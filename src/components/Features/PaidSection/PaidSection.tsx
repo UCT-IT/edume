@@ -11,16 +11,21 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
 import { strings } from "@/assets/locales/locales";
 import paidImage from "@/assets/images/paid.svg";
+import Image from "next/image";
 
 const PaidSection = () => {
-  const data: string[] = strings.getPaid?.slice() || [];
+  const getPaidData = {
+    getPaidTitle: strings?.features?.getPaid?.title,
+    getPaidContent: strings?.features?.getPaid?.content,
+    getPaidLink: strings?.features?.getPaid?.link,
+    getPaidBtn: strings?.features?.getPaid?.btn,
+  };
   return (
     <Container maxW="container.xl" px={["20px", "", ""]}>
       <Grid
@@ -34,12 +39,7 @@ const PaidSection = () => {
         paddingY="50px"
       >
         <GridItem pos="relative">
-          <Image
-            width="400px"
-            margin="auto"
-            alt="Paid image"
-            src={paidImage}
-          ></Image>
+          <Image alt="Paid image" src={paidImage}></Image>
         </GridItem>
         <GridItem>
           <Text
@@ -48,7 +48,7 @@ const PaidSection = () => {
             fontSize="22px"
             mt="10px"
           >
-            get paid faster
+            {getPaidData.getPaidTitle}
           </Text>
           <List
             spacing={6}
@@ -57,16 +57,16 @@ const PaidSection = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {data.map((item: string, index: number) => (
-              <ListItem key={index} mb="10px">
-                <ListIcon as={CheckIcon} color="black" />
+            {getPaidData?.getPaidContent?.map((item: string, index: number) => (
+              <ListItem key={index} mb="10px" display="flex" gap="16px">
+                <ListIcon as={CheckIcon} color="black" mt="5px" />
                 {item}
               </ListItem>
             ))}
             <ListItem color="primary">
               <ListIcon as={CheckIcon} color="black" />
               <Link href="/">
-                <span>More Billing Features.</span>
+                <span>{getPaidData.getPaidLink}</span>
               </Link>
             </ListItem>
           </List>
@@ -78,7 +78,7 @@ const PaidSection = () => {
             _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {getPaidData.getPaidBtn}
           </Button>
         </GridItem>
       </Grid>
