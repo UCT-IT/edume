@@ -28,6 +28,11 @@ const Feature = () => {
     featureContent: strings?.features?.feature?.content,
     featureLink: strings?.features?.feature?.link,
     featureBtn: strings?.features?.feature?.btn,
+    badge: strings?.features?.feature?.badge,
+    text: strings?.features?.text,
+    link: strings?.features?.link,
+    seeMore: strings?.features?.seeMore,
+    desc: strings?.features?.desc,
   };
   return (
     <Container maxW="container.xl" px={["20px", "", ""]}>
@@ -40,7 +45,7 @@ const Feature = () => {
         gap={7}
         paddingY="50px"
       >
-        <GridItem order={[2, 1, 1]}>
+        <GridItem order={[2, 2, 1]}>
           <Text
             fontWeight="bold"
             mb="17px"
@@ -89,7 +94,7 @@ const Feature = () => {
             {featureData.featureBtn}
           </Button>
         </GridItem>
-        <GridItem pos="relative" order={[1, 2, 2]}>
+        <GridItem pos="relative" order={[1, 1, 2]}>
           <Box
             fontSize="20px"
             fontWeight="bold"
@@ -104,7 +109,7 @@ const Feature = () => {
             bg="#F4D12F"
             color="secondary"
           >
-            Hightlighted Feature
+            {featureData.badge}
           </Box>
           <Box
             mb={["", "", "60px"]}
@@ -115,23 +120,17 @@ const Feature = () => {
             textAlign="center"
             position="relative"
           >
-            <Text fontWeight="bold" mb="10px" fontSize="20px">
-              2-Factor Authentication Add-on
-            </Text>
             <Text color="textColor" mb="10px">
-              Strengthened Security: The
+              {featureData.text}
               <span>
                 <Link href="/">
-                  <Text color="primary">
-                    2-Factor Authentication Add-on Features
-                  </Text>
+                  <Text color="primary">{featureData.link}</Text>
                 </Link>
               </span>
-              Add-on helps to keep your data and information more secure by
-              adding an extra layer of security to your Teachworks account.
+              {featureData.desc}
             </Text>
             <Link href="/">
-              <Text color="primary">See More New Features</Text>
+              <Text color="primary">{featureData.seeMore}</Text>
             </Link>
           </Box>
           <Image alt="Feature image" src={featureImage}></Image>

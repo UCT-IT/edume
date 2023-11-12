@@ -36,7 +36,7 @@ const TutorTeacher = () => {
         }}
         paddingY="50px"
       >
-        <GridItem order={[2, 1, 1]}>
+        <GridItem order={[2, 2, 1]}>
           <Text
             fontWeight="medium"
             textTransform="capitalize"
@@ -76,7 +76,7 @@ const TutorTeacher = () => {
             {tutorData.tutorBtn}
           </Button>
         </GridItem>
-        <GridItem pos="relative" order={[1, 2, 2]}>
+        <GridItem pos="relative" order={[1, 1, 2]}>
           <Image alt="Tutor image" src={tutorImage}></Image>
         </GridItem>
       </Grid>

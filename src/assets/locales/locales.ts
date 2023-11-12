@@ -2,11 +2,57 @@ import LocalizedStrings from "react-localization";
 
 export let strings = new LocalizedStrings({
   en: {
+    dropdownFeatures: {
+      title: "Features",
+      dropdownMenus: [
+        "Overview",
+        "Calendar & Scheduling",
+        "Communication",
+        "Billing & Payroll",
+        "Records & Analytics",
+        "Customize & secondary Label",
+        "Automation",
+        "Multiple Branches",
+        "Integrations & Add-Ons",
+        "Website Plugins Demo",
+      ],
+    },
+    dropdownSolution: {
+      title: "Solution",
+      dropdownMenus: [
+        "Tutoring",
+        "Language Schools",
+        "Test Preparation",
+        "Music Schools",
+        "Driving Schools",
+      ],
+    },
+    dropdownSupport: {
+      title: "Support",
+      dropdownMenus: [
+        "Tutorials",
+        "Getting Started Guide",
+        "Knowledge Base",
+        "Contact Us",
+        "FAQs",
+        "Blog",
+      ],
+    },
+    heroSection: {
+      title: "Organize & Automate Your",
+    },
     features: {
       title: "OUR FEATURES",
       subTitle: "How Teachworks can Help Your Teaching Business",
+      text: "Strengthened Security: The",
+      link: "2-Factor Authentication Add-on",
+      desc: "Add-on helps to keep your data and information more secure by adding an extra layer of security to your Teachworks account.",
+      seeMore: "See More New Features",
       feature: {
         title: "Simplifying Scheduling",
+        badge: "Hightlighted Feature",
+        subtitle: "2-Factor Authentication Add-on",
+
         content: [
           "Speed up scheduling for one-on-one and group lessons using our many calendar views and time-savers.",
           "Send reminders to clients when their invoices are due.",
@@ -77,42 +123,6 @@ export let strings = new LocalizedStrings({
         link: "More Reporting Features",
         btn: "Start Your Free Trial",
       },
-    },
-    dropdownFeatures: {
-      title: "Features",
-      dropdownMenus: [
-        "Overview",
-        "Calendar & Scheduling",
-        "Communication",
-        "Billing & Payroll",
-        "Records & Analytics",
-        "Customize & secondary Label",
-        "Automation",
-        "Multiple Branches",
-        "Integrations & Add-Ons",
-        "Website Plugins Demo",
-      ],
-    },
-    dropdownSolution: {
-      title: "Solution",
-      dropdownMenus: [
-        "Tutoring",
-        "Language Schools",
-        "Test Preparation",
-        "Music Schools",
-        "Driving Schools",
-      ],
-    },
-    dropdownSupport: {
-      title: "Support",
-      dropdownMenus: [
-        "Tutorials",
-        "Getting Started Guide",
-        "Knowledge Base",
-        "Contact Us",
-        "FAQs",
-        "Blog",
-      ],
     },
   },
   bg: {},

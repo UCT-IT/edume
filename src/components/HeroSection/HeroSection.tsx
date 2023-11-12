@@ -1,10 +1,11 @@
 "use client";
-import { Box, Button, Container, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import React from "react";
-import "./HeroSection.css";
-import heroBg from "../../assets/images/heroSectionImage.svg";
-import Image from "next/image";
+
+import heroSectionImg from "../../assets/images/heroSectionImage.svg";
+import herobgImg from "@/assets/images/herobgImg.svg";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -30,51 +31,55 @@ const HeroSection = () => {
 
     return () => clearInterval(interval);
   }, [textArray.length]);
+
   return (
     <>
-      <Box pos="relative">
-        <Box pos="absolute" right="0px" top="90px" zIndex={1}>
-          <Image src={heroBg} alt="Hero Banner Image"></Image>
-        </Box>
-        <Box
-          bgImage="url('https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61856827909fb72472abfc6c_601da34bc4b63f405a9e97f1_bg-test2.svg')"
-          bgSize="cover"
-          bgPos="center"
-          h="100vh"
-          bgRepeat="repeat"
-          bgColor="primary"
-          className="clip"
-        >
-          <Container maxW="container.xl" paddingTop="150px" pl="80px" pr="50px">
-            <Box>
+      <Box
+        bgImage='url("https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61856827909fb72472abfc6c_601da34bc4b63f405a9e97f1_bg-test2.svg")'
+        bgColor="primary"
+        clipPath="polygon(0 0, 100% 0, 100% 95%, 0% 100%)"
+        zIndex={1}
+        pt={{ base: "15%", sm: "10%" }}
+      >
+        <Container maxW="container.xl" h="100%">
+          <Grid
+            templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 2fr" }}
+            alignItems="center"
+            justifyContent="center"
+            gap={{ base: "null", md: "20px" }}
+            h="100%"
+            pos="relative"
+          >
+            <Box
+              textColor="secondary"
+              textAlign={{ base: "center", md: "left" }}
+            >
               <Text
-                as="h1"
-                textColor="white"
-                fontSize="54px"
+                fontSize={{ base: "27px", sm: "30px", lg: "54px" }}
                 fontWeight="bold"
                 lineHeight="1.2"
-                my="10px"
               >
                 Organize & <br /> Automate Your
               </Text>
               <Text
                 transition="opacity 0.5s"
                 opacity={fadeOut ? 0 : 1}
-                fontSize="45px"
+                fontSize={{ base: "24px", sm: "28px", lg: "45px" }}
+                textColor="black"
+                my="10px"
               >
                 {textArray[currentTextIndex]}
               </Text>
-              <Text textColor="white" my="20px">
-                Teachworks is the #1 choice for managing your tutoring or <br />
+              <Text>
+                Teachworks is the #1 choice for managing your tutoring or
                 teaching business. Easily manage scheduling, students, billing
-                <br /> and more!
+                and more!
               </Text>
               <Button
-                as="a"
                 bg="#8BC220"
                 _hover={{ bg: "#97CE2C" }}
-                color="white"
-                px="20px"
+                color="secondary"
+                px="40px"
                 py="25px"
                 my="20px"
                 borderRadius="3px"
@@ -82,10 +87,16 @@ const HeroSection = () => {
               >
                 Try It for Free
               </Button>
-              <Text textColor="white">or Take a Quick Tour</Text>
+              <Text>or Take a Quick Tour</Text>
             </Box>
-          </Container>
-        </Box>
+            <Box zIndex={2} w="100%">
+              <Image
+                src={heroSectionImg}
+                alt="Hero Section Banner Image"
+              ></Image>
+            </Box>
+          </Grid>
+        </Container>
       </Box>
     </>
   );
