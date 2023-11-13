@@ -14,7 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/next-js";
+import NextLink from "next/link";
 import { strings } from "@/assets/locales/locales";
 import communitionImage from "@/assets/images/communication.svg";
 import Image from "next/image";
@@ -67,7 +68,7 @@ const Communication = () => {
             )}
             <ListItem color="primary" display="flex" gap="16px">
               <ListIcon as={CheckIcon} color="black" mt="5px" />
-              <Link href="/">
+              <Link as={NextLink} href="/">
                 <span>{communicationData.communicationLink}</span>
               </Link>
             </ListItem>

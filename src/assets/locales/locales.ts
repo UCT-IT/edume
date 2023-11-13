@@ -2,6 +2,12 @@ import LocalizedStrings from "react-localization";
 
 export let strings = new LocalizedStrings({
   en: {
+    nav: {
+      testimonial: "Testimonials",
+      pricing: "Pricing",
+      login: "Login",
+      btn: "Try if for now",
+    },
     dropdownFeatures: {
       title: "Features",
       dropdownMenus: [
@@ -39,7 +45,19 @@ export let strings = new LocalizedStrings({
       ],
     },
     heroSection: {
-      title: "Organize & Automate Your",
+      title: `Organize & 
+      Automate Your`,
+      animatedText: [
+        "Driving School",
+        "Music school",
+        "Language School",
+        "Test Prep center",
+        "Tutoring Company",
+      ],
+      description:
+        "Teachworks is the #1 choice for managing your tutoring or teaching business. Easily manage scheduling, students, billing and more!",
+      btn: "Try It for free",
+      tour: "or Take a Quick Tour",
     },
     features: {
       title: "OUR FEATURES",

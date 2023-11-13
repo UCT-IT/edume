@@ -40,12 +40,7 @@ const DropdownMenu = ({
           backgroundColor="secondary"
         >
           {dropdownMenus?.map((menu, i) => (
-            <Text
-              key={i}
-              as="a"
-              href="#"
-              _hover={{ fontWeight: "semibold", color: "122634" }}
-            >
+            <Text key={i} _hover={{ fontWeight: "semibold", color: "122634" }}>
               {menu}
             </Text>
           ))}

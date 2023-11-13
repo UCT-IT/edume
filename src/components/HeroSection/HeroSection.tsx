@@ -3,9 +3,10 @@ import { Box, Button, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import React from "react";
 
 import heroSectionImg from "../../assets/images/heroSectionImage.svg";
-import herobgImg from "@/assets/images/herobgImg.svg";
+import herobgImg from "@/assets/images/heroBg.svg";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { strings } from "@/assets/locales/locales";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -17,7 +18,13 @@ const HeroSection = () => {
     "Test Prep center",
     "Tutoring Company",
   ];
-
+  const data = {
+    title: strings?.heroSection?.title,
+    animatedText: strings?.heroSection?.animatedText,
+    description: strings?.heroSection?.description,
+    btn: strings?.heroSection?.btn,
+    tour: strings?.heroSection?.tour,
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setFadeOut(true);
@@ -35,7 +42,18 @@ const HeroSection = () => {
   return (
     <>
       <Box
-        bgImage='url("https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61856827909fb72472abfc6c_601da34bc4b63f405a9e97f1_bg-test2.svg")'
+        // style={{
+        //   backgroundImage: `url(${herobgImg})`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   height: "100%",
+        // }}
+        bgImage={`url(${herobgImg})`}
+        bgSize="cover"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        w="100%"
+        h="100%"
         bgColor="primary"
         clipPath="polygon(0 0, 100% 0, 100% 95%, 0% 100%)"
         zIndex={1}
@@ -58,8 +76,9 @@ const HeroSection = () => {
                 fontSize={{ base: "27px", sm: "30px", lg: "54px" }}
                 fontWeight="bold"
                 lineHeight="1.2"
+                // whiteSpace="pre-wrap"
               >
-                Organize & <br /> Automate Your
+                {data.title}
               </Text>
               <Text
                 transition="opacity 0.5s"
@@ -70,11 +89,7 @@ const HeroSection = () => {
               >
                 {textArray[currentTextIndex]}
               </Text>
-              <Text>
-                Teachworks is the #1 choice for managing your tutoring or
-                teaching business. Easily manage scheduling, students, billing
-                and more!
-              </Text>
+              <Text>{data.description}</Text>
               <Button
                 bg="#8BC220"
                 _hover={{ bg: "#97CE2C" }}
@@ -85,9 +100,9 @@ const HeroSection = () => {
                 borderRadius="3px"
                 fontWeight="normal"
               >
-                Try It for Free
+                {data.btn}
               </Button>
-              <Text>or Take a Quick Tour</Text>
+              <Text>{data.tour}</Text>
             </Box>
             <Box zIndex={2} w="100%">
               <Image

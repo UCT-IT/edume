@@ -3,7 +3,6 @@ import {
   Button,
   Container,
   Flex,
-  Link,
   SlideFade,
   Spacer,
   Text,
@@ -11,9 +10,10 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import { strings } from "@/assets/locales/locales";
+import { Link } from "@chakra-ui/next-js";
 
 // Now you can use NextLink in your code
 
@@ -48,7 +48,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
+    <React.Fragment>
       {/* For Md and Lg devices */}
       <Box
         as="nav"
@@ -111,7 +111,6 @@ const Navbar = () => {
 
           <Spacer></Spacer>
           <Button
-            as="a"
             bg="#122634"
             _hover={{ bg: "#193447" }}
             color="secondary"
@@ -121,7 +120,7 @@ const Navbar = () => {
             fontWeight="normal"
             fontSize={["null", "12px", "14px", "16px"]}
           >
-            Try It for Free
+            {strings?.nav?.btn}
           </Button>
         </Container>
       </Box>
@@ -162,20 +161,20 @@ const Navbar = () => {
               <DropdownMenu {...dropdownFeatures} />
               <DropdownMenu {...dropdownSolution} />
               <Link as={NextLink} href="#" _hover={{ textDecoration: "none" }}>
-                Testimonials
+                {strings?.nav?.testimonial}
               </Link>
               <Link as={NextLink} href="#" _hover={{ textDecoration: "none" }}>
-                Pricing
+                {strings?.nav?.pricing}
               </Link>
               <DropdownMenu {...dropdownSupport} />
               <Link as={NextLink} href="#" _hover={{ textDecoration: "none" }}>
-                Login
+                {strings?.nav?.login}
               </Link>
             </VStack>
           </SlideFade>
         )}
       </Box>
-    </>
+    </React.Fragment>
   );
 };
 

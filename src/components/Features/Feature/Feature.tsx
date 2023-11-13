@@ -14,11 +14,12 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import Link from "next/link";
 import "./Feature.css";
 import { strings } from "@/assets/locales/locales";
 import featureImage from "@/assets/images/feature.svg";
 import Image from "next/image";
+import { Link } from "@chakra-ui/next-js";
+import NextLink from "next/link";
 
 const Feature = () => {
   const featureData = {
@@ -78,7 +79,7 @@ const Feature = () => {
               gap="16px"
             >
               <ListIcon as={CheckIcon} color="black" />
-              <Link href="/">
+              <Link as={NextLink} href="/">
                 <span>{featureData.featureLink}</span>
               </Link>
             </ListItem>

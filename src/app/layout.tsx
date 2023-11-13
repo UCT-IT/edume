@@ -1,12 +1,12 @@
-"use client"
-import Navbar from '@/components/Navbar/Navbar'
-import { Providers } from './providers'
-import Footer from '@/components/Footer/Footer'
+"use client";
+import Navbar from "@/components/Navbar/Navbar";
+import { Providers } from "./providers";
+import Footer from "@/components/Footer/Footer";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -20,5 +20,5 @@ export default function RootLayout({
         </main>
       </body>
     </html>
-  )
+  );
 }

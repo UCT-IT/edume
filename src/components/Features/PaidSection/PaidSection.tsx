@@ -14,7 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/next-js";
+import NextLink from "next/link";
 import { strings } from "@/assets/locales/locales";
 import paidImage from "@/assets/images/paid.svg";
 import Image from "next/image";
@@ -65,7 +66,7 @@ const PaidSection = () => {
             ))}
             <ListItem color="primary">
               <ListIcon as={CheckIcon} color="black" />
-              <Link href="/">
+              <Link as={NextLink} href="/">
                 <span>{getPaidData.getPaidLink}</span>
               </Link>
             </ListItem>

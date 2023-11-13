@@ -14,7 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/next-js";
+import NextLink from "next/link";
 import { strings } from "@/assets/locales/locales";
 import tutorImage from "@/assets/images/tutor.svg";
 import Image from "next/image";
@@ -60,7 +61,7 @@ const TutorTeacher = () => {
             ))}
             <ListItem color="primary" display="flex" gap="16px">
               <ListIcon as={CheckIcon} color="black" mt="5px" />
-              <Link href="/">
+              <Link as={NextLink} href="/">
                 <span>{tutorData.tutorLink}</span>
               </Link>
             </ListItem>
