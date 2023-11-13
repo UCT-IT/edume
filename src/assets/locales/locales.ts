@@ -142,6 +142,27 @@ export let strings = new LocalizedStrings({
         btn: "Start Your Free Trial",
       },
     },
+    works: {
+      title: "How it Works",
+      contents: [
+        {
+          heading: "Add Students & Tutors/Teachers",
+          desc: "Add students and teachers one at a time or import them in bulk.",
+        },
+        {
+          heading: "Schedule Lessons",
+          desc: "Add lessons to the calendar or have clients book online.",
+        },
+        {
+          heading: "Bill Your Clients",
+          desc: "Generate invoices and process payments.",
+        },
+        {
+          heading: "Grow Your Business",
+          desc: "Use our reports to keep track of your business performance.",
+        },
+      ],
+    },
   },
   bg: {},
 });
