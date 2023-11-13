@@ -142,6 +142,61 @@ export let strings = new LocalizedStrings({
         btn: "Start Your Free Trial",
       },
     },
+    footer: {
+      footerHeader: `Simplify management, save time, and grow your
+      business.`,
+      footerBtn1: "Start Your Free Trial",
+      footerBtn2: "Take a Quick Tour",
+      footerColumns: [
+        {
+          footerTitle: "NAVIGATION",
+          footerLinks: [
+            "Scheduling",
+            "Communication",
+            "Billing & Payroll",
+            "Records & Analytics",
+            "Multiple Locations",
+            "Integrations",
+            "Website Plugins Demo",
+          ],
+        },
+        {
+          footerTitle: "RESOURCES",
+          footerLinks: [
+            "Tutorials",
+            "Getting Started Guide",
+            "Knowledge Base",
+            "Teachworks Blog",
+            "Client Testimonials",
+          ],
+        },
+        {
+          footerTitle: "SOLUTIONS",
+          footerLinks: [
+            "Tutoring Centers",
+            "Language Schools",
+            "Test Preparation",
+            "Music Schools",
+            "Driving Schools",
+          ],
+        },
+        {
+          footerTitle: "OUR COMPANY",
+          footerLinks: [
+            "About Us",
+            "Contact",
+            "Test Preparation",
+            "Careers",
+            "Status Page",
+          ],
+        },
+        {
+          footerTitle: "LEGAL",
+          footerLinks: ["Privacy Policy", "Terms & Conditions"],
+        },
+      ],
+      footerCopyRight: "© Teachworks 2021",
+    },
   },
   bg: {},
 });

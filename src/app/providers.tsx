@@ -10,6 +10,7 @@ const colors = {
   tertiary: "#8bc220",
   buttonHoverd: "#5AA8EC",
   textColor: "#555",
+  footerLinksColor: "#ffffffad",
 };
 const breakpoints = {
   base: "0px",
