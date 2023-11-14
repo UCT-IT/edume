@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import PrevArrow from "./PrevArrow";
 import NextArrow from "./NextArrow";
 import { strings } from "@/assets/locales/locales";
+import NextLink from "next/link";
 
 const TestimonialCarousel = () => {
   const data = {
@@ -87,7 +88,16 @@ const TestimonialCarousel = () => {
                   <Text pb="30px" color="">
                     {item.text}
                   </Text>
-                  <Link textColor="blue.300">{item.link}</Link>
+                  <Link
+                    href="/"
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                    as={NextLink}
+                    textColor="blue.300"
+                  >
+                    {item.link}
+                  </Link>
                 </Box>
               </Box>
             ))}

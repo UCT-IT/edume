@@ -189,6 +189,13 @@ export let strings = new LocalizedStrings({
         },
       ],
     },
+    businessWork: {
+      title: "GROW WITH US",
+      subTitle: "Built to Grow With Your Business",
+      description:
+        "Whether you have 10 students or 10,000, Teachworks is loaded with features to make managing large quantities of students, tutors/teachers and lessons faster & more efficient. If you have plans to expand to multiple locations or build a franchise system, Teachworks provides the tools to help you manage and monitor multiple locations from a single master account.",
+      link: "Manage Multiple Branches",
+    },
   },
   bg: {},
 });
