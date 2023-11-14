@@ -196,6 +196,26 @@ export let strings = new LocalizedStrings({
         "Whether you have 10 students or 10,000, Teachworks is loaded with features to make managing large quantities of students, tutors/teachers and lessons faster & more efficient. If you have plans to expand to multiple locations or build a franchise system, Teachworks provides the tools to help you manage and monitor multiple locations from a single master account.",
       link: "Manage Multiple Branches",
     },
+    FAQ: {
+      title: "Popular Questions",
+      content: [
+        {
+          title: "Is my data secure?",
+          desc: "Yes! Teachworks follows best practices for securing data and access to the software, ensuring your data is always safe and secure. For more information,",
+          link: "visit our Knowledge Base.",
+        },
+        {
+          title: "Is support included?",
+          desc: "Yes! Email support is included in all of our plans. We are very responsive to any questions you may have. We also have a detailed knowledge base and tutorials to help you make the most of your account.",
+        },
+        {
+          title: "Can I integrate with my website?",
+          desc: "Yes! We have many features that can be integrated with your website. This includes Website Booking, Custom Forms, Website Profiles for tutors & teachers and more!,",
+          link: "View our demo site",
+        },
+      ],
+      link: "See More FAQs",
+    },
   },
   bg: {},
 });

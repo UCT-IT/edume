@@ -1,3 +1,4 @@
+import FAQ from "@/components/FAQ/FAQ";
 import Features from "@/components/Features/Features";
 import GrowBusiness from "@/components/GrowBusiness/GrowBusiness";
 import HeroSection from "@/components/HeroSection/HeroSection";
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Works></Works>
       <TestimonialCarousel></TestimonialCarousel>
       <GrowBusiness></GrowBusiness>
+      <FAQ></FAQ>
     </React.Fragment>
   );
 };

@@ -1,4 +1,4 @@
-import { Container, Link, Text } from "@chakra-ui/react";
+import { Container, Divider, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import bgImg from "@/assets/images/businessWork.svg";
 import NextLink from "next/link";
@@ -48,6 +48,7 @@ const GrowBusiness = () => {
       >
         {data.link}
       </Link>
+      <Divider mt="30px"></Divider>
     </Container>
   );
 };
