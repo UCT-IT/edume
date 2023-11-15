@@ -2,13 +2,12 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Box, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 
-const DropdownMenu = ({
-  title,
-  dropdownMenus,
-}: {
+type DropdownMenuPropsType = {
   title: string | undefined;
   dropdownMenus: string[] | undefined;
-}) => {
+};
+
+const DropdownMenu = ({ title, dropdownMenus }: DropdownMenuPropsType) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Box

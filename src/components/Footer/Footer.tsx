@@ -9,30 +9,48 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Icon } from "@chakra-ui/react";
-import { ImFacebook, ImTwitter } from "react-icons/im";
+import { ImFacebook } from "react-icons/im";
 import { strings } from "@/assets/locales/locales";
 import FooterGridItem from "./FooterGridItem";
-
+import { motion } from "framer-motion";
 const Footer = () => {
+  const MotionText = motion(Text);
   const footerData = strings.footer;
   const footerColumns = footerData?.footerColumns;
 
   return (
     <Box bgColor="primary" clipPath="polygon(0 5%, 100% 0, 100% 100%, 0 100%)">
-      <Container maxW="container.xl" textColor="secondary" pt="80px">
+      <Container
+        maxW="container.xl"
+        textColor="secondary"
+        pt="80px"
+        pos="relative"
+      >
         <Box w={{ base: "95%", md: "75%" }} mx="auto">
-          <Text fontSize="35px" textAlign="center" whiteSpace="pre-wrap">
+          <MotionText
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 0.5,
+              delay: 0.2,
+            }}
+            fontSize="35px"
+            textAlign="center"
+            whiteSpace="pre-wrap"
+          >
             {/* Simplify management, save time, and grow your
             <br /> business. */}
             {footerData?.footerHeader}
-          </Text>
+          </MotionText>
+
           <Flex
             justifyContent="center"
             alignItems="center"
             flexDirection={{ base: "column", md: "row" }}
           >
             <Button
-              bg="#8BC220"
+              bg="tertiary"
               _hover={{ bg: "#97CE2C" }}
               color="secondary"
               px="40px"
@@ -80,20 +98,15 @@ const Footer = () => {
           </Text>
           <Box mr="200px">
             <Button
-              borderRadius="50%"
+              as="a"
+              href="https://www.facebook.com/uttaracomputertraininganditfirm"
+              target="_blank"
+              rounded="50%"
               color="secondary"
               bg="transparent"
               _hover={{ bg: "secondary", color: "black" }}
             >
               <Icon as={ImFacebook} />
-            </Button>
-            <Button
-              borderRadius="50%"
-              color="secondary"
-              bg="transparent"
-              _hover={{ bg: "secondary", color: "black" }}
-            >
-              <Icon as={ImTwitter} />
             </Button>
           </Box>
         </Flex>

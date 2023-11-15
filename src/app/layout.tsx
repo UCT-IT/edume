@@ -2,6 +2,8 @@
 import Navbar from "@/components/Navbar/Navbar";
 import { Providers } from "./providers";
 import Footer from "@/components/Footer/Footer";
+import ScrollButton from "@/components/ScrollButton/ScrollButton";
+import { Box } from "@chakra-ui/react";
 
 export default function RootLayout({
   children,
@@ -13,9 +15,12 @@ export default function RootLayout({
       <body>
         <main>
           <Providers>
-            <Navbar></Navbar>
-            {children}
-            <Footer></Footer>
+            <Box pos="relative">
+              <Navbar></Navbar>
+              {children}
+              <Footer></Footer>
+              <ScrollButton></ScrollButton>
+            </Box>
           </Providers>
         </main>
       </body>

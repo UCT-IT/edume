@@ -1,12 +1,11 @@
 "use client";
 import { Box, Button, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import React from "react";
-
 import heroSectionImg from "../../assets/images/heroSectionImage.svg";
-import herobgImg from "@/assets/images/heroBg.svg";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { strings } from "@/assets/locales/locales";
+import HeroBackground from "../HeroBackground/HeroBackground";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -40,25 +39,8 @@ const HeroSection = () => {
   }, [textArray.length]);
 
   return (
-    <>
-      <Box
-        // style={{
-        //   backgroundImage: `url(${herobgImg})`,
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   height: "100%",
-        // }}
-        bgImage={`url(${herobgImg})`}
-        bgSize="cover"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        w="100%"
-        h="100%"
-        bgColor="primary"
-        clipPath="polygon(0 0, 100% 0, 100% 95%, 0% 100%)"
-        zIndex={1}
-        pt={{ base: "15%", sm: "10%" }}
-      >
+    <React.Fragment>
+      <HeroBackground>
         <Container maxW="container.xl" h="100%">
           <Grid
             templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 2fr" }}
@@ -112,8 +94,8 @@ const HeroSection = () => {
             </Box>
           </Grid>
         </Container>
-      </Box>
-    </>
+      </HeroBackground>
+    </React.Fragment>
   );
 };
 
