@@ -11,13 +11,6 @@ import { strings } from "@/assets/locales/locales";
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
-  const textArray = [
-    "Driving School",
-    "Music school",
-    "Language School",
-    "Test Prep center",
-    "Tutoring Company",
-  ];
   const data = {
     title: strings?.heroSection?.title,
     animatedText: strings?.heroSection?.animatedText,
