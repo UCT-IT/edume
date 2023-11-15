@@ -21,7 +21,7 @@ const NextArrow = (props: any) => {
       top="50%"
       transform="translateY(-50%)"
       aria-label="Previous"
-    ></IconButton>
+    />
   );
 };
 

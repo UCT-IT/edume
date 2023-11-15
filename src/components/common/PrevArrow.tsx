@@ -21,7 +21,7 @@ const PrevArrow = (props: any) => {
       zIndex="3"
       transform="translateY(-50%)"
       aria-label="Previous"
-    ></IconButton>
+    />
   );
 };
 

@@ -10,16 +10,14 @@ import {
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PrevArrow from "./PrevArrow";
-import NextArrow from "./NextArrow";
-import { strings } from "@/assets/locales/locales";
+import PrevArrow from "../common/PrevArrow";
+import NextArrow from "../common/NextArrow";
 import NextLink from "next/link";
+import data from "@/assets/locales/data/testimonial.json";
+import { motion } from "framer-motion";
 
 const TestimonialCarousel = () => {
-  const data = {
-    title: strings?.testimonials?.title,
-    contents: strings?.testimonials?.content,
-  };
+  const MotionBox = motion(Box);
   const settings = {
     infinite: true,
     speed: 500,
@@ -57,17 +55,24 @@ const TestimonialCarousel = () => {
         >
           {data.title}
         </Heading>
-        <Box py="30px">
+        <Box textAlign="center" py="30px">
           <Slider {...settings}>
-            {data?.contents?.map((item) => (
-              <Box
+            {data.content?.map((item) => (
+              <MotionBox
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2,
+                }}
                 key={item.title}
                 display="flex"
                 justifyItems="center"
                 alignItems="center"
                 flexDirection="column"
               >
-                <Box textAlign="center">
+                <Box>
                   <Text
                     color="secondary"
                     fontSize={["18px", "25px", "25px"]}
@@ -88,20 +93,20 @@ const TestimonialCarousel = () => {
                   <Text pb="30px" color="">
                     {item.text}
                   </Text>
-                  <Link
-                    href="/"
-                    _hover={{
-                      textDecoration: "none",
-                    }}
-                    as={NextLink}
-                    textColor="blue.300"
-                  >
-                    {item.link}
-                  </Link>
                 </Box>
-              </Box>
+              </MotionBox>
             ))}
           </Slider>
+          <Link
+            href="/"
+            _hover={{
+              textDecoration: "none",
+            }}
+            as={NextLink}
+            textColor="blue.300"
+          >
+            {data.link}
+          </Link>
         </Box>
       </Container>
     </Box>

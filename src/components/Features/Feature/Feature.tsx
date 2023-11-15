@@ -66,7 +66,7 @@ const Feature = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {featureData?.featureContent?.map((item: string, index: number) => (
+            {featureData.featureContent?.map((item: string, index: number) => (
               <ListItem key={index} display="flex" gap="16px" mb="10px">
                 <ListIcon mt="5px" as={CheckIcon} color="black" />
                 <Text>{item}</Text>

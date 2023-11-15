@@ -163,32 +163,6 @@ export let strings = new LocalizedStrings({
         },
       ],
     },
-    testimonials: {
-      title: "More than tutors and education companies rely on Teachworks",
-      content: [
-        {
-          title:
-            "Teachworks has been very user friendly which has been an asset in training our tutors in using the system",
-          subTitle: "Teacher's Pet Educational Services",
-          text: "Val Spak",
-          link: "See More Previews",
-        },
-        {
-          title:
-            "I highly recommend Teachworks to other learning centers or similar service providers.",
-          subTitle: "Rob Wahl",
-          text: "Multisensory Learning Centers Inc.",
-          link: "See More Previews",
-        },
-        {
-          title:
-            "Teachworks is terrific. Highly adaptable software, straightforward pricing, and excellent customer service.",
-          subTitle: "Val Spak",
-          text: "Red Pelican Music",
-          link: "See More Previews",
-        },
-      ],
-    },
     businessWork: {
       title: "GROW WITH US",
       subTitle: "Built to Grow With Your Business",

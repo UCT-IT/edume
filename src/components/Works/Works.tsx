@@ -17,7 +17,7 @@ const Works = () => {
     contents: strings?.works?.contents,
   };
   return (
-    <Container maxW="container.xl " py="50px" px={["20px", "", ""]}>
+    <Container maxW="container.xl " py="80px" px={["20px", "", ""]}>
       <Heading mb="40px" textAlign="center">
         {data.title}
       </Heading>
@@ -32,7 +32,7 @@ const Works = () => {
           lg: "repeat(4, 1fr)",
         }}
       >
-        {data?.contents?.map((item, index) => (
+        {data.contents?.map((item, index) => (
           <GridItem key={item.heading}>
             <Heading as="h4" size="sm">
               {index + 1}. {item.heading}

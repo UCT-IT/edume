@@ -58,7 +58,7 @@ const Business = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {businessData?.businessContent?.map(
+            {businessData.businessContent?.map(
               (item: string, index: number) => (
                 <ListItem key={index} mb="10px" display="flex" gap="16px">
                   <ListIcon as={CheckIcon} color="black" mt="5px" />
