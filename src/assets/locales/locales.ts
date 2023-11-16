@@ -84,7 +84,7 @@ export let strings = new LocalizedStrings({
       getPaid: {
         title: "Get Paid Faster",
         content: [
-          "Offer flexible billing options including hourly billing, package billing, flat fees or a combination to accommodate your clients’ needs.",
+          "Offer flexible billing options including hourly billing, package billing, flat fees or a combination to accommodate your client's needs.",
           "Generate single invoices, multiple invoices, or automate your invoicing.",
           "Send automatic Invoice Due Reminders and Low Package Balance Alerts to your clients.",
           "Allow your clients to pay online, or process payments on their behalf.",
@@ -135,7 +135,7 @@ export let strings = new LocalizedStrings({
         content: [
           "Use our various reports to keep track of business performance and easily identify opportunities for growth.",
           "Add additional locations, branches, or switch to a franchise system without outgrowing the software.",
-          "Use bulk actions to quickly update records whether it’s one or one thousand at a time.",
+          "Use bulk actions to quickly update records whether it's one or one thousand at a time.",
           "Choose from 60+ free integrations & add-ons that allow you to extend the functionality of your account to meet the needs of your growing business.",
         ],
         link: "More Reporting Features",

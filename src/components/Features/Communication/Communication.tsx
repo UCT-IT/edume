@@ -58,7 +58,7 @@ const Communication = () => {
             mt={"18px"}
             fontWeight="normal"
           >
-            {communicationData?.communicationContent?.map(
+            {communicationData.communicationContent?.map(
               (item: string, index: number) => (
                 <ListItem key={index} mb="10px" display="flex" gap="16px">
                   <ListIcon as={CheckIcon} color="black" mt="5px" />

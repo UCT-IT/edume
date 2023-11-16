@@ -58,7 +58,7 @@ const PaidSection = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {getPaidData?.getPaidContent?.map((item: string, index: number) => (
+            {getPaidData.getPaidContent?.map((item: string, index: number) => (
               <ListItem key={index} mb="10px" display="flex" gap="16px">
                 <ListIcon as={CheckIcon} color="black" mt="5px" />
                 {item}

@@ -10,13 +10,6 @@ import HeroBackground from "../HeroBackground/HeroBackground";
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
-  const textArray = [
-    "Driving School",
-    "Music school",
-    "Language School",
-    "Test Prep center",
-    "Tutoring Company",
-  ];
   const data = {
     title: strings?.heroSection?.title,
     animatedText: strings?.heroSection?.animatedText,
@@ -29,14 +22,14 @@ const HeroSection = () => {
       setFadeOut(true);
       setTimeout(() => {
         setCurrentTextIndex((prevIndex) =>
-          prevIndex === textArray.length - 1 ? 0 : prevIndex + 1
+          prevIndex === (data.animatedText?.length ?? 0) - 1 ? 0 : prevIndex + 1
         );
         setFadeOut(false);
       }, 1000);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [textArray.length]);
+  }, [data.animatedText]);
 
   return (
     <React.Fragment>
@@ -69,7 +62,7 @@ const HeroSection = () => {
                 textColor="black"
                 my="10px"
               >
-                {textArray[currentTextIndex]}
+                {data.animatedText?.[currentTextIndex]}
               </Text>
               <Text>{data.description}</Text>
               <Button

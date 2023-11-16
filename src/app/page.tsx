@@ -1,3 +1,4 @@
+import HomePage from "@/Pages/Home/HomePage";
 import Features from "@/components/Features/Features";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import { Text } from "@chakra-ui/react";
@@ -12,8 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <React.Fragment>
-      <HeroSection />
-      <Features />
+      <HomePage></HomePage>
     </React.Fragment>
   );
 }

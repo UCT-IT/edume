@@ -53,7 +53,7 @@ const Clients = () => {
             mt="18px"
             fontWeight="normal"
           >
-            {clientData?.clientContent?.map((item: string, index: number) => (
+            {clientData.clientContent?.map((item: string, index: number) => (
               <ListItem key={index} mb="10px" display="flex" gap="16px">
                 <ListIcon as={CheckIcon} color="black" mt="5px" />
                 {item}
