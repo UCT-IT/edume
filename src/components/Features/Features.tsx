@@ -8,14 +8,14 @@ import Business from "./Business/Business";
 
 const Features = () => {
   return (
-    <>
+    <React.Fragment>
       <Feature />
       <PaidSection />
       <Clients />
       <Communication />
       <TutorTeacher />
       <Business />
-    </>
+    </React.Fragment>
   );
 };
 

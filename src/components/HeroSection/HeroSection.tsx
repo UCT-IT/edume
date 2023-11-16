@@ -1,98 +1,94 @@
 "use client";
-import { Box, Button, Container, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import React from "react";
-import "./HeroSection.css";
-import heroBg from "../../assets/heroSectionImage.svg";
-import Image from "next/image";
+import heroSectionImg from "../../assets/images/heroSectionImage.svg";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import { strings } from "@/assets/locales/locales";
+import HeroBackground from "../HeroBackground/HeroBackground";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
-  const textArray = [
-    "Driving School",
-    "Music school",
-    "Language School",
-    "Test Prep center",
-    "Tutoring Company",
-  ];
-
+  const data = {
+    title: strings?.heroSection?.title,
+    animatedText: strings?.heroSection?.animatedText,
+    description: strings?.heroSection?.description,
+    btn: strings?.heroSection?.btn,
+    tour: strings?.heroSection?.tour,
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setFadeOut(true);
       setTimeout(() => {
         setCurrentTextIndex((prevIndex) =>
-          prevIndex === textArray.length - 1 ? 0 : prevIndex + 1
+          prevIndex === (data.animatedText?.length ?? 0) - 1 ? 0 : prevIndex + 1
         );
         setFadeOut(false);
       }, 1000);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [textArray.length]);
+  }, [data.animatedText]);
+
   return (
-    <>
-      <Box pos={"relative"}>
-        <Box pos="absolute" right="0px" top="90px" zIndex={1}>
-          <Image src={heroBg} alt="Hero Banner Image"></Image>
-        </Box>
-        <Box
-          bgImage="url('https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61856827909fb72472abfc6c_601da34bc4b63f405a9e97f1_bg-test2.svg')"
-          bgSize={"cover"}
-          bgPos={"center"}
-          h="100vh"
-          bgRepeat={"repeat"}
-          bgColor={"primary"}
-          className="clip"
-        >
-          <Container
-            maxW={"container.xl"}
-            paddingTop="150px"
-            pl="80px"
-            pr="50px"
+    <React.Fragment>
+      <HeroBackground>
+        <Container maxW="container.xl" h="100%">
+          <Grid
+            templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 2fr" }}
+            alignItems="center"
+            justifyContent="center"
+            gap={{ base: "null", md: "20px" }}
+            h="100%"
+            pos="relative"
           >
-            <Box>
+            <Box
+              textColor="secondary"
+              textAlign={{ base: "center", md: "left" }}
+            >
               <Text
-                as="h1"
-                textColor="white"
-                fontSize="54px"
+                fontSize={{ base: "27px", sm: "30px", lg: "54px" }}
                 fontWeight="bold"
                 lineHeight="1.2"
-                my="10px"
+                // whiteSpace="pre-wrap"
               >
-                Organize & <br /> Automate Your
+                {data.title}
               </Text>
               <Text
                 transition="opacity 0.5s"
                 opacity={fadeOut ? 0 : 1}
-                fontSize="45px"
+                fontSize={{ base: "24px", sm: "28px", lg: "45px" }}
+                textColor="black"
+                my="10px"
               >
-                {textArray[currentTextIndex]}
+                {data.animatedText?.[currentTextIndex]}
               </Text>
-              <Text textColor="white" my="20px">
-                Teachworks is the #1 choice for managing your tutoring or <br />{" "}
-                teaching business. Easily manage scheduling, students, billing{" "}
-                <br /> and more!
-              </Text>
+              <Text>{data.description}</Text>
               <Button
-                as="a"
                 bg="#8BC220"
                 _hover={{ bg: "#97CE2C" }}
-                color="white"
-                px="20px"
+                color="secondary"
+                px="40px"
                 py="25px"
                 my="20px"
                 borderRadius="3px"
                 fontWeight="normal"
               >
-                Try It for Free
+                {data.btn}
               </Button>
-              <Text textColor="white">or Take a Quick Tour</Text>
+              <Text>{data.tour}</Text>
             </Box>
-          </Container>
-        </Box>
-      </Box>
-    </>
+            <Box zIndex={2} w="100%">
+              <Image
+                src={heroSectionImg}
+                alt="Hero Section Banner Image"
+              ></Image>
+            </Box>
+          </Grid>
+        </Container>
+      </HeroBackground>
+    </React.Fragment>
   );
 };
 

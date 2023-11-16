@@ -11,18 +11,26 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import Link from "next/link";
-import { getPaid } from "@/assets/Data/Data";
+import { Link } from "@chakra-ui/next-js";
+import NextLink from "next/link";
+import { strings } from "@/assets/locales/locales";
+import paidImage from "@/assets/images/paid.svg";
+import Image from "next/image";
 
 const PaidSection = () => {
+  const getPaidData = {
+    getPaidTitle: strings?.features?.getPaid?.title,
+    getPaidContent: strings?.features?.getPaid?.content,
+    getPaidLink: strings?.features?.getPaid?.link,
+    getPaidBtn: strings?.features?.getPaid?.btn,
+  };
   return (
     <Container maxW="container.xl" px={["20px", "", ""]}>
       <Grid
-        placeItems={"center"}
+        placeItems="center"
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
@@ -31,54 +39,47 @@ const PaidSection = () => {
         gap={6}
         paddingY="50px"
       >
-        <GridItem pos={"relative"}>
-          <Image
-            width={"400px"}
-            margin="auto"
-            alt="image"
-            src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a5250a62d6f17bc8a9fd59_pay-online.svg"
-          ></Image>
+        <GridItem pos="relative">
+          <Image alt="Paid image" src={paidImage}></Image>
         </GridItem>
         <GridItem>
           <Text
-            fontWeight={"medium"}
+            fontWeight="medium"
             textTransform="capitalize"
-            fontSize={"22px"}
-            mt={"10px"}
+            fontSize="22px"
+            mt="10px"
           >
-            get paid faster
+            {getPaidData.getPaidTitle}
           </Text>
           <List
             spacing={6}
-            color={"#555"}
-            fontSize={"18px"}
-            mt={"18px"}
-            fontWeight={"normal"}
+            color="textColor"
+            fontSize="18px"
+            mt="18px"
+            fontWeight="normal"
           >
-            {getPaid.map((item: { list: string }, index) => (
-              <ListItem key={index} mb={"10px"}>
-                <ListIcon as={CheckIcon} color="black" />
-                {item.list}
+            {getPaidData.getPaidContent?.map((item: string, index: number) => (
+              <ListItem key={index} mb="10px" display="flex" gap="16px">
+                <ListIcon as={CheckIcon} color="black" mt="5px" />
+                {item}
               </ListItem>
             ))}
-            <ListItem>
+            <ListItem color="primary">
               <ListIcon as={CheckIcon} color="black" />
-              <Link href={"/"}>
-                <span style={{ color: "#3898ec" }}>
-                  More Scheduling Feature.
-                </span>
+              <Link as={NextLink} href="/">
+                <span>{getPaidData.getPaidLink}</span>
               </Link>
             </ListItem>
           </List>
           <Button
             bg="primary"
-            color="#ffffff"
+            color="secondary"
             p={7}
-            textTransform={"capitalize"}
-            _hover={{ bg: "#5AA8EC" }}
+            textTransform="capitalize"
+            _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {getPaidData.getPaidBtn}
           </Button>
         </GridItem>
       </Grid>

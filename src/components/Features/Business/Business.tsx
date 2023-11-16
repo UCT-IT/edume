@@ -11,18 +11,26 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import Link from "next/link";
-import { business } from "@/assets/Data/Data";
+import { Link } from "@chakra-ui/next-js";
+import NextLink from "next/link";
+import { strings } from "@/assets/locales/locales";
+import businessImage from "@/assets/images/business.svg";
+import Image from "next/image";
 
 const Business = () => {
+  const businessData = {
+    businessTitle: strings?.features?.business?.title,
+    businessContent: strings?.features?.business?.content,
+    businessLink: strings?.features?.business?.link,
+    businessBtn: strings?.features?.business?.btn,
+  };
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
-        placeItems={"center"}
+        placeItems="center"
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
@@ -31,54 +39,49 @@ const Business = () => {
         gap={6}
         paddingY="50px"
       >
-        <GridItem pos={"relative"}>
-          <Image
-            width={"400px"}
-            margin="auto"
-            alt="image"
-            src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a542194310eb1879b1d805_stats.svg"
-          ></Image>
+        <GridItem pos="relative">
+          <Image alt="business image" src={businessImage}></Image>
         </GridItem>
         <GridItem>
           <Text
-            fontWeight={"medium"}
+            fontWeight="medium"
             textTransform="capitalize"
-            fontSize={"22px"}
-            mt={"10px"}
+            fontSize="22px"
+            mt="10px"
           >
-            Grow Your Business
+            {businessData.businessTitle}
           </Text>
           <List
             spacing={6}
-            color={"#555"}
-            fontSize={"18px"}
-            mt={"18px"}
-            fontWeight={"normal"}
+            color="textColor"
+            fontSize="18px"
+            mt="18px"
+            fontWeight="normal"
           >
-            {business.map((item: { list: string }, index) => (
-              <ListItem key={index} mb={"10px"}>
-                <ListIcon as={CheckIcon} color="black" />
-                {item.list}
-              </ListItem>
-            ))}
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              <Link href={"/"}>
-                <span style={{ color: "#3898ec" }}>
-                  More Scheduling Feature.
-                </span>
+            {businessData.businessContent?.map(
+              (item: string, index: number) => (
+                <ListItem key={index} mb="10px" display="flex" gap="16px">
+                  <ListIcon as={CheckIcon} color="black" mt="5px" />
+                  {item}
+                </ListItem>
+              )
+            )}
+            <ListItem color="primary" display="flex" gap="16px">
+              <ListIcon as={CheckIcon} color="black" mt="5px" />
+              <Link as={NextLink} href="/">
+                <span>{businessData.businessLink}</span>
               </Link>
             </ListItem>
           </List>
           <Button
             bg="primary"
-            color="#ffffff"
+            color="secondary"
             p={7}
-            textTransform={"capitalize"}
-            _hover={{ bg: "#5AA8EC" }}
+            textTransform="capitalize"
+            _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {businessData.businessBtn}
           </Button>
         </GridItem>
       </Grid>

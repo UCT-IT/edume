@@ -11,14 +11,22 @@ import {
   ListIcon,
   ListItem,
   Text,
-  Image,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import Link from "next/link";
-import { tutorTeacher } from "@/assets/Data/Data";
+import { Link } from "@chakra-ui/next-js";
+import NextLink from "next/link";
+import { strings } from "@/assets/locales/locales";
+import tutorImage from "@/assets/images/tutor.svg";
+import Image from "next/image";
 
 const TutorTeacher = () => {
+  const tutorData = {
+    tutorTitle: strings?.features?.tutor?.title,
+    tutorContent: strings?.features?.tutor?.content,
+    tutorLink: strings?.features?.tutor?.link,
+    tutorBtn: strings?.features?.tutor?.btn,
+  };
   return (
     <Container maxW="container.xl " px={["20px", "", ""]}>
       <Grid
@@ -29,55 +37,48 @@ const TutorTeacher = () => {
         }}
         paddingY="50px"
       >
-        <GridItem order={[2, 1, 1]}>
+        <GridItem order={[2, 2, 1]}>
           <Text
-            fontWeight={"medium"}
+            fontWeight="medium"
             textTransform="capitalize"
-            fontSize={"22px"}
-            mt={"10px"}
+            fontSize="22px"
+            mt="10px"
           >
-            Equip Your Tutors & Teachers
+            {tutorData.tutorTitle}
           </Text>
           <List
             spacing={6}
-            color={"#555"}
-            fontSize={"18px"}
-            mt={"18px"}
-            fontWeight={"normal"}
+            color="textColor"
+            fontSize="18px"
+            mt="18px"
+            fontWeight="normal"
           >
-            {tutorTeacher.map((item: { list: string }, index) => (
-              <ListItem key={index} mb={"10px"}>
-                <ListIcon as={CheckIcon} color="black" />
-                {item.list}
+            {tutorData.tutorContent?.map((item: string, index: number) => (
+              <ListItem key={index} mb="10px" display="flex" gap="16px">
+                <ListIcon as={CheckIcon} color="black" mt="5px" />
+                {item}
               </ListItem>
             ))}
-            <ListItem>
-              <ListIcon as={CheckIcon} color="black" />
-              <Link href={"/"}>
-                <span style={{ color: "#3898ec" }}>
-                  More Scheduling Feature.
-                </span>
+            <ListItem color="primary" display="flex" gap="16px">
+              <ListIcon as={CheckIcon} color="black" mt="5px" />
+              <Link as={NextLink} href="/">
+                <span>{tutorData.tutorLink}</span>
               </Link>
             </ListItem>
           </List>
           <Button
             bg="primary"
-            color="#ffffff"
+            color="secondary"
             p={7}
-            textTransform={"capitalize"}
-            _hover={{ bg: "#5AA8EC" }}
+            textTransform="capitalize"
+            _hover={{ bg: "buttonHoverd" }}
             mt={6}
           >
-            Start your free trial
+            {tutorData.tutorBtn}
           </Button>
         </GridItem>
-        <GridItem pos={"relative"} order={[1, 2, 2]}>
-          <Image
-            width={{ base: "100%", sm: "75%", lg: "400px" }}
-            margin="auto"
-            alt="image"
-            src="https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61a5409d9377f47c5ce18b62_teachers.svg"
-          ></Image>
+        <GridItem pos="relative" order={[1, 1, 2]}>
+          <Image alt="Tutor image" src={tutorImage}></Image>
         </GridItem>
       </Grid>
     </Container>
