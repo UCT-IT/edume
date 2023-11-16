@@ -84,7 +84,7 @@ export let strings = new LocalizedStrings({
       getPaid: {
         title: "Get Paid Faster",
         content: [
-          "Offer flexible billing options including hourly billing, package billing, flat fees or a combination to accommodate your clients’ needs.",
+          "Offer flexible billing options including hourly billing, package billing, flat fees or a combination to accommodate your client's needs.",
           "Generate single invoices, multiple invoices, or automate your invoicing.",
           "Send automatic Invoice Due Reminders and Low Package Balance Alerts to your clients.",
           "Allow your clients to pay online, or process payments on their behalf.",
@@ -135,60 +135,67 @@ export let strings = new LocalizedStrings({
         content: [
           "Use our various reports to keep track of business performance and easily identify opportunities for growth.",
           "Add additional locations, branches, or switch to a franchise system without outgrowing the software.",
-          "Use bulk actions to quickly update records whether it’s one or one thousand at a time.",
+          "Use bulk actions to quickly update records whether it's one or one thousand at a time.",
           "Choose from 60+ free integrations & add-ons that allow you to extend the functionality of your account to meet the needs of your growing business.",
         ],
         link: "More Reporting Features",
         btn: "Start Your Free Trial",
       },
     },
-    works: {
-      title: "How it Works",
-      contents: [
+    footer: {
+      footerHeader: `Simplify management, save time, and grow your
+      business.`,
+      footerBtn1: "Start Your Free Trial",
+      footerBtn2: "Take a Quick Tour",
+      footerColumns: [
         {
-          heading: "Add Students & Tutors/Teachers",
-          desc: "Add students and teachers one at a time or import them in bulk.",
+          footerTitle: "NAVIGATION",
+          footerLinks: [
+            "Scheduling",
+            "Communication",
+            "Billing & Payroll",
+            "Records & Analytics",
+            "Multiple Locations",
+            "Integrations",
+            "Website Plugins Demo",
+          ],
         },
         {
-          heading: "Schedule Lessons",
-          desc: "Add lessons to the calendar or have clients book online.",
+          footerTitle: "RESOURCES",
+          footerLinks: [
+            "Tutorials",
+            "Getting Started Guide",
+            "Knowledge Base",
+            "Teachworks Blog",
+            "Client Testimonials",
+          ],
         },
         {
-          heading: "Bill Your Clients",
-          desc: "Generate invoices and process payments.",
+          footerTitle: "SOLUTIONS",
+          footerLinks: [
+            "Tutoring Centers",
+            "Language Schools",
+            "Test Preparation",
+            "Music Schools",
+            "Driving Schools",
+          ],
         },
         {
-          heading: "Grow Your Business",
-          desc: "Use our reports to keep track of your business performance.",
+          footerTitle: "OUR COMPANY",
+          footerLinks: [
+            "About Us",
+            "Contact",
+            "Test Preparation",
+            "Careers",
+            "Status Page",
+          ],
+        },
+        {
+          footerTitle: "LEGAL",
+          footerLinks: ["Privacy Policy", "Terms & Conditions"],
         },
       ],
-    },
-    businessWork: {
-      title: "GROW WITH US",
-      subTitle: "Built to Grow With Your Business",
-      description:
-        "Whether you have 10 students or 10,000, Teachworks is loaded with features to make managing large quantities of students, tutors/teachers and lessons faster & more efficient. If you have plans to expand to multiple locations or build a franchise system, Teachworks provides the tools to help you manage and monitor multiple locations from a single master account.",
-      link: "Manage Multiple Branches",
-    },
-    FAQ: {
-      title: "Popular Questions",
-      content: [
-        {
-          title: "Is my data secure?",
-          desc: "Yes! Teachworks follows best practices for securing data and access to the software, ensuring your data is always safe and secure. For more information,",
-          link: "visit our Knowledge Base.",
-        },
-        {
-          title: "Is support included?",
-          desc: "Yes! Email support is included in all of our plans. We are very responsive to any questions you may have. We also have a detailed knowledge base and tutorials to help you make the most of your account.",
-        },
-        {
-          title: "Can I integrate with my website?",
-          desc: "Yes! We have many features that can be integrated with your website. This includes Website Booking, Custom Forms, Website Profiles for tutors & teachers and more!,",
-          link: "View our demo site",
-        },
-      ],
-      link: "See More FAQs",
+      footerCopyRight: "© Teachworks 2021",
     },
   },
   bg: {},
