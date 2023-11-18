@@ -9,12 +9,12 @@ import Business from "./Business/Business";
 const Features = () => {
   return (
     <React.Fragment>
-      <Feature />
+      {/* <Feature />
       <PaidSection />
       <Clients />
       <Communication />
       <TutorTeacher />
-      <Business />
+      <Business /> */}
     </React.Fragment>
   );
 };
