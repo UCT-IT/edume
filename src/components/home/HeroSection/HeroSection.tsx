@@ -1,11 +1,10 @@
 "use client";
-import { Box, Button, Container, Grid, GridItem, Text } from "@chakra-ui/react";
 import React from "react";
-import heroSectionImg from "../../assets/images/heroSectionImage.svg";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { strings } from "@/assets/locales/locales";
 import HeroBackground from "../HeroBackground/HeroBackground";
+import heroSectionImg from "@/assets/images/heroSectionImage.svg";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -34,59 +33,38 @@ const HeroSection = () => {
   return (
     <React.Fragment>
       <HeroBackground>
-        <Container maxW="container.xl" h="100%">
-          <Grid
-            templateColumns={{ base: "1fr", md: "1fr 1fr", lg: "1fr 2fr" }}
-            alignItems="center"
-            justifyContent="center"
-            gap={{ base: "null", md: "20px" }}
-            h="100%"
-            pos="relative"
-          >
-            <Box
-              textColor="secondary"
-              textAlign={{ base: "center", md: "left" }}
-            >
-              <Text
-                fontSize={{ base: "27px", sm: "30px", lg: "54px" }}
-                fontWeight="bold"
-                lineHeight="1.2"
-                // whiteSpace="pre-wrap"
-              >
-                {data.title}
-              </Text>
-              <Text
-                transition="opacity 0.5s"
-                opacity={fadeOut ? 0 : 1}
-                fontSize={{ base: "24px", sm: "28px", lg: "45px" }}
-                textColor="black"
-                my="10px"
-              >
-                {data.animatedText?.[currentTextIndex]}
-              </Text>
-              <Text>{data.description}</Text>
-              <Button
-                bg="#8BC220"
-                _hover={{ bg: "#97CE2C" }}
-                color="secondary"
-                px="40px"
-                py="25px"
-                my="20px"
-                borderRadius="3px"
-                fontWeight="normal"
-              >
-                {data.btn}
-              </Button>
-              <Text>{data.tour}</Text>
-            </Box>
-            <Box zIndex={2} w="100%">
-              <Image
-                src={heroSectionImg}
-                alt="Hero Section Banner Image"
-              ></Image>
-            </Box>
-          </Grid>
-        </Container>
+        <div className="relative z-10">
+          <div className="container mx-auto pt-32 pb-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center md:gap-5 h-full relative md:pl-5 lg:pl-10">
+              <div className="text-secondary text-center md:text-left">
+                <h2 className="text-[27px] md:text-[30px] lg:text-[54px] font-bold whitespace-pre-line">
+                  {data.title}
+                </h2>
+                <h2
+                  className={`transition-opacity duration-500 opacity-${
+                    fadeOut ? 0 : 1
+                  } text-[24px] md:text-[45px] text-black py-2 font-kalam italic`}
+                >
+                  {data.animatedText?.[currentTextIndex]}
+                </h2>
+                <p className="leading-8 py-5 whitespace-pre-line font-light">
+                  {data.description}
+                </p>
+                <button className="bg-tertiary hover:bg-[#97CE2C] text-secondary px-10 py-6 my-5 rounded">
+                  {data.btn}
+                </button>
+                <p className="font-light">{data.tour}</p>
+              </div>
+              <div className="h-full ">
+                <Image
+                  src={heroSectionImg}
+                  alt="Hero Section Banner Image"
+                  className="w-full h-full lg:w-3/4 lg:absolute right-0 lg:-bottom-12"
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </div>
       </HeroBackground>
     </React.Fragment>
   );
