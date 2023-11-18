@@ -9,12 +9,11 @@ import React from "react";
 const HomePage = () => {
   return (
     <React.Fragment>
-      <HeroSection />
       <Features />
-      <Works></Works>
+      {/* <Works></Works>
       <TestimonialCarousel></TestimonialCarousel>
       <GrowBusiness></GrowBusiness>
-      <FAQ></FAQ>
+      <FAQ></FAQ> */}
     </React.Fragment>
   );
 };
