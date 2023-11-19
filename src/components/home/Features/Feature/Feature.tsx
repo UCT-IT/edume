@@ -61,7 +61,7 @@ const Feature = () => {
       </div>
       <div className="p-7 relative">
         <div
-          style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}
+          style={{ clipPath: "polygon(0 17%, 100% 0, 100% 100%, 0% 100%)" }}
           className="p-8 md:p-14 mb-14 bg-[#FDF7DA] text-center relative"
         >
           <h2 className="text-black font-medium">Teachworks API</h2>
