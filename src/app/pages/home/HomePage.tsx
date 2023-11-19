@@ -5,6 +5,7 @@ const HomePage = () => {
   return (
     <React.Fragment>
       <HeroSection />
+      <Features />
     </React.Fragment>
   );
 };

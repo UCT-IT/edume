@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
       backgroundImage: {
         "hero-bg": "url('/heroBg.svg')",
       },
@@ -15,7 +16,6 @@ const config: Config = {
         primary: "#3898ec",
         secondary: "#fff",
         tertiary: "#8bc220",
-        buttonHoverd: "#5AA8EC",
         textColor: "#555",
         footerLinksColor: "#ffffffad",
       },
