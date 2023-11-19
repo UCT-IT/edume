@@ -1,3 +1,4 @@
+import Features from "@/components/home/Features/Features";
 import HeroSection from "@/components/home/HeroSection/HeroSection";
 import React from "react";
 

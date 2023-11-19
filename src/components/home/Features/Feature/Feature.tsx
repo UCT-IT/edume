@@ -4,8 +4,7 @@ import featureImage from "@/assets/images/feature.svg";
 import Image from "next/image";
 import { IoMdCheckmark } from "react-icons/io";
 import Link from "next/link";
-import FeatureButton from "@/components/button/FeatureButton";
-
+import CommonButton from "@/components/common/button/CommonButton";
 const Feature = () => {
   const featureData = {
     title: strings?.features?.title,
@@ -43,7 +42,7 @@ const Feature = () => {
                 {data}
               </li>
             ))}
-            <li className="text-primary mb-3 flex text-[18px] font-normal gap-3 ">
+            <li className="text-primary mb-3 flex text-[16px] font-normal gap-3 ">
               <span className="font-bold text-black text-[24px]">
                 <IoMdCheckmark />
               </span>
@@ -52,7 +51,12 @@ const Feature = () => {
               </Link>
             </li>
           </ul>
-          <FeatureButton href="/" text={featureData.btn}></FeatureButton>
+          <CommonButton
+            href="/"
+            text={featureData.btn as string}
+            hover="#5AA8EC"
+            color="primary"
+          ></CommonButton>
         </div>
       </div>
       <div className="p-7 relative">

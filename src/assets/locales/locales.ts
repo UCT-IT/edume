@@ -76,7 +76,7 @@ export let strings = new LocalizedStrings({
           "Speed up scheduling for one-on-one and group lessons using our many calendar views and time-savers.",
           "Send reminders to clients when their invoices are due.",
           "Allow your tutors & teachers to manage their own schedules and complete lessons with ease.",
-          "Allow your clients to easily book, request, join and reschedule their own lessons",
+          `Allow your clients to easily book, request, join and their own lessons`,
           "Quickly switch between various calendars and views, spot conflicts, copy lessons, drag-and-drop lessons to update lesson data and more.",
         ],
         link: "More Scheduling Feature.",
