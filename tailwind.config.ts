@@ -12,8 +12,7 @@ const config: Config = {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic":
         //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-bg":
-          "url('https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61856827909fb72472abfc6c_601da34bc4b63f405a9e97f1_bg-test2.svg')",
+        "hero-bg": "url('/heroBg.svg')",
       },
       colors: {
         primary: "#3898ec",
