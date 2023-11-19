@@ -8,9 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-
       backgroundImage: {
-        "hero-bg": "url('/heroBg.svg')",
+        "hero-bg": "url('/home/heroBg.svg')",
       },
       colors: {
         primary: "#3898ec",

@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Button,
@@ -13,7 +14,8 @@ import NextLink from "next/link";
 import React, { useEffect, useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import { strings } from "@/assets/locales/locales";
-import { Link } from "@chakra-ui/next-js";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 // Now you can use NextLink in your code
 
@@ -50,130 +52,88 @@ const Navbar = () => {
   return (
     <React.Fragment>
       {/* For Md and Lg devices */}
-      <Box
-        as="nav"
-        py="20px"
-        pos="fixed"
-        w="100%"
-        zIndex={10}
-        display={{ base: "none", sm: "block" }}
-        bgColor={isScrolled ? "tertiary" : "transparent"}
+      <nav
+        className={`py-5 fixed w-full z-[999] hidden md:block ${
+          isScrolled ? "bg-tertiary" : "bg-transparent"
+        }`}
       >
-        <Container
-          maxW="container.xl"
-          display="flex"
-          alignItems="center"
-          justifyContent="between"
-        >
-          <Text
-            color="secondary"
-            fontWeight="semibold"
-            fontSize={["25px", "15px", "25px"]}
-          >
+        <div className="container mx-auto px-2 flex items-center justify-between gap-4 lg:gap-10 text-base">
+          <h1 className="text-secondary font-semibold text-2xl md:text-lg lg:text-2xl">
             teachworks.
-          </Text>
-          <Flex
-            alignItems="center"
-            gap={["null", "10px", "15px", "25px"]}
-            ps={["null", "15px", "25px", "50px"]}
-          >
+          </h1>
+          <div className="flex items-center gap-2 lg:gap-8 flex-grow text-sm lg:text-base">
             <DropdownMenu {...dropdownFeatures} />
             <DropdownMenu {...dropdownSolution} />
             <Link
-              as={NextLink}
-              color="secondary"
               href="#"
-              fontSize={["null", "12px", "14px", "16px"]}
-              _hover={{ textDecoration: "none" }}
+              className="text-secondary hover:no-underline hover:text-[#122634]"
             >
               Testimonials
             </Link>
             <Link
-              as={NextLink}
-              color="secondary"
               href="#"
-              fontSize={["null", "12px", "14px", "16px"]}
-              _hover={{ textDecoration: "none" }}
+              className="text-secondary hover:no-underline hover:text-[#122634]"
             >
               Pricing
             </Link>
             <DropdownMenu {...dropdownSupport} />
             <Link
-              as={NextLink}
-              color="secondary"
               href="#"
-              fontSize={["null", "12px", "14px", "16px"]}
-              _hover={{ textDecoration: "none" }}
+              className="text-secondary hover:no-underline hover:text-[#122634]"
             >
               Login
             </Link>
-          </Flex>
-
-          <Spacer></Spacer>
-          <Button
-            bg="#122634"
-            _hover={{ bg: "#193447" }}
-            color="secondary"
-            px={["null", "10px", "15px", "20px"]}
-            py={["null", "10px", "20px", "25px"]}
-            borderRadius="3px"
-            fontWeight="normal"
-            fontSize={["null", "12px", "14px", "16px"]}
-          >
+          </div>
+          <button className="bg-[#122634] hover:bg-[#193447] text-secondary px-10 py-4 rounded">
             {strings?.nav?.btn}
-          </Button>
-        </Container>
-      </Box>
+          </button>
+        </div>
+      </nav>
 
       {/* For base and sm devices */}
-      <Box
-        as="nav"
-        w="100%"
-        pos="fixed"
-        zIndex={2}
-        display={{ base: "block", sm: "none" }}
-        bgColor={isScrolled ? "tertiary" : "transparent"}
+      <nav
+        className={`w-full fixed block md:hidden z-[1000] ${
+          isScrolled ? "bg-tertiary" : "bg-transparent"
+        }`}
       >
-        <Container
-          maxW="container.sm"
-          display="flex"
-          justifyContent="space-between"
-          p="20px"
-          color="secondary"
-        >
-          <Text fontWeight="bold" fontSize="20px">
-            teachworks.
-          </Text>
-          <Box onClick={() => setIsMenuOpen(!isMenuOpen)} cursor={"pointer"}>
+        <div className="container mx-auto flex justify-between p-5 text-secondary">
+          <h1 className="font-bold text-xl">teachworks.</h1>
+          <div
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="cursor-pointer"
+          >
             <HamburgerIcon />
-          </Box>
-        </Container>
+          </div>
+        </div>
+
         {isMenuOpen && (
-          <SlideFade in={isMenuOpen} offsetY="-50px">
-            <VStack
-              w="100%"
-              bg="secondary"
-              px="30px"
-              py="20px"
-              spacing={4}
-              alignItems={"left"}
-            >
-              <DropdownMenu {...dropdownFeatures} />
-              <DropdownMenu {...dropdownSolution} />
-              <Link as={NextLink} href="#" _hover={{ textDecoration: "none" }}>
+          <motion.div
+            initial={{ y: -100, opacity: 0, scaleY: 0.5 }}
+            animate={{ y: 0, opacity: 1, scaleY: 1 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            className={`w-full bg-secondary px-[30px] py-5 flex-col space-y-4 items-center justify-center`}
+          >
+            <DropdownMenu {...dropdownFeatures} />
+            <DropdownMenu {...dropdownSolution} />
+            <div>
+              <Link href="#" className="hover:no-underline">
                 {strings?.nav?.testimonial}
               </Link>
-              <Link as={NextLink} href="#" _hover={{ textDecoration: "none" }}>
+            </div>
+            <div>
+              <Link href="#" className="hover:no-underline">
                 {strings?.nav?.pricing}
               </Link>
-              <DropdownMenu {...dropdownSupport} />
-              <Link as={NextLink} href="#" _hover={{ textDecoration: "none" }}>
+            </div>
+            <DropdownMenu {...dropdownSupport} />
+            <div>
+              <Link href="#" className="hover:no-underline">
                 {strings?.nav?.login}
               </Link>
-            </VStack>
-          </SlideFade>
+            </div>
+          </motion.div>
         )}
-      </Box>
+      </nav>
     </React.Fragment>
   );
 };

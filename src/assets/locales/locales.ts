@@ -16,7 +16,7 @@ export let strings = new LocalizedStrings({
         "Communication",
         "Billing & Payroll",
         "Records & Analytics",
-        "Customize & secondary Label",
+        "Customize & white Label",
         "Automation",
         "Multiple Branches",
         "Integrations & Add-Ons",

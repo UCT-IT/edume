@@ -10,42 +10,27 @@ type DropdownMenuPropsType = {
 const DropdownMenu = ({ title, dropdownMenus }: DropdownMenuPropsType) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <Box
+    <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      position="relative"
-      fontSize={["16px", "12px", "14px", "16px"]}
+      className="relative"
     >
-      <Text
-        cursor="pointer"
-        color={{ base: "null", sm: `${isHovered ? "#122634" : "secondary"}` }}
-        display={{ base: "flex", sm: "block" }}
-        justifyContent={{ base: "space-between" }}
-        alignItems={["center", "null"]}
-      >
+      <div className="cursor-pointer md:text-secondary hover:text-[#122634] flex justify-between items-center">
         {title} <ChevronDownIcon />
-      </Text>
+      </div>
       {isHovered && (
-        <VStack
-          position={{ base: "static", sm: "absolute" }}
-          top={{ base: "null", sm: "100%" }}
-          left={{ base: "null", sm: "0" }}
-          zIndex="1"
-          width={["100%", "max-content", "max-content", "250px"]}
-          alignItems="left"
-          spacing={[4, 2, 2, 4]}
-          px={["20px", "10px", "20px", "30px"]}
-          py={["null", "10px", "15px", "20px"]}
-          backgroundColor="secondary"
-        >
+        <ul className="md:absolute md:top-full w-full md:w-64 flex-col items-start space-y-5 px-10 py-5 bg-secondary text-textColor">
           {dropdownMenus?.map((menu, i) => (
-            <Text key={i} _hover={{ fontWeight: "semibold", color: "122634" }}>
+            <li
+              key={i}
+              className="hover:font-semibold hover:text-[#122634] cursor-pointer"
+            >
               {menu}
-            </Text>
+            </li>
           ))}
-        </VStack>
+        </ul>
       )}
-    </Box>
+    </div>
   );
 };
 

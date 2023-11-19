@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { strings } from "@/assets/locales/locales";
 import HeroBackground from "../HeroBackground/HeroBackground";
-import heroImages from "@/assets/images/heroSectionImage.svg";
+import heroSectionImage from "../../../../public/home/heroSectionImage.svg";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -49,14 +49,15 @@ const HeroSection = () => {
               <p className="leading-8 py-5 whitespace-pre-line font-light">
                 {data.description}
               </p>
-              <button className="bg-tertiary hover:bg-[#97CE2C] text-secondary px-10 py-6 my-5 rounded">
+              <button className="bg-tertiary hover:bg-[#97CE2C] text-secondary px-10 py-4 my-5 rounded">
                 {data.btn}
               </button>
               <p className="font-light">{data.tour}</p>
             </div>
             <div className="w-full">
               <Image
-                src={heroImages}
+                src={heroSectionImage}
+                priority
                 alt="Hero Section Banner Image"
                 className="w-full h-full lg:w-3/4 lg:absolute right-0 lg:-bottom-12"
               />
