@@ -13,8 +13,8 @@ const Features = () => {
       <PaidSection />
       <Clients />
       <Communication />
-      {/* <TutorTeacher />
-      <Business /> */}
+      <TutorTeacher />
+      {/* <Business /> */}
     </React.Fragment>
   );
 };
