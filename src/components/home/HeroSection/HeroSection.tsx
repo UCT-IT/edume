@@ -60,7 +60,7 @@ const HeroSection = () => {
                   src={heroSectionImg}
                   alt="Hero Section Banner Image"
                   className="w-full h-full lg:w-3/4 lg:absolute right-0 lg:-bottom-12"
-                ></Image>
+                />
               </div>
             </div>
           </div>
