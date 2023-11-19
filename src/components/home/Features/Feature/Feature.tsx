@@ -1,25 +1,10 @@
-"use client";
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  List,
-  ListIcon,
-  ListItem,
-  Text,
-} from "@chakra-ui/react";
-import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import "./Feature.css";
 import { strings } from "@/assets/locales/locales";
 import featureImage from "@/assets/images/feature.svg";
 import Image from "next/image";
-import { Link } from "@chakra-ui/next-js";
-import NextLink from "next/link";
+import { IoMdCheckmark } from "react-icons/io";
+import Link from "next/link";
+import FeatureButton from "@/components/button/FeatureButton";
 
 const Feature = () => {
   const featureData = {
@@ -34,110 +19,63 @@ const Feature = () => {
     link: strings?.features?.link,
     seeMore: strings?.features?.seeMore,
     desc: strings?.features?.desc,
+    listLink: strings?.features?.feature?.link,
+    btn: strings?.features?.feature?.btn,
   };
   return (
-    <Container maxW="container.xl" px={["20px", "", ""]}>
-      <Grid
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-          lg: "repeat(2, 1fr)",
-        }}
-        gap={7}
-        paddingY="50px"
-      >
-        <GridItem order={[2, 2, 1]}>
-          <Text
-            fontWeight="bold"
-            mb="17px"
-            color="tertiary"
-            textTransform="uppercase"
-          >
-            {featureData.title}
-          </Text>
-          <Heading>{featureData.subTitle}</Heading>
-          <Text fontWeight="medium" fontSize="22px" mt="10px">
+    <div className="container px-[20px] py-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="order-last md:order-first">
+        <h3 className="text-tertiary font-bold mb-4 ">{featureData.title}</h3>
+        <h1 className="text-4xl font-medium mb-4">{featureData.subTitle}</h1>
+        <div>
+          <h2 className="mb-4 font-medium text-2xl">
             {featureData.featureTitle}
-          </Text>
-          <List
-            spacing={6}
-            color="textColor"
-            fontSize="18px"
-            mt="18px"
-            fontWeight="normal"
-          >
-            {featureData.featureContent?.map((item: string, index: number) => (
-              <ListItem key={index} display="flex" gap="16px" mb="10px">
-                <ListIcon mt="5px" as={CheckIcon} color="black" />
-                <Text>{item}</Text>
-              </ListItem>
+          </h2>
+          <ul>
+            {featureData.featureContent?.map((data, index) => (
+              <li
+                className="text-textColor mb-3 flex text-[18px] font-normal gap-3"
+                key={index}
+              >
+                <span className="font-bold text-black text-[24px]">
+                  <IoMdCheckmark />
+                </span>
+                {data}
+              </li>
             ))}
-            <ListItem
-              color="primary"
-              display="flex"
-              alignItems="center"
-              gap="16px"
-            >
-              <ListIcon as={CheckIcon} color="black" />
-              <Link as={NextLink} href="/">
-                <span>{featureData.featureLink}</span>
-              </Link>
-            </ListItem>
-          </List>
-          <Button
-            bg="primary"
-            color="secondary"
-            p={7}
-            textTransform="capitalize"
-            _hover={{ bg: "buttonHoverd" }}
-            mt={4}
-          >
-            {featureData.featureBtn}
-          </Button>
-        </GridItem>
-        <GridItem pos="relative" order={[1, 1, 2]}>
-          <Box
-            fontSize="20px"
-            fontWeight="bold"
-            borderRadius="10px"
-            textAlign="center"
-            zIndex={1}
-            w="50%"
-            p={{ base: "5px", md: "16px", lg: "16px" }}
-            pos="absolute"
-            left="25%"
-            top="-25px"
-            bg="#F4D12F"
-            color="secondary"
-          >
-            {featureData.badge}
-          </Box>
-          <Box
-            mb={["", "", "60px"]}
-            className="clip-path"
-            bg="#FDF7DA"
-            p={10}
-            py="50px"
-            textAlign="center"
-            position="relative"
-          >
-            <Text color="textColor" mb="10px">
-              {featureData.text}
-              <span>
-                <Link href="/">
-                  <Text color="primary">{featureData.link}</Text>
-                </Link>
+            <li className="text-primary mb-3 flex text-[18px] font-normal gap-3 ">
+              <span className="font-bold text-black text-[24px]">
+                <IoMdCheckmark />
               </span>
-              {featureData.desc}
-            </Text>
-            <Link href="/">
-              <Text color="primary">{featureData.seeMore}</Text>
-            </Link>
-          </Box>
-          <Image alt="Feature image" src={featureImage}></Image>
-        </GridItem>
-      </Grid>
-    </Container>
+              <Link className="hover:text-black transition-all" href="/">
+                {featureData.listLink}
+              </Link>
+            </li>
+          </ul>
+          <FeatureButton href="/" text={featureData.btn}></FeatureButton>
+        </div>
+      </div>
+      <div className="p-7 relative">
+        <div
+          style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}
+          className="p-8 md:p-14 mb-14 bg-[#FDF7DA] text-center relative"
+        >
+          <h2 className="text-black font-medium">Teachworks API</h2>
+          <p className="text-[14px] my-4 text-textColor">{featureData.desc}</p>
+          <Link className="text-primary hover:text-black text-[15px]" href="/">
+            {featureData.link}
+          </Link>
+        </div>
+        <div className="w-1/2 text-center left-[25%] m-auto bg-[#F4D12F] text-secondary text-xl md:text-2xl font-bold p-3 rounded-lg absolute top-0 z-30">
+          {featureData.badge}
+        </div>
+        <Image
+          className="w-full md:w-3/4"
+          alt="Feature image"
+          src={featureImage}
+        ></Image>
+      </div>
+    </div>
   );
 };
 
