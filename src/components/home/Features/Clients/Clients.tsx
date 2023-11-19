@@ -14,7 +14,7 @@ const Clients = () => {
     btn: strings?.features?.client?.btn,
   };
   return (
-    <div className="container px-[20px] md:py-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="container px-[20px] md:pb-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
       <div className="order-last md:order-first">
         <div>
           <h2 className="mb-4 font-medium text-2xl">{data.title}</h2>

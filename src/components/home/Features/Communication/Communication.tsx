@@ -14,7 +14,7 @@ const Communication = () => {
     btn: strings?.features?.communication?.btn,
   };
   return (
-    <div className="container px-[20px] md:py-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="container px-[20px] md:pb-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
       <div className="p-7 relative">
         <Image
           className="w-full md:w-full lg:w-3/4 h-full"

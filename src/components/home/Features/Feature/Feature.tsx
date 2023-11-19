@@ -74,7 +74,7 @@ const Feature = () => {
           {featureData.badge}
         </div>
         <Image
-          className="w-full md:w-full lg:w-3/4 h-full"
+          className="w-full md:w-full lg:w-3/4"
           alt="Feature image"
           src={featureImage}
         ></Image>
