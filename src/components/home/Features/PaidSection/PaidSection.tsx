@@ -41,7 +41,10 @@ const PaidSection = () => {
               <span className="font-bold text-black text-[24px]">
                 <IoMdCheckmark />
               </span>
-              <Link className="hover:text-black transition-all" href="/">
+              <Link
+                className="hover:text-black transition-all text-[18px]"
+                href="/"
+              >
                 {data.link}
               </Link>
             </li>

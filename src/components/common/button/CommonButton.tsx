@@ -7,7 +7,7 @@ const CommonButton = ({ text, href, hover, color }: buttonProps) => {
   return (
     <Link href={href}>
       <button
-        className={`btn mt-6 py-5 px-10 rounded-md hover:bg-[${hover}] bg-${color} text-white`}
+        className={`btn mt-6 py-4 px-10 rounded-md hover:bg-[${hover}] bg-${color} text-white`}
       >
         {text}
       </button>

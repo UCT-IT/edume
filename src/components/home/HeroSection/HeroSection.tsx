@@ -40,8 +40,8 @@ const HeroSection = () => {
                 {data.title}
               </h2>
               <h2
-                className={`transition-opacity duration-500 opacity-${
-                  fadeOut ? 0 : 1
+                className={`transition-opacity duration-1000 ${
+                  fadeOut ? "opacity-0" : "opacity-1"
                 } text-[24px] md:text-[45px] text-black py-2 font-kalam italic`}
               >
                 {data.animatedText?.[currentTextIndex]}
