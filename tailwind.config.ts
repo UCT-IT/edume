@@ -8,13 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {},
+
+      backgroundImage: {
+        "hero-bg": "url('/heroBg.svg')",
+      },
       colors: {
         primary: "#3898ec",
         secondary: "#fff",
         tertiary: "#8bc220",
         textColor: "#555",
         footerLinksColor: "#ffffffad",
+      },
+      fontFamily: {
+        kalam: ["Kalam", "cursive"],
       },
     },
   },
