@@ -1,91 +1,63 @@
-"use client";
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  List,
-  ListIcon,
-  ListItem,
-  Text,
-} from "@chakra-ui/react";
-import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
-import { Link } from "@chakra-ui/next-js";
-import NextLink from "next/link";
 import { strings } from "@/assets/locales/locales";
 import communitionImage from "@/assets/images/communication.svg";
 import Image from "next/image";
+import CommonButton from "@/components/common/button/CommonButton";
+import { IoMdCheckmark } from "react-icons/io";
+import Link from "next/link";
 
 const Communication = () => {
-  const communicationData = {
-    communicationTitle: strings?.features?.communication?.title,
-    communicationContent: strings?.features?.communication?.content,
-    communicationLink: strings?.features?.communication?.link,
-    communicationBtn: strings?.features?.communication?.btn,
+  const data = {
+    title: strings?.features?.communication?.title,
+    content: strings?.features?.communication?.content,
+    link: strings?.features?.communication?.link,
+    btn: strings?.features?.communication?.btn,
   };
   return (
-    <Container maxW="container.xl " px={["20px", "", ""]}>
-      <Grid
-        placeItems="center"
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-          lg: "repeat(2, 1fr)",
-        }}
-        gap={6}
-        paddingY="50px"
-      >
-        <GridItem pos="relative">
-          <Image alt="Communication Image" src={communitionImage}></Image>
-        </GridItem>
-        <GridItem>
-          <Text
-            fontWeight="medium"
-            textTransform="capitalize"
-            fontSize="22px"
-            mt="10px"
-          >
-            {communicationData.communicationTitle}
-          </Text>
-          <List
-            spacing={6}
-            color="textColor"
-            fontSize="18px"
-            mt={"18px"}
-            fontWeight="normal"
-          >
-            {communicationData.communicationContent?.map(
-              (item: string, index: number) => (
-                <ListItem key={index} mb="10px" display="flex" gap="16px">
-                  <ListIcon as={CheckIcon} color="black" mt="5px" />
-                  {item}
-                </ListItem>
-              )
-            )}
-            <ListItem color="primary" display="flex" gap="16px">
-              <ListIcon as={CheckIcon} color="black" mt="5px" />
-              <Link as={NextLink} href="/">
-                <span>{communicationData.communicationLink}</span>
+    <div className="container px-[20px] md:py-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="p-7 relative">
+        <Image
+          className="w-full md:w-full lg:w-3/4 h-full"
+          alt="Feature image"
+          src={communitionImage}
+        ></Image>
+      </div>
+      <div className="">
+        <div>
+          <h2 className="mb-4 font-medium text-2xl">{data.title}</h2>
+          <ul>
+            {data.content?.map((data, index) => (
+              <li
+                className="text-textColor mb-3 flex text-[16px] font-normal gap-3"
+                key={index}
+              >
+                <span className="font-bold text-black text-[24px]">
+                  <IoMdCheckmark />
+                </span>
+                {data}
+              </li>
+            ))}
+            <li className="text-primary mb-3 flex text-[18px] font-normal gap-3 ">
+              <span className="font-bold text-black text-[24px]">
+                <IoMdCheckmark />
+              </span>
+              <Link
+                className="hover:text-black transition-all text-[18px]"
+                href="/"
+              >
+                {data.link}
               </Link>
-            </ListItem>
-          </List>
-          <Button
-            bg="primary"
-            color="secondary"
-            p={7}
-            textTransform="capitalize"
-            _hover={{ bg: "buttonHoverd" }}
-            mt={6}
-          >
-            {communicationData.communicationBtn}
-          </Button>
-        </GridItem>
-      </Grid>
-    </Container>
+            </li>
+          </ul>
+          <CommonButton
+            href="/"
+            text={data.btn as string}
+            hover="#5AA8EC"
+            color="primary"
+          ></CommonButton>
+        </div>
+      </div>
+    </div>
   );
 };
 
