@@ -7,19 +7,19 @@ import Link from "next/link";
 import CommonButton from "@/components/common/button/CommonButton";
 const Feature = () => {
   const featureData = {
-    title: strings?.features?.title,
-    subTitle: strings?.features?.subTitle,
-    featureTitle: strings?.features?.feature?.title,
-    featureContent: strings?.features?.feature?.content,
-    featureLink: strings?.features?.feature?.link,
-    featureBtn: strings?.features?.feature?.btn,
-    badge: strings?.features?.feature?.badge,
-    text: strings?.features?.text,
-    link: strings?.features?.link,
-    seeMore: strings?.features?.seeMore,
-    desc: strings?.features?.desc,
-    listLink: strings?.features?.feature?.link,
-    btn: strings?.features?.feature?.btn,
+    title: strings.features.title,
+    subTitle: strings.features.subTitle,
+    featureTitle: strings.features.feature.title,
+    featureContent: strings.features.feature.content,
+    featureLink: strings.features.feature.link,
+    featureBtn: strings.features.feature.btn,
+    badge: strings.features.feature.badge,
+    text: strings.features.text,
+    link: strings.features.link,
+    seeMore: strings.features.seeMore,
+    desc: strings.features.desc,
+    listLink: strings.features.feature.link,
+    btn: strings.features.feature.btn,
   };
   return (
     <div className="container px-[20px] py-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -31,10 +31,10 @@ const Feature = () => {
             {featureData.featureTitle}
           </h2>
           <ul>
-            {featureData.featureContent?.map((data, index) => (
+            {featureData.featureContent?.map((data) => (
               <li
                 className="text-textColor mb-3 flex text-[18px] font-normal gap-3"
-                key={index}
+                key={data}
               >
                 <span className="font-bold text-black text-[24px]">
                   <IoMdCheckmark />
@@ -56,7 +56,7 @@ const Feature = () => {
             text={featureData.btn as string}
             hover="#5AA8EC"
             color="primary"
-          ></CommonButton>
+          />
         </div>
       </div>
       <div className="p-7 relative">
@@ -77,7 +77,7 @@ const Feature = () => {
           className="w-full md:w-full lg:w-3/4"
           alt="Feature image"
           src={featureImage}
-        ></Image>
+        />
       </div>
     </div>
   );

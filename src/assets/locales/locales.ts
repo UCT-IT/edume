@@ -247,5 +247,4 @@ export let strings = new LocalizedStrings({
       footerCopyRight: "© Teachworks 2021",
     },
   },
-  bg: {},
 });

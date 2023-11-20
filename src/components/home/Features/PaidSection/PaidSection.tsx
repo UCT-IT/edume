@@ -8,10 +8,10 @@ import Link from "next/link";
 
 const PaidSection = () => {
   const data = {
-    title: strings?.features?.getPaid?.title,
-    content: strings?.features?.getPaid?.content,
-    link: strings?.features?.getPaid?.link,
-    btn: strings?.features?.getPaid?.btn,
+    title: strings.features.getPaid.title,
+    content: strings.features.getPaid.content,
+    link: strings.features.getPaid.link,
+    btn: strings.features.getPaid.btn,
   };
   return (
     <div className="container px-[20px] md:pb-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -20,16 +20,16 @@ const PaidSection = () => {
           className="w-full md:w-full lg:w-3/4 h-full"
           alt="Feature image"
           src={paidImage}
-        ></Image>
+        />
       </div>
       <div className="">
         <div>
           <h2 className="mb-4 font-medium text-2xl">{data.title}</h2>
           <ul>
-            {data.content?.map((data, index) => (
+            {data.content?.map((data) => (
               <li
                 className="text-textColor mb-3 flex text-[16px] font-normal gap-3"
-                key={index}
+                key={data}
               >
                 <span className="font-bold text-black text-[24px]">
                   <IoMdCheckmark />
@@ -54,7 +54,7 @@ const PaidSection = () => {
             text={data.btn as string}
             hover="#5AA8EC"
             color="primary"
-          ></CommonButton>
+          />
         </div>
       </div>
     </div>
