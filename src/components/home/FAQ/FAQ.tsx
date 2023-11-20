@@ -24,7 +24,7 @@ const FAQ = () => {
           >
             <div className="pr-2">
               <h2 className="text-[18px] mb-2 font-normal">{item.title}</h2>
-              <p className="mb-2 leading-[30px] text-textColor text-[15px]">
+              <p className="mb-2 leading-[30px] px-8 text-textColor text-[15px]">
                 {item.desc}
               </p>
               <Link

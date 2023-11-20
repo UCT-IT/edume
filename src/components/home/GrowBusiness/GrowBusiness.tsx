@@ -6,10 +6,10 @@ import { strings } from "@/assets/locales/locales";
 
 const GrowBusiness = () => {
   const data = {
-    title: strings.businessWork.title,
-    subTitle: strings.businessWork.subTitle,
-    description: strings.businessWork.description,
-    link: strings.businessWork.link,
+    title: strings?.businessWork?.title,
+    subTitle: strings?.businessWork?.subTitle,
+    description: strings?.businessWork?.description,
+    link: strings?.businessWork?.link,
   };
   return (
     <Container
