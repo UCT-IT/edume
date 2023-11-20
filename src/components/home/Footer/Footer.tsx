@@ -1,12 +1,5 @@
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  Flex,
-  Grid,
-  Text,
-} from "@chakra-ui/react";
+"use client";
+import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { Icon } from "@chakra-ui/react";
 import { ImFacebook } from "react-icons/im";
@@ -14,20 +7,17 @@ import { strings } from "@/assets/locales/locales";
 import FooterGridItem from "./FooterGridItem";
 import { motion } from "framer-motion";
 const Footer = () => {
-  const MotionText = motion(Text);
   const footerData = strings.footer;
   const footerColumns = footerData?.footerColumns;
 
   return (
-    <Box bgColor="primary" clipPath="polygon(0 5%, 100% 0, 100% 100%, 0 100%)">
-      <Container
-        maxW="container.xl"
-        textColor="secondary"
-        pt="80px"
-        pos="relative"
-      >
-        <Box w={{ base: "95%", md: "75%" }} mx="auto">
-          <MotionText
+    <div
+      className="bg-primary"
+      style={{ clipPath: "polygon(0 5%, 100% 0, 100% 100%, 0 100%)" }}
+    >
+      <div className="container mx-auto text-secondary pt-20 relative">
+        <div className="w-[95%] md:w-3/4 mx-auto">
+          <motion.h1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -35,83 +25,51 @@ const Footer = () => {
               duration: 0.5,
               delay: 0.2,
             }}
-            fontSize="35px"
-            textAlign="center"
-            whiteSpace="pre-wrap"
+            // fontSize="35px"
+            // textAlign="center"
+            // whiteSpace="pre-wrap"
+            className="text-[35px] text-center whitespace-pre-wrap"
           >
             {/* Simplify management, save time, and grow your
             <br /> business. */}
             {footerData?.footerHeader}
-          </MotionText>
+          </motion.h1>
 
-          <Flex
-            justifyContent="center"
-            alignItems="center"
-            flexDirection={{ base: "column", md: "row" }}
-          >
-            <Button
-              bg="tertiary"
-              _hover={{ bg: "#97CE2C" }}
-              color="secondary"
-              px="40px"
-              py="25px"
-              my="20px"
-              borderRadius="3px"
-              fontWeight="normal"
-              mr="20px"
-            >
+          <div className="flex flex-col md:flex-row items-center justify-center md:space-x-4 lg:space-x-6">
+            <button className="bg-tertiary hover:bg-[#97CE2C] text-secondary px-10 py-4 my-5 rounded">
               {/* Start Your Free Trial */}
               {footerData?.footerBtn1}
-            </Button>
-            <Button
-              bg="#2574a3"
-              _hover={{ bg: "#4C7DB6" }}
-              color="secondary"
-              px="40px"
-              py="25px"
-              my="20px"
-              borderRadius="3px"
-              fontWeight="normal"
-            >
+            </button>
+            <button className="bg-[#2574a3] hover:bg-[#4C7DB6] text-secondary px-10 py-4 my-5 rounded">
               {/* Take a Quick Tour */}
               {footerData?.footerBtn2}
-            </Button>
-          </Flex>
-        </Box>
-        <Divider orientation="horizontal" my="20px"></Divider>
-        <Grid
-          templateColumns={{ base: "null", md: "repeat(5,1fr)" }}
-          rowGap={{ base: "10px", md: "null" }}
-        >
+            </button>
+          </div>
+        </div>
+        <hr className="w-full my-7"></hr>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-2 pl-2">
           {footerColumns?.map((column, index) => (
             <FooterGridItem key={index} column={column} />
           ))}
-        </Grid>
-        <Flex
-          justifyContent="space-between"
-          py="30px"
-          flexDirection={{ base: "column", md: "row" }}
-        >
-          <Text>
+        </div>
+        <div className="flex justify-between py-7 flex-col md:flex-row">
+          <h1>
             {/* © Teachworks 2021 */}
             {footerData?.footerCopyRight}
-          </Text>
-          <Box mr="200px">
-            <Button
-              as="a"
-              href="https://www.facebook.com/uttaracomputertraininganditfirm"
-              target="_blank"
-              rounded="50%"
-              color="secondary"
-              bg="transparent"
-              _hover={{ bg: "secondary", color: "black" }}
-            >
-              <Icon as={ImFacebook} />
-            </Button>
-          </Box>
-        </Flex>
-      </Container>
-    </Box>
+          </h1>
+          <div className="mr-[200px]">
+            <button className="rounded-full text-secondary bg-transparent hover:bg-secondary hover:text-black p-3">
+              <a
+                href="https://www.facebook.com/uttaracomputertraininganditfirm"
+                target="_blank"
+              >
+                <ImFacebook />
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export default Footer;
