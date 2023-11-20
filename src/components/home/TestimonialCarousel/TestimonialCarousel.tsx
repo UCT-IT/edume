@@ -1,22 +1,14 @@
 "use client";
 import data from "@/assets/locales/data/testimonial.json";
-import {
-  Box,
-  Container,
-  Heading,
-  Link,
-  Text
-} from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import NextLink from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import NextArrow from "../../common/NextArrow";
 import PrevArrow from "../../common/PrevArrow";
+import Link from "next/link";
 
 const TestimonialCarousel = () => {
-  const MotionBox = motion(Box);
   const settings = {
     infinite: true,
     speed: 500,
@@ -42,22 +34,15 @@ const TestimonialCarousel = () => {
     ],
   };
   return (
-    <Box bg="#F4F9FF" py="60px">
-      <Container maxW="container.xl " py="50px" px={["20px", "", ""]}>
-        <Heading
-          as="h6"
-          fontSize="25px"
-          color="#111111"
-          textAlign="center"
-          fontWeight="normal"
-          mb="30px"
-        >
+    <div className="bg-[#F4F9FF]">
+      <div className="container mx-auto px-5 md:px-0 py-[50px]">
+        <h1 className="text-[25px] font-light text-[#111111] text-center mb-7 ">
           {data.title}
-        </Heading>
-        <Box textAlign="center" py="30px">
+        </h1>
+        <div className="text-center py-7 ">
           <Slider {...settings}>
             {data.content?.map((item) => (
-              <MotionBox
+              <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
@@ -66,49 +51,26 @@ const TestimonialCarousel = () => {
                   delay: 0.2,
                 }}
                 key={item.title}
-                display="flex"
-                justifyItems="center"
-                alignItems="center"
-                flexDirection="column"
+                className="flex  justify-center font-light items-center italic flex-col"
               >
-                <Box>
-                  <Text
-                    color="secondary"
-                    fontSize={["18px", "25px", "25px"]}
-                    fontWeight="semibold"
-                    textColor="black"
-                    mb="30px"
-                    px={["", "", "150px"]}
-                  >
+                <div className="w-[87%] mx-auto">
+                  <p className="text-black text-[18px] md:text-[25px] whitespace-pre-wrap font-semibold px-0 md:px-10   lg:px-[150px]  ">
                     {item.title}
-                  </Text>
-                  <Text
-                    color="tertiary"
-                    fontWeight="semibold"
-                    fontSize={["20px", "20px", "20px"]}
-                  >
+                  </p>
+                  <p className="text-tertiary font-semibold text-[20px] mt-7">
                     {item.subTitle}
-                  </Text>
-                  <Text pb="30px" color="">
-                    {item.text}
-                  </Text>
-                </Box>
-              </MotionBox>
+                  </p>
+                  <p className="pb-7">{item.text}</p>
+                </div>
+              </motion.div>
             ))}
           </Slider>
-          <Link
-            href="/"
-            _hover={{
-              textDecoration: "none",
-            }}
-            as={NextLink}
-            textColor="blue.300"
-          >
+          <Link className="hover:no-underline mt-5 text-blue-400" href="/">
             {data.link}
           </Link>
-        </Box>
-      </Container>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,4 +1,6 @@
+import Features from "@/components/home/Features/Features";
 import HeroSection from "@/components/home/HeroSection/HeroSection";
+import TestimonialCarousel from "@/components/home/TestimonialCarousel/TestimonialCarousel";
 import React from "react";
 
 const HomePage = () => {
@@ -6,6 +8,7 @@ const HomePage = () => {
     <React.Fragment>
       <HeroSection />
       <Features />
+      <TestimonialCarousel></TestimonialCarousel>
     </React.Fragment>
   );
 };

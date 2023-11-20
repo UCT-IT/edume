@@ -1,27 +1,15 @@
-import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { IconButton } from "@chakra-ui/react";
+import { FaArrowRight } from "react-icons/fa";
 import React from "react";
 
 const NextArrow = (props: any) => {
   const { onClick } = props;
   return (
-    <IconButton
+    <button
       onClick={onClick}
-      icon={<ArrowForwardIcon />}
-      pos="absolute"
-      right={["0px", "20px", "20px"]}
-      bg="secondary"
-      rounded="50%"
-      h="60px"
-      w="60px"
-      fontSize="xl"
-      color="#000"
-      shadow="2xl"
-      zIndex="3"
-      top="50%"
-      transform="translateY(-50%)"
-      aria-label="Previous"
-    />
+      className="absolute grid place-items-center top-[50%] translate-y-[-50%] bg-secondary h-[60px] w-[60px] rounded-full shadow-2xl right-5 z-10 "
+    >
+      <FaArrowRight />
+    </button>
   );
 };
 
