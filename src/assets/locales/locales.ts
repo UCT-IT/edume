@@ -45,7 +45,7 @@ export let strings = new LocalizedStrings({
       ],
     },
     heroSection: {
-      title: `Organize & 
+      title: `Organize &
       Automate Your`,
       animatedText: [
         "Driving School",
@@ -54,8 +54,9 @@ export let strings = new LocalizedStrings({
         "Test Prep center",
         "Tutoring Company",
       ],
-      description:
-        "Teachworks is the #1 choice for managing your tutoring or teaching business. Easily manage scheduling, students, billing and more!",
+      description: `Teachworks is the #1 choice for managing your tutoring or
+      teaching business. Easily manage scheduling, students, billing
+      and more!`,
       btn: "Try It for free",
       tour: "or Take a Quick Tour",
     },
@@ -141,6 +142,54 @@ export let strings = new LocalizedStrings({
         link: "More Reporting Features",
         btn: "Start Your Free Trial",
       },
+    },
+    works: {
+      title: "How it Works",
+      contents: [
+        {
+          heading: "Add Students & Tutors/Teachers",
+          desc: "Add students and teachers one at a time or import them in bulk.",
+        },
+        {
+          heading: "Schedule Lessons",
+          desc: "Add lessons to the calendar or have clients book online.",
+        },
+        {
+          heading: "Bill Your Clients",
+          desc: "Generate invoices and process payments.",
+        },
+        {
+          heading: "Grow Your Business",
+          desc: "Use our reports to keep track of your business performance",
+        },
+      ],
+    },
+    businessWork: {
+      title: "GROW WITH US",
+      subTitle: "Built to Grow With Your Business",
+      description:
+        "Whether you have 10 students or 10,000, Teachworks is loaded with features to make managing large quantities of students, tutors/teachers and lessons faster & more efficient. If you have plans to expand to multiple locations or build a franchise system, Teachworks provides the tools to help you manage and monitor multiple locations from a single master account.",
+      link: "Manage Multiple Branches",
+    },
+    FAQ: {
+      title: "Popular Questions",
+      link: "see more FAQs",
+      content: [
+        {
+          title: "Is my data secure?",
+          desc: "Yes! Teachworks follows best practices for securing data and access to the software, ensuring your data is always safe and secure. For more information.",
+          link: "visit our Knowledge Base.",
+        },
+        {
+          title: "Is support included?",
+          desc: "Yes! Email support is included in all of our plans. We are very responsive to any questions you may have. We also have a detailed knowledge base and tutorials to help you make the most of your account.",
+        },
+        {
+          title: "Can I integrate with my website?",
+          desc: "Yes! We have many features that can be integrated with your website. This includes Website Booking, Custom Forms, Website Profiles for tutors & teachers and more",
+          link: "View our demo site",
+        },
+      ],
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your

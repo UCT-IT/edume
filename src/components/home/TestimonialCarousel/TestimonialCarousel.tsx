@@ -1,20 +1,19 @@
 "use client";
+import data from "@/assets/locales/data/testimonial.json";
 import {
   Box,
   Container,
   Heading,
-  IconButton,
   Link,
-  Text,
+  Text
 } from "@chakra-ui/react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import PrevArrow from "../common/PrevArrow";
-import NextArrow from "../common/NextArrow";
-import NextLink from "next/link";
-import data from "@/assets/locales/data/testimonial.json";
 import { motion } from "framer-motion";
+import NextLink from "next/link";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import NextArrow from "../../common/NextArrow";
+import PrevArrow from "../../common/PrevArrow";
 
 const TestimonialCarousel = () => {
   const MotionBox = motion(Box);
