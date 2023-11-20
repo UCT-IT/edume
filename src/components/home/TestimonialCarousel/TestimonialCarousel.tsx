@@ -27,8 +27,8 @@ const TestimonialCarousel = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -36,7 +36,7 @@ const TestimonialCarousel = () => {
   return (
     <div className="bg-[#F4F9FF]">
       <div className="container mx-auto px-5 md:px-0 py-[50px]">
-        <h1 className="text-[25px] font-light text-[#111111] text-center mb-7 ">
+        <h1 className="text-[22px] font-light text-[#111111] text-center mb-7 ">
           {data.title}
         </h1>
         <div className="text-center py-7 ">
