@@ -19,10 +19,10 @@ const DropdownMenu = ({ title, dropdownMenus }: DropdownMenuPropsType) => {
         {title} <ChevronDownIcon />
       </div>
       {isHovered && (
-        <ul className="md:absolute md:top-full w-full md:w-64 flex-col items-start space-y-5 px-10 py-5 bg-secondary text-textColor">
-          {dropdownMenus?.map((menu, i) => (
+        <ul className="md:absolute md:top-full w-full md:w-64 flex-col items-start space-y-5 px-10 py-5 lg:py-6 bg-secondary text-textColor">
+          {dropdownMenus?.map((menu) => (
             <li
-              key={i}
+              key={menu}
               className="hover:font-semibold hover:text-[#122634] cursor-pointer"
             >
               {menu}

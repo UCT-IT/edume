@@ -3,6 +3,7 @@ import LocalizedStrings from "react-localization";
 export let strings = new LocalizedStrings({
   en: {
     nav: {
+      logo: "teachworks.",
       testimonial: "Testimonials",
       pricing: "Pricing",
       login: "Login",

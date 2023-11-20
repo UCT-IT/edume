@@ -39,7 +39,7 @@ const Navbar = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setIsScrolled(scrollPosition > 200);
+    setIsScrolled(scrollPosition > 20);
   };
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-2 flex items-center justify-between gap-4 lg:gap-10 text-base">
           <h1 className="text-secondary font-semibold text-2xl md:text-lg lg:text-2xl">
-            teachworks.
+            {strings?.nav?.logo}
           </h1>
           <div className="flex items-center gap-2 lg:gap-8 flex-grow text-sm lg:text-base">
             <DropdownMenu {...dropdownFeatures} />
@@ -68,20 +68,20 @@ const Navbar = () => {
               href="#"
               className="text-secondary hover:no-underline hover:text-[#122634]"
             >
-              Testimonials
+              {strings?.nav?.testimonial}
             </Link>
             <Link
               href="#"
               className="text-secondary hover:no-underline hover:text-[#122634]"
             >
-              Pricing
+              {strings?.nav?.pricing}
             </Link>
             <DropdownMenu {...dropdownSupport} />
             <Link
               href="#"
               className="text-secondary hover:no-underline hover:text-[#122634]"
             >
-              Login
+              {strings?.nav?.login}
             </Link>
           </div>
           <button className="bg-[#122634] hover:bg-[#193447] text-secondary px-10 py-4 rounded">
