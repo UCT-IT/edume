@@ -5,8 +5,8 @@ import { strings } from "@/assets/locales/locales";
 
 const Works = () => {
   const data = {
-    title: strings?.works?.title,
-    contents: strings?.works?.contents,
+    title: strings.works?.title,
+    contents: strings.works?.contents,
   };
   return (
     <div className="container mx-auto px-[20px] pb-16 md:px-0">
