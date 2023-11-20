@@ -9,8 +9,8 @@ import Business from "./Business/Business";
 const Features = () => {
   return (
     <React.Fragment>
-      {/* <Feature />
-      <PaidSection />
+      <Feature />
+      {/* <PaidSection />
       <Clients />
       <Communication />
       <TutorTeacher />

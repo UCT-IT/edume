@@ -45,7 +45,7 @@ export let strings = new LocalizedStrings({
       ],
     },
     heroSection: {
-      title: `Organize & 
+      title: `Organize &
       Automate Your`,
       animatedText: [
         "Driving School",
@@ -54,8 +54,9 @@ export let strings = new LocalizedStrings({
         "Test Prep center",
         "Tutoring Company",
       ],
-      description:
-        "Teachworks is the #1 choice for managing your tutoring or teaching business. Easily manage scheduling, students, billing and more!",
+      description: `Teachworks is the #1 choice for managing your tutoring or
+      teaching business. Easily manage scheduling, students, billing
+      and more!`,
       btn: "Try It for free",
       tour: "or Take a Quick Tour",
     },
@@ -246,5 +247,4 @@ export let strings = new LocalizedStrings({
       footerCopyRight: "© Teachworks 2021",
     },
   },
-  bg: {},
 });
