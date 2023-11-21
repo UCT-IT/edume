@@ -1,5 +1,4 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Box, Text, VStack } from "@chakra-ui/react";
+import { IoIosArrowDown } from "react-icons/io";
 import React, { useState } from "react";
 
 type DropdownMenuPropsType = {
@@ -10,42 +9,27 @@ type DropdownMenuPropsType = {
 const DropdownMenu = ({ title, dropdownMenus }: DropdownMenuPropsType) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <Box
+    <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      position="relative"
-      fontSize={["16px", "12px", "14px", "16px"]}
+      className="relative"
     >
-      <Text
-        cursor="pointer"
-        color={{ base: "null", sm: `${isHovered ? "#122634" : "secondary"}` }}
-        display={{ base: "flex", sm: "block" }}
-        justifyContent={{ base: "space-between" }}
-        alignItems={["center", "null"]}
-      >
-        {title} <ChevronDownIcon />
-      </Text>
+      <div className="cursor-pointer font-light md:text-secondary md:text-sm lg:text-base hover:text-[#122634] flex justify-between items-center lg:gap-1">
+        <span>{title}</span> <IoIosArrowDown />
+      </div>
       {isHovered && (
-        <VStack
-          position={{ base: "static", sm: "absolute" }}
-          top={{ base: "null", sm: "100%" }}
-          left={{ base: "null", sm: "0" }}
-          zIndex="1"
-          width={["100%", "max-content", "max-content", "250px"]}
-          alignItems="left"
-          spacing={[4, 2, 2, 4]}
-          px={["20px", "10px", "20px", "30px"]}
-          py={["null", "10px", "15px", "20px"]}
-          backgroundColor="secondary"
-        >
-          {dropdownMenus?.map((menu, i) => (
-            <Text key={i} _hover={{ fontWeight: "semibold", color: "122634" }}>
+        <ul className="md:absolute md:top-full w-full md:w-64 flex-col items-start space-y-5 px-10 py-5 lg:py-6 bg-secondary text-textColor">
+          {dropdownMenus?.map((menu) => (
+            <li
+              key={menu}
+              className="hover:font-semibold hover:text-[#122634] cursor-pointer text-sm"
+            >
               {menu}
-            </Text>
+            </li>
           ))}
-        </VStack>
+        </ul>
       )}
-    </Box>
+    </div>
   );
 };
 
