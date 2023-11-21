@@ -8,7 +8,7 @@ const HomePage = () => {
     <React.Fragment>
       <HeroSection />
       <Features />
-      <Works></Works>
+      <Works />
     </React.Fragment>
   );
 };
