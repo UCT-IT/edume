@@ -1,81 +1,49 @@
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  GridItem,
-  Heading,
-  Link,
-  Text,
-} from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
 import { strings } from "@/assets/locales/locales";
+import Link from "next/link";
 
 const FAQ = () => {
   const data = {
-    title: strings?.FAQ?.title,
-    link: strings?.FAQ?.link,
-    content: strings?.FAQ?.content,
+    title: strings.FAQ.title,
+    link: strings.FAQ.link,
+    content: strings.FAQ.content,
   };
   return (
-    <Container
-      maxW="container.xl "
-      pb="60px"
-      textAlign="center"
-      px={["20px", "", ""]}
-    >
-      <Heading>{data.title}</Heading>
-      <Grid
-        templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
-        mt="60px"
-        gap="20px"
-      >
+    <div className="container px-[20px] pb-16 text-center md:px-0 mx-auto">
+      <h2 className="mb-8 text-3xl font-semibold">{data.title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {data?.content?.map((item, index, array) => (
-          <GridItem
+          <div
+            className={`${
+              index === array.length - 1
+                ? ""
+                : "lg:border-r-[1px] border-gray-400"
+            } mb-7`}
             key={item.title}
-            mb="30px"
-            borderRight={
-              index === array.length - 1 ? "none" : "1px solid #80808038"
-            }
           >
-            <Box pr="10px">
-              <Text fontSize="22px" mb="10px" fontWeight="semibold">
-                {item.title}
-              </Text>
-              <Text
-                mb="10px"
-                lineHeight="30px"
-                textColor="textColor"
-                fontSize="17px"
-              >
+            <div className="pr-2">
+              <h2 className="text-[18px] mb-2 font-normal">{item.title}</h2>
+              <p className="mb-2 leading-[30px] px-8 text-textColor text-[15px]">
                 {item.desc}
-              </Text>
+              </p>
               <Link
+                className="hover:no-underline hover:text-black mt-2 text-primary"
                 href="/"
-                _hover={{
-                  textDecoration: "none",
-                }}
-                as={NextLink}
-                textColor="blue.400"
               >
                 {item.link}
               </Link>
-            </Box>
-          </GridItem>
+            </div>
+          </div>
         ))}
-      </Grid>
+      </div>
       <Link
+        className="hover:no-underline mt-8 hover:text-black text-primary"
         href="/"
-        _hover={{
-          textDecoration: "none",
-        }}
-        as={NextLink}
-        textColor="blue.400"
       >
         {data.link}
       </Link>
-    </Container>
+    </div>
   );
 };
 

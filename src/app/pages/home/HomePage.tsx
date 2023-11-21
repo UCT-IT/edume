@@ -1,3 +1,4 @@
+import FAQ from "@/components/home/FAQ/FAQ";
 import Features from "@/components/home/Features/Features";
 import GrowBusiness from "@/components/home/GrowBusiness/GrowBusiness";
 import HeroSection from "@/components/home/HeroSection/HeroSection";
@@ -9,6 +10,7 @@ const HomePage = () => {
     <React.Fragment>
       <HeroSection />
       <Features />
+      <FAQ />
       <GrowBusiness />
       <Works />
     </React.Fragment>
