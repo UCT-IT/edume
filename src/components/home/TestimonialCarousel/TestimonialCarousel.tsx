@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import NextArrow from "../../common/NextArrow";
-import PrevArrow from "../../common/PrevArrow";
+
+import NextArrow from "../../common/carouselArrows/NextArrow";
+import PrevArrow from "../../common/carouselArrows/PrevArrow";
 import Link from "next/link";
 
 const TestimonialCarousel = () => {
