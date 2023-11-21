@@ -10,7 +10,7 @@ const FAQ = () => {
     content: strings.FAQ.content,
   };
   return (
-    <div className="container px-[20px] pb-16 text-center md:px-0 mx-auto">
+    <div className="container px-[20px] py-16 text-center md:px-0 mx-auto">
       <h2 className="mb-8 text-3xl font-semibold">{data.title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {data?.content?.map((item, index, array) => (

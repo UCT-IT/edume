@@ -9,7 +9,7 @@ const Works = () => {
     contents: strings.works?.contents,
   };
   return (
-    <div className="container mx-auto px-[20px] pb-16 md:px-0">
+    <div className="container mx-auto px-[20px] py-16 md:px-0">
       <h2 className="font-bold text-center text-3xl mb-10">{data.title}</h2>
       <Image className="w-full mb-7" alt="work image" src={workImage} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-center">
