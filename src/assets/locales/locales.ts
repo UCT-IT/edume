@@ -3,6 +3,7 @@ import LocalizedStrings from "react-localization";
 export let strings = new LocalizedStrings({
   en: {
     nav: {
+      logo: "teachworks.",
       testimonial: "Testimonials",
       pricing: "Pricing",
       login: "Login",
@@ -16,7 +17,7 @@ export let strings = new LocalizedStrings({
         "Communication",
         "Billing & Payroll",
         "Records & Analytics",
-        "Customize & secondary Label",
+        "Customize & white Label",
         "Automation",
         "Multiple Branches",
         "Integrations & Add-Ons",
