@@ -1,55 +1,34 @@
-import { Container, Divider, Link, Text } from "@chakra-ui/react";
 import React from "react";
-import bgImg from "@/assets/images/businessWork.svg";
-import NextLink from "next/link";
+// import bgImg from "/home/businessWork.svg";
 import { strings } from "@/assets/locales/locales";
+import Link from "next/link";
 
 const GrowBusiness = () => {
   const data = {
-    title: strings?.businessWork?.title,
-    subTitle: strings?.businessWork?.subTitle,
-    description: strings?.businessWork?.description,
-    link: strings?.businessWork?.link,
+    title: strings.businessWork.title,
+    subTitle: strings.businessWork.subTitle,
+    description: strings.businessWork.description,
+    link: strings.businessWork.link,
   };
   return (
-    <Container
-      bgImage={`url("https://assets-global.website-files.com/601a133a769fa8f8d45d95ba/61854dd04e61c933221fc418_map.svg")`}
-      //   bgImage={`url(${bgImg})`}
-      bgSize="cover"
-      bgPosition="center"
-      bgRepeat="no-repeat"
-      maxW="container.xl "
-      py="100px"
-      px={["20px", "", ""]}
-      textAlign="center"
-    >
-      <Text
-        textColor="tertiary"
-        fontWeight="bold"
-        size="md"
-        letterSpacing="3px"
-        mb="20px"
-      >
-        {data.title}
-      </Text>
-      <Text mb="30px" fontSize="35px" fontWeight="medium">
-        {data.subTitle}
-      </Text>
-      <Text mb="30px" lineHeight="30px" textColor="textColor" fontSize="18px">
-        {data.description}
-      </Text>
-      <Link
-        href="/"
-        _hover={{
-          textDecoration: "none",
-        }}
-        as={NextLink}
-        textColor="blue.400"
-      >
-        {data.link}
-      </Link>
-      <Divider mt="30px"></Divider>
-    </Container>
+    <React.Fragment>
+      <div className="bg-[url('/home/businessWork.svg')] bg-clip-border bg-contain bg-no-repeat container mx-auto px-[20px] pb-16 md:px-0 bg-center text-center">
+        <h2 className="text-tertiary font-bold tracking-wide mb-5 ">
+          {data.title}
+        </h2>
+        <h2 className="mb-7 text-[35px] font-semibold">{data.subTitle}</h2>
+        <p className="mb-7 leading-7 text-textColor text-[16px]">
+          {data.description}
+        </p>
+        <Link
+          className="hover:no-underline hover:text-black transition-all text-primary"
+          href="/"
+        >
+          {data.link}
+        </Link>
+      </div>
+      <hr className="my-[30px]"></hr>
+    </React.Fragment>
   );
 };
 
