@@ -42,7 +42,7 @@ const TestimonialCarousel = () => {
         </h1>
         <div className="text-center py-7 ">
           <Slider {...settings}>
-            {data.content?.map((item) => (
+            {data.content.map((item) => (
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}

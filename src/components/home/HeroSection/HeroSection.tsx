@@ -3,25 +3,25 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { strings } from "@/assets/locales/locales";
-import HeroBackground from "../HeroBackground/HeroBackground";
+import HeroBackground from "../../common/HeroBackground/HeroBackground";
 import heroSectionImage from "../../../../public/home/heroSectionImage.svg";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
   const data = {
-    title: strings?.heroSection?.title,
-    animatedText: strings?.heroSection?.animatedText,
-    description: strings?.heroSection?.description,
-    btn: strings?.heroSection?.btn,
-    tour: strings?.heroSection?.tour,
+    title: strings.heroSection.title,
+    animatedText: strings.heroSection.animatedText,
+    description: strings.heroSection.description,
+    btn: strings.heroSection.btn,
+    tour: strings.heroSection.tour,
   };
   useEffect(() => {
     const interval = setInterval(() => {
       setFadeOut(true);
       setTimeout(() => {
         setCurrentTextIndex((prevIndex) =>
-          prevIndex === (data.animatedText?.length ?? 0) - 1 ? 0 : prevIndex + 1
+          prevIndex === (data.animatedText.length ?? 0) - 1 ? 0 : prevIndex + 1
         );
         setFadeOut(false);
       }, 1000);
@@ -44,7 +44,7 @@ const HeroSection = () => {
                   fadeOut ? "opacity-0" : "opacity-1"
                 } text-[24px] md:text-[45px] text-black py-2 font-kalam italic`}
               >
-                {data.animatedText?.[currentTextIndex]}
+                {data.animatedText[currentTextIndex]}
               </h2>
               <p className="leading-8 py-5 whitespace-pre-line font-light">
                 {data.description}

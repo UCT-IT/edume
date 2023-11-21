@@ -12,37 +12,40 @@ export let strings = new LocalizedStrings({
     dropdownFeatures: {
       title: "Features",
       dropdownMenus: [
-        "Overview",
-        "Calendar & Scheduling",
-        "Communication",
-        "Billing & Payroll",
-        "Records & Analytics",
-        "Customize & white Label",
-        "Automation",
-        "Multiple Branches",
-        "Integrations & Add-Ons",
-        "Website Plugins Demo",
+        { menuName: "Overview", menuLink: "#" },
+        {
+          menuName: "Calendar & Scheduling",
+          menuLink: "pages/calendarAndscheduling",
+        },
+        { menuName: "Communication", menuLink: "#" },
+        { menuName: "Billing & Payroll", menuLink: "#" },
+        { menuName: "Records & Analytics", menuLink: "#" },
+        { menuName: "Customize & white Label", menuLink: "#" },
+        { menuName: "Automation", menuLink: "#" },
+        { menuName: "Multiple Branches", menuLink: "#" },
+        { menuName: "Integrations & Add-Ons", menuLink: "#" },
+        { menuName: "Website Plugins Demo", menuLink: "#" },
       ],
     },
     dropdownSolution: {
       title: "Solution",
       dropdownMenus: [
-        "Tutoring",
-        "Language Schools",
-        "Test Preparation",
-        "Music Schools",
-        "Driving Schools",
+        { menuName: "Tutoring", menuLink: "#" },
+        { menuName: "Language Schools", menuLink: "#" },
+        { menuName: "Test Preparation", menuLink: "#" },
+        { menuName: "Music Schools", menuLink: "#" },
+        { menuName: "Driving Schools", menuLink: "#" },
       ],
     },
     dropdownSupport: {
       title: "Support",
       dropdownMenus: [
-        "Tutorials",
-        "Getting Started Guide",
-        "Knowledge Base",
-        "Contact Us",
-        "FAQs",
-        "Blog",
+        { menuName: "Tutorials", menuLink: "#" },
+        { menuName: "Getting Started Guide", menuLink: "#" },
+        { menuName: "Knowledge Base", menuLink: "#" },
+        { menuName: "Contact Us", menuLink: "#" },
+        { menuName: "FAQs", menuLink: "#" },
+        { menuName: "Blog", menuLink: "#" },
       ],
     },
     heroSection: {
@@ -191,6 +194,13 @@ export let strings = new LocalizedStrings({
           link: "View our demo site",
         },
       ],
+    },
+    calendarAndScheduling: {
+      heroContent: {
+        title: "Complex Scheduling Simplified.",
+        description: `Coordinating schedules with multiple teachers, students and locations can be a challenge.
+        Teachworks simplifies scheduling and ensures that everyone is on the same page.`,
+      },
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your

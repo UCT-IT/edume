@@ -6,7 +6,7 @@ import FooterGridItem from "./FooterGridItem";
 import { motion } from "framer-motion";
 const Footer = () => {
   const footerData = strings.footer;
-  const footerColumns = footerData?.footerColumns;
+  const footerColumns = footerData.footerColumns;
 
   return (
     <div
@@ -25,26 +25,26 @@ const Footer = () => {
             }}
             className="text-[35px] text-center whitespace-pre-wrap"
           >
-            {footerData?.footerHeader}
+            {footerData.footerHeader}
           </motion.h1>
 
           <div className="flex flex-col md:flex-row items-center justify-center md:space-x-4 lg:space-x-6">
             <button className="bg-tertiary hover:bg-[#97CE2C] text-secondary px-10 py-4 my-5 rounded">
-              {footerData?.footerBtn1}
+              {footerData.footerBtn1}
             </button>
             <button className="bg-[#2574a3] hover:bg-[#4C7DB6] text-secondary px-10 py-4 my-5 rounded">
-              {footerData?.footerBtn2}
+              {footerData.footerBtn2}
             </button>
           </div>
         </div>
         <hr className="w-full my-7" />
         <div className="grid grid-cols-1 md:grid-cols-5 gap-2 pl-2">
-          {footerColumns?.map((column, index) => (
+          {footerColumns.map((column, index) => (
             <FooterGridItem key={index} column={column} />
           ))}
         </div>
         <div className="flex justify-between py-7 flex-col md:flex-row">
-          <h1>{footerData?.footerCopyRight}</h1>
+          <h1>{footerData.footerCopyRight}</h1>
           <div className="mr-[200px]">
             <button className="rounded-full text-secondary bg-transparent hover:bg-secondary hover:text-black p-3">
               <a

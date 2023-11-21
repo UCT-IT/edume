@@ -31,7 +31,7 @@ const Feature = () => {
             {featureData.featureTitle}
           </h2>
           <ul>
-            {featureData.featureContent?.map((data) => (
+            {featureData.featureContent.map((data) => (
               <li
                 className="text-textColor mb-3 flex text-[18px] font-normal gap-3"
                 key={data}

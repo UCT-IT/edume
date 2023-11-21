@@ -21,17 +21,17 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const dropdownFeatures = {
-    title: strings?.dropdownFeatures?.title,
-    dropdownMenus: strings?.dropdownFeatures?.dropdownMenus,
+    title: strings.dropdownFeatures.title,
+    dropdownMenus: strings.dropdownFeatures.dropdownMenus,
   };
   const dropdownSolution = {
-    title: strings?.dropdownSolution?.title,
-    dropdownMenus: strings?.dropdownSolution?.dropdownMenus,
+    title: strings.dropdownSolution.title,
+    dropdownMenus: strings.dropdownSolution.dropdownMenus,
   };
 
   const dropdownSupport = {
-    title: strings?.dropdownSupport?.title,
-    dropdownMenus: strings?.dropdownSupport?.dropdownMenus,
+    title: strings.dropdownSupport.title,
+    dropdownMenus: strings.dropdownSupport.dropdownMenus,
   };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,7 +59,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-2 flex items-center justify-between gap-4 lg:gap-10 text-base">
           <h1 className="text-secondary font-semibold text-2xl md:text-lg lg:text-2xl">
-            {strings?.nav?.logo}
+            {strings.nav.logo}
           </h1>
           <div className="flex items-center gap-2 lg:gap-8 flex-grow text-sm lg:text-base">
             <DropdownMenu {...dropdownFeatures} />
@@ -68,24 +68,24 @@ const Navbar = () => {
               href="#"
               className="text-secondary hover:no-underline hover:text-[#122634] font-light"
             >
-              {strings?.nav?.testimonial}
+              {strings.nav.testimonial}
             </Link>
             <Link
               href="#"
               className="text-secondary hover:no-underline hover:text-[#122634] font-light"
             >
-              {strings?.nav?.pricing}
+              {strings.nav.pricing}
             </Link>
             <DropdownMenu {...dropdownSupport} />
             <Link
               href="#"
               className="text-secondary hover:no-underline hover:text-[#122634] font-light"
             >
-              {strings?.nav?.login}
+              {strings.nav.login}
             </Link>
           </div>
           <button className="bg-[#122634] hover:bg-[#193447] text-secondary px-10 py-4 rounded">
-            {strings?.nav?.btn}
+            {strings.nav.btn}
           </button>
         </div>
       </nav>
@@ -117,18 +117,18 @@ const Navbar = () => {
             <DropdownMenu {...dropdownSolution} />
             <div>
               <Link href="#" className="hover:no-underline font-light">
-                {strings?.nav?.testimonial}
+                {strings.nav.testimonial}
               </Link>
             </div>
             <div>
               <Link href="#" className="hover:no-underline font-light">
-                {strings?.nav?.pricing}
+                {strings.nav.pricing}
               </Link>
             </div>
             <DropdownMenu {...dropdownSupport} />
             <div>
               <Link href="#" className="hover:no-underline font-light">
-                {strings?.nav?.login}
+                {strings.nav.login}
               </Link>
             </div>
           </motion.div>
