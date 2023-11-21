@@ -4,23 +4,22 @@ import featureImage from "@/assets/images/feature.svg";
 import Image from "next/image";
 import { IoMdCheckmark } from "react-icons/io";
 import Link from "next/link";
-import FeatureButton from "@/components/button/FeatureButton";
-
+import CommonButton from "@/components/common/button/CommonButton";
 const Feature = () => {
   const featureData = {
-    title: strings?.features?.title,
-    subTitle: strings?.features?.subTitle,
-    featureTitle: strings?.features?.feature?.title,
-    featureContent: strings?.features?.feature?.content,
-    featureLink: strings?.features?.feature?.link,
-    featureBtn: strings?.features?.feature?.btn,
-    badge: strings?.features?.feature?.badge,
-    text: strings?.features?.text,
-    link: strings?.features?.link,
-    seeMore: strings?.features?.seeMore,
-    desc: strings?.features?.desc,
-    listLink: strings?.features?.feature?.link,
-    btn: strings?.features?.feature?.btn,
+    title: strings.features.title,
+    subTitle: strings.features.subTitle,
+    featureTitle: strings.features.feature.title,
+    featureContent: strings.features.feature.content,
+    featureLink: strings.features.feature.link,
+    featureBtn: strings.features.feature.btn,
+    badge: strings.features.feature.badge,
+    text: strings.features.text,
+    link: strings.features.link,
+    seeMore: strings.features.seeMore,
+    desc: strings.features.desc,
+    listLink: strings.features.feature.link,
+    btn: strings.features.feature.btn,
   };
   return (
     <div className="container px-[20px] py-16 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -32,10 +31,10 @@ const Feature = () => {
             {featureData.featureTitle}
           </h2>
           <ul>
-            {featureData.featureContent?.map((data, index) => (
+            {featureData.featureContent?.map((data) => (
               <li
                 className="text-textColor mb-3 flex text-[18px] font-normal gap-3"
-                key={index}
+                key={data}
               >
                 <span className="font-bold text-black text-[24px]">
                   <IoMdCheckmark />
@@ -43,7 +42,7 @@ const Feature = () => {
                 {data}
               </li>
             ))}
-            <li className="text-primary mb-3 flex text-[18px] font-normal gap-3 ">
+            <li className="text-primary mb-3 flex text-[16px] font-normal gap-3 ">
               <span className="font-bold text-black text-[24px]">
                 <IoMdCheckmark />
               </span>
@@ -52,12 +51,17 @@ const Feature = () => {
               </Link>
             </li>
           </ul>
-          <FeatureButton href="/" text={featureData.btn}></FeatureButton>
+          <CommonButton
+            href="/"
+            text={featureData.btn as string}
+            hover="#5AA8EC"
+            color="primary"
+          />
         </div>
       </div>
       <div className="p-7 relative">
         <div
-          style={{ clipPath: "polygon(0 12%, 100% 0, 100% 100%, 0% 100%)" }}
+          style={{ clipPath: "polygon(0 17%, 100% 0, 100% 100%, 0% 100%)" }}
           className="p-8 md:p-14 mb-14 bg-[#FDF7DA] text-center relative"
         >
           <h2 className="text-black font-medium">Teachworks API</h2>
@@ -70,10 +74,10 @@ const Feature = () => {
           {featureData.badge}
         </div>
         <Image
-          className="w-full md:w-3/4"
+          className="w-full md:w-full lg:w-3/4"
           alt="Feature image"
           src={featureImage}
-        ></Image>
+        />
       </div>
     </div>
   );
