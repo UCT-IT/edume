@@ -66,20 +66,20 @@ const Navbar = () => {
             <DropdownMenu {...dropdownSolution} />
             <Link
               href="#"
-              className="text-secondary hover:no-underline hover:text-[#122634]"
+              className="text-secondary hover:no-underline hover:text-[#122634] font-light"
             >
               {strings?.nav?.testimonial}
             </Link>
             <Link
               href="#"
-              className="text-secondary hover:no-underline hover:text-[#122634]"
+              className="text-secondary hover:no-underline hover:text-[#122634] font-light"
             >
               {strings?.nav?.pricing}
             </Link>
             <DropdownMenu {...dropdownSupport} />
             <Link
               href="#"
-              className="text-secondary hover:no-underline hover:text-[#122634]"
+              className="text-secondary hover:no-underline hover:text-[#122634] font-light"
             >
               {strings?.nav?.login}
             </Link>
@@ -116,18 +116,18 @@ const Navbar = () => {
             <DropdownMenu {...dropdownFeatures} />
             <DropdownMenu {...dropdownSolution} />
             <div>
-              <Link href="#" className="hover:no-underline">
+              <Link href="#" className="hover:no-underline font-light">
                 {strings?.nav?.testimonial}
               </Link>
             </div>
             <div>
-              <Link href="#" className="hover:no-underline">
+              <Link href="#" className="hover:no-underline font-light">
                 {strings?.nav?.pricing}
               </Link>
             </div>
             <DropdownMenu {...dropdownSupport} />
             <div>
-              <Link href="#" className="hover:no-underline">
+              <Link href="#" className="hover:no-underline font-light">
                 {strings?.nav?.login}
               </Link>
             </div>
