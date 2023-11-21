@@ -10,11 +10,11 @@ const Features = () => {
   return (
     <React.Fragment>
       <Feature />
-      {/* <PaidSection />
+      <PaidSection />
       <Clients />
       <Communication />
       <TutorTeacher />
-      <Business /> */}
+      <Business />
     </React.Fragment>
   );
 };

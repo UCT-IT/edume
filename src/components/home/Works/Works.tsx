@@ -1,11 +1,3 @@
-import {
-  Box,
-  Container,
-  Grid,
-  GridItem,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
 import React from "react";
 import workImage from "@/assets/images/works.svg";
 import Image from "next/image";
@@ -13,37 +5,24 @@ import { strings } from "@/assets/locales/locales";
 
 const Works = () => {
   const data = {
-    title: strings?.works?.title,
-    contents: strings?.works?.contents,
+    title: strings.works?.title,
+    contents: strings.works?.contents,
   };
   return (
-    <Container maxW="container.xl " py="80px" px={["20px", "", ""]}>
-      <Heading mb="40px" textAlign="center">
-        {data.title}
-      </Heading>
-      <Image alt="work image" src={workImage} />
-      <Grid
-        textAlign="center"
-        mt="20px"
-        gap="20px"
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-          lg: "repeat(4, 1fr)",
-        }}
-      >
-        {data.contents?.map((item, index) => (
-          <GridItem key={item.heading}>
-            <Heading as="h4" size="sm">
-              {index + 1}. {item.heading}
-            </Heading>
-            <Text fontSize="18" color="textColor" mt="12px">
-              {item.desc}
-            </Text>
-          </GridItem>
+    <div className="container mx-auto px-[20px] pb-16 md:px-0">
+      <h2 className="font-bold text-center text-3xl mb-10">{data.title}</h2>
+      <Image className="w-full mb-7" alt="work image" src={workImage} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-center">
+        {data.contents?.map((d, i) => (
+          <div key={d.heading}>
+            <h2 className="text-[17px] font-medium mb-4">
+              {i + 1} {d.heading}
+            </h2>
+            <p className="text-textColor text-[15px]">{d.desc}</p>
+          </div>
         ))}
-      </Grid>
-    </Container>
+      </div>
+    </div>
   );
 };
 
