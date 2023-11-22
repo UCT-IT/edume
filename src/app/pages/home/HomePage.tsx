@@ -2,6 +2,7 @@ import FAQ from "@/components/home/FAQ/FAQ";
 import Features from "@/components/home/Features/Features";
 import GrowBusiness from "@/components/home/GrowBusiness/GrowBusiness";
 import HeroSection from "@/components/home/HeroSection/HeroSection";
+import TestimonialCarousel from "@/components/home/TestimonialCarousel/TestimonialCarousel";
 import Works from "@/components/home/Works/Works";
 import React from "react";
 
@@ -10,9 +11,10 @@ const HomePage = () => {
     <React.Fragment>
       <HeroSection />
       <Features />
-      <FAQ />
-      <GrowBusiness />
       <Works />
+      <TestimonialCarousel />
+      <GrowBusiness />
+      <FAQ />
     </React.Fragment>
   );
 };
