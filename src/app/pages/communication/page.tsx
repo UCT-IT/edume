@@ -2,8 +2,12 @@ import CommonButton from "@/components/common/button/CommonButton";
 import CommonSection from "@/components/common/featurePages/commonSection/CommonSection";
 import HeroBackground from "@/components/home/HeroBackground/HeroBackground";
 import React from "react";
-import RightComponent from "./userAccess/RightComponent";
-import LeftComponent from "./userAccess/LeftComponent";
+import UserAccessRightComponent from "./userAccess/RightComponent";
+import UserAccessLeftComponent from "./userAccess/LeftComponent";
+import EliminateLeftComponent from "./eliminateNoShows/LeftComponent";
+import EliminateRightComponent from "./eliminateNoShows/RightComponent";
+import StayInTuochRightComponent from "./stayInTouch/RightComponent";
+import StayInTuochLefttComponent from "./stayInTouch/LeftComponent";
 import { strings } from "@/assets/locales/locales";
 
 const CommunicationPage = () => {
@@ -29,8 +33,20 @@ const CommunicationPage = () => {
         </div>
       </HeroBackground>
       <CommonSection
-        rightComponent={<RightComponent />}
-        leftComponent={<LeftComponent />}
+        rightComponent={<UserAccessRightComponent />}
+        leftComponent={<UserAccessLeftComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        rightComponent={<EliminateRightComponent />}
+        leftComponent={<EliminateLeftComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        rightComponent={<StayInTuochRightComponent />}
+        leftComponent={<StayInTuochLefttComponent />}
         orderFirst="first"
         orderLast="last"
       />

@@ -211,6 +211,30 @@ export let strings = new LocalizedStrings({
         access.`,
         link: { text: "Try it for free", href: "#" },
       },
+      eliminate: {
+        heading: `ELIMINATE NO-SHOWS`,
+        title: `Automatic Email 
+        Reminders to Improve 
+        Attendance`,
+        firstDescription: `Reduce absences and confusion about lesson times and locations 
+        with automated lesson reminders for students, parents and 
+        teachers.`,
+        secondDescription: `Reminder templates are fully customizable and you can adjust 
+        how many hours in advance your reminders are sent..`,
+        link: { text: "Open An Account", href: "#" },
+      },
+      stayInTouch: {
+        heading: `STAY IN TOUCH`,
+        title: `Provide Feedback with 
+        Lesson Notese`,
+        firstDescription: `After each lesson, teachers can save notes about the lesson and 
+        have the option to send the notes to parents or students by 
+        email.`,
+        secondDescription: `Parents love receiving regular feedback, and this convenient 
+        format provides them with a regular reminder of the value of 
+        your teaching services.`,
+        link: { text: "Sign Up", href: "#" },
+      },
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your

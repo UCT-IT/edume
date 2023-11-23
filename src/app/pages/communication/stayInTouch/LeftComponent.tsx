@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const LeftComponent = () => {
-  const data = strings.communication.userAccess;
+  const data = strings.communication.stayInTouch;
   return (
     <React.Fragment>
       <p className="text-tertiary font-semibold tracking-widest">
