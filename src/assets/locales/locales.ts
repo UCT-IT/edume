@@ -192,6 +192,26 @@ export let strings = new LocalizedStrings({
         },
       ],
     },
+    communication: {
+      title: `Enhance & Automate 
+      Communication.`,
+      description: `Communication is an important part of any teaching organization. Teachworks will help your 
+      business communicate and provide teachers, students and parents with the information 
+      that they need.`,
+      btn: "Get Started Today",
+      userAccess: {
+        heading: `EASY USER ACCESS`,
+        title: `Personal, Online User 
+        Accounts`,
+        firstDescription: `Give your Teachers, Staff, Parents and Students personal online 
+        accounts with access to their own information based on their 
+        account type and permission settings.`,
+        secondDescription: `Customers can conveniently and easily access their calendar, 
+        lesson history, invoices and more from any computer with web-
+        access.`,
+        link: { text: "Try it for free", href: "#" },
+      },
+    },
     footer: {
       footerHeader: `Simplify management, save time, and grow your
       business.`,
