@@ -192,6 +192,14 @@ export let strings = new LocalizedStrings({
         },
       ],
     },
+    overview: {
+      heroContent: {
+        title: `Manage & Grow Your Business
+        With Less Effort`,
+        description: `Teachworks helps education businesses of all sizes simplify management and scale 
+        their businesses.`,
+      },
+    },
     footer: {
       footerHeader: `Simplify management, save time, and grow your
       business.`,

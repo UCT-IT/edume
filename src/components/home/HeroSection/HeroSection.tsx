@@ -3,7 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { strings } from "@/assets/locales/locales";
-import HeroBackground from "../HeroBackground/HeroBackground";
+import HeroBackground from "@/components/common/HeroBackground/HeroBackground";
 import heroSectionImage from "../../../../public/home/heroSectionImage.svg";
 
 const HeroSection = () => {
