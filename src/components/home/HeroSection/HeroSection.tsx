@@ -5,6 +5,7 @@ import Image from "next/image";
 import { strings } from "@/assets/locales/locales";
 import HeroBackground from "../../common/HeroBackground/HeroBackground";
 import heroSectionImage from "../../../../public/home/heroSectionImage.svg";
+import CommonButton from "@/components/common/button/CommonButton";
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -49,9 +50,12 @@ const HeroSection = () => {
               <p className="leading-8 py-5 whitespace-pre-line font-light">
                 {data.description}
               </p>
-              <button className="bg-tertiary hover:bg-[#97CE2C] text-secondary px-10 py-4 my-5 rounded">
-                {data.btn}
-              </button>
+              <CommonButton
+                text={data.btn}
+                href="#"
+                hover="[#97CE2C]"
+                color="tertiary"
+              />
               <p className="font-light">{data.tour}</p>
             </div>
             <div className="w-full">

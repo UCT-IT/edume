@@ -201,6 +201,84 @@ export let strings = new LocalizedStrings({
         description: `Coordinating schedules with multiple teachers, students and locations can be a challenge.
         Teachworks simplifies scheduling and ensures that everyone is on the same page.`,
       },
+      flexibleViews: {
+        heading: `FLEXIBLE VIEWS`,
+        title: `Multiple Calendar Views &
+        Filters`,
+        descriptionOne: `Finding open spaces is quick & easy with over six different
+        calendar views including month, week agenda, daily agenda,
+        teachers, and locations.`,
+        descriptionTwo: `Plus calendar filters for students, teachers and locations.`,
+        link: {
+          text: `Try it for Free`,
+          link: "#",
+        },
+      },
+      easyAvailability: {
+        heading: `EASY AVAILABILITY`,
+        title: `Teacher Availability`,
+        description: `View teacher availability on the calendar for quickly finding
+        openings. Teachers can manage their availability from their
+        personal Teachworks accounts, so their availability is always up-
+        to-date.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      simplifiedScheduling: {
+        heading: `SIMPLIFIED SCHEDULING`,
+        title: `Quick and Easy
+        Scheduling`,
+        descriptionOne: `Manage schedule changes right from the calendar. Drag & Drop
+        lessons to a new time, teacher or location in seconds.`,
+        descriptionTwo: `Resize lessons to change duration. Click to schedule a new
+        lesson.`,
+        link: {
+          text: `Open an Account`,
+          link: "#",
+        },
+      },
+      eliminateClashes: {
+        heading: `ELIMINATE CLASHES`,
+        title: `Spot Scheduling Conflicts`,
+        descriptionOne: `When scheduling a new lesson, easily view a teacher's lesson
+        and availability conflicts and location conflicts with the click of a
+        button.`,
+        descriptionTwo: `Conflict details include the specific lessons, availabilities and
+        times of the conflicts.`,
+        link: {
+          text: `Try it Out`,
+          link: "#",
+        },
+      },
+      websiteBookingOne: {
+        heading: `WEBSITE BOOKING`,
+        title: `Booking Lessons from
+        Your Website`,
+        descriptionOne: `Allow students to book lessons with teachers directly from your
+        website based on your teachers' availability.`,
+        descriptionTwo: `Booking notifications are sent to the client, teacher and your
+        company and the lesson is scheduled on your calendar.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      websiteBookingTwo: {
+        heading: `WEBSITE BOOKING`,
+        title: `Joining Open Classes
+        from Your Website`,
+        descriptionOne: `Use our Website Booking Plugin to let students view and join
+        open classes directly from your website -- whenever it's most
+        convenient for them.`,
+        descriptionTwo: `Students can easily filter by date, teacher and class name, and
+        they can see the number of open spaces available.`,
+        link: {
+          text: `Start Today`,
+          link: "#",
+        },
+      },
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your

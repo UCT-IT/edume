@@ -1,23 +1,10 @@
 "use client";
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  SlideFade,
-  Spacer,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import NextLink from "next/link";
+import { HiMenu, HiOutlineX } from "react-icons/hi";
 import React, { useEffect, useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import { strings } from "@/assets/locales/locales";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-// Now you can use NextLink in your code
 
 const Navbar = () => {
   const dropdownFeatures = {
@@ -102,7 +89,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="cursor-pointer"
           >
-            <HamburgerIcon />
+            {isMenuOpen ? <HiOutlineX /> : <HiMenu />}
           </div>
         </div>
 

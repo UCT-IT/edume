@@ -1,7 +1,20 @@
 import { strings } from "@/assets/locales/locales";
 import HeroBackground from "@/components/common/HeroBackground/HeroBackground";
 import CommonButton from "@/components/common/button/CommonButton";
+import CommonSection from "@/components/common/featuresPages/commonSection/CommonSection";
 import React from "react";
+import FlexibleLeftComponent from "./flexibleViews/LeftComponent";
+import FlexibleRightComponent from "./flexibleViews/RightComponent";
+import EasyLeftComponent from "./easyAvailability/LeftComponent";
+import EasyRightComponent from "./easyAvailability/RightComponent";
+import SimplifiedLeftComponent from "./simplifiedScheduling/LeftComponent";
+import SimplifiedRightComponent from "./simplifiedScheduling/RightComponent";
+import EliminateLeftComponent from "./eliminateClashes/LeftComponent";
+import EliminateRightComponent from "./eliminateClashes/RightComponent";
+import WebOneLeftComponent from "./websiteBookingOne/LeftComponent";
+import WebOneRightComponent from "./websiteBookingOne/RightComponent";
+import WebTwoLeftComponent from "./websiteBookingTwo/LeftComponent";
+import WebTwoRightComponent from "./websiteBookingTwo/RightComponent";
 
 const CalendarAndScheduling = () => {
   const data = {
@@ -26,6 +39,42 @@ const CalendarAndScheduling = () => {
           </div>
         </div>
       </HeroBackground>
+      <CommonSection
+        leftComponent={<FlexibleLeftComponent />}
+        rightComponent={<FlexibleRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<EasyLeftComponent />}
+        rightComponent={<EasyRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        leftComponent={<SimplifiedLeftComponent />}
+        rightComponent={<SimplifiedRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<EliminateLeftComponent />}
+        rightComponent={<EliminateRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        leftComponent={<WebOneLeftComponent />}
+        rightComponent={<WebOneRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<WebTwoLeftComponent />}
+        rightComponent={<WebTwoRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
     </React.Fragment>
   );
 };

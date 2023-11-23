@@ -1,5 +1,4 @@
 import React from "react";
-// import herobgImg from "../../assets/images/heroBg.svg";
 
 const HeroBackground = ({ children }: { children: React.ReactNode }) => {
   return (
