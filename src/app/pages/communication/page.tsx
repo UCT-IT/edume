@@ -8,10 +8,16 @@ import EliminateLeftComponent from "./eliminateNoShows/LeftComponent";
 import EliminateRightComponent from "./eliminateNoShows/RightComponent";
 import StayInTuochRightComponent from "./stayInTouch/RightComponent";
 import StayInTuochLefttComponent from "./stayInTouch/LeftComponent";
+import AutomatedRightComponent from "./automatedReminders1/RightComponent";
+import AutomatedLefttComponent from "./automatedReminders1/LeftComponent";
+import AutomatedRightComponent2 from "./automatedReminders2/RightComponent";
+import AutomatedLefttComponent2 from "./automatedReminders2/LeftComponent";
 import { strings } from "@/assets/locales/locales";
+import MoreFeaturesSections from "@/components/common/featurePages/moreFeaturesSections/MoreFeaturesSections";
 
 const CommunicationPage = () => {
   const data = strings.communication;
+  const moreFeaturesSectionsData = strings.communication.moreFeautesSections;
   return (
     <React.Fragment>
       <HeroBackground>
@@ -49,6 +55,22 @@ const CommunicationPage = () => {
         leftComponent={<StayInTuochLefttComponent />}
         orderFirst="first"
         orderLast="last"
+      />
+      <CommonSection
+        rightComponent={<AutomatedRightComponent />}
+        leftComponent={<AutomatedLefttComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        rightComponent={<AutomatedRightComponent2 />}
+        leftComponent={<AutomatedLefttComponent2 />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <MoreFeaturesSections
+        featureData={moreFeaturesSectionsData}
+        column="grid-cols-4"
       />
     </React.Fragment>
   );

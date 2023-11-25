@@ -235,6 +235,73 @@ export let strings = new LocalizedStrings({
         your teaching services.`,
         link: { text: "Sign Up", href: "#" },
       },
+      automatedReminders: {
+        heading: `AUTOMATED REMINDERS`,
+        title: `Automatic SMS Lesson 
+        Reminders`,
+        firstDescription: `Enable the SMS Lesson Reminders Add-On and provide 
+        students, parents and teachers with timely reminders sent right 
+        to their mobile phones.`,
+        secondDescription: `Customize messages and adjust lead times for each type of 
+        recipient. Easily view delivery results for all of your reminders.`,
+        link: { text: "Try Teachworks for Free", href: "#" },
+      },
+      automatedReminders2: {
+        heading: `AUTOMATED REMINDERS`,
+        title: `Send Individual & Group 
+        Emails`,
+        firstDescription: `Send emails to one or more of your teachers, staff, students and 
+        parents.`,
+        secondDescription: `Save unlimited email templates for frequently used 
+        communications. Use merge tags to personalize messages for 
+        each recipient.`,
+        link: { text: "Strart Your free trial", href: "#" },
+      },
+      moreFeautesSections: {
+        heading: "Here are a few more ways Teachworks helps you communicate...",
+        contents: [
+          {
+            title: "Easy Notifications",
+            description:
+              "Sending notifications from your account can be either automated, or it's as simple as checking a box when saving a form.",
+          },
+          {
+            title: "Customizable Templates",
+            description:
+              "Customize your notifications with your own subject and message. Use merge tags to personalize each email.",
+          },
+          {
+            title: "View Email Logs",
+            description:
+              "View detailed records of all notifications sent from your account.",
+          },
+          {
+            title: "Track Deliverability",
+            description:
+              "Track which email addresses couldn't be delivered, so that you can correct your records.",
+          },
+          {
+            title: "Welcome Emails",
+            description:
+              "Automatically send welcome emails to new clients, students and teachers when setting up a new profile.",
+          },
+          {
+            title: "Invoice Emails",
+            description:
+              "Send invoices by email and allow your clients to save, print and pay online.",
+          },
+          {
+            title: "Payment Emails",
+            description:
+              "Automatically send an email to a customer when you've received a payment.",
+          },
+          {
+            title: "Teacher Payslips",
+            description:
+              "Send teachers their payslips by email including payment hours and details.",
+          },
+        ],
+      },
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your
