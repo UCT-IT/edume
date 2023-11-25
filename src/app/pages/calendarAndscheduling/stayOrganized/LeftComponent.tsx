@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const LeftComponent = () => {
-  const data = strings.calendarAndScheduling.simplifiedScheduling;
+  const data = strings.calendarAndScheduling.stayOrganized;
   return (
     <React.Fragment>
       <p className="text-tertiary font-semibold tracking-widest">

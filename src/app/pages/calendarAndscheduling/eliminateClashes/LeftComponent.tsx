@@ -15,7 +15,7 @@ const LeftComponent = () => {
       <p className="leading-8 font-light text-textColor text-center md:text-left lg:whitespace-pre-line">
         {data.descriptionOne}
       </p>
-      <p className="font-ligt text-textColor text-center md:text-left lg:whitespace-pre-line">
+      <p className="font-light text-textColor text-center md:text-left lg:whitespace-pre-line">
         {data.descriptionTwo}
       </p>
       <p className="text-primary hover:text-black">

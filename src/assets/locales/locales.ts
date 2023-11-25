@@ -279,6 +279,125 @@ export let strings = new LocalizedStrings({
           link: "#",
         },
       },
+      uptodateRecords: {
+        heading: `UP-TO-DATE RECORDS`,
+        title: `Detailed Records`,
+        descriptionOne: `Track detailed records for each lesson including attendance
+        status, revenue, wage, teacher, students, location, subject and
+        more.`,
+        descriptionTwo: `Plus teachers can enter lesson notes to save and email to
+        students or parents.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      samePage: {
+        heading: `BE ON THE SAME PAGE`,
+        title: `Personal Calendars`,
+        descriptionOne: `Give teachers, parents, and students easy, online access to their
+        personal calendars.`,
+        descriptionTwo: `Scheduling changes are available instantly in all accounts, so
+        everyone will always be up-to-date.`,
+        link: {
+          text: `Start Today`,
+          link: "#",
+        },
+      },
+      stayOrganized: {
+        heading: `STAY ORGANIZED`,
+        title: `Schedule Confirmations`,
+        descriptionOne: `Reduce last minute cancellations and maintain open
+        communication with your customers with schedule
+        confirmation emails.`,
+        descriptionTwo: `The fully customizable email template gives your clients a quick
+        outlook of upcoming sessions.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      zoneSupport: {
+        heading: `MULTI TIME ZONE SUPPORT`,
+        title: `Support Multiple Time
+        Zones`,
+        descriptionOne: `Do you offer online tutoring with employees and students in
+        different time zones?Put an end to confusion about lesson times!`,
+        descriptionTwo: `Our User Time Zones Add-On simplifies scheduling across time
+        zones by displaying lessons in each user's local time.`,
+        link: {
+          text: `Try it Today`,
+          link: "#",
+        },
+      },
+      moreFeaturesSection: {
+        heading: `Plus many more time-saving features...`,
+        features: [
+          {
+            title: `Individuals & Groups`,
+            description: `Schedule lessons for individuals or
+            groups of students.`,
+          },
+          {
+            title: `Calendar Lock`,
+            description: `Lock calendar prior to date to
+            prevent changes to past periods.`,
+          },
+          {
+            title: `Repeating Lessons`,
+            description: `Create repeating lessons with
+            highly flexible repeat options.`,
+          },
+          {
+            title: `Color-Coding`,
+            description: `Color-code lessons by teacher,
+            student or location.`,
+          },
+          {
+            title: `Jump to Date`,
+            description: `Jump to any date quickly with the
+            calendar date picker.`,
+          },
+          {
+            title: `Calendar Feeds`,
+            description: `Access lessons from other devices
+            using calendar feeds.`,
+          },
+          {
+            title: `Adjustable Settings`,
+            description: `Set default calendar view, first hour,
+            time increments and more.`,
+          },
+          {
+            title: `Lesson Size`,
+            description: `Limit the number of students that
+            can join a lesson.`,
+          },
+          {
+            title: `Copy Lessons`,
+            description: `Copy settings from existing lesson
+            to create an identical lesson.`,
+          },
+          {
+            title: `Joinable Lessons`,
+            description: `Make lessons joinable and allow
+            students to view and enroll in open
+            lessons.`,
+          },
+          {
+            title: `Cancellation Emails`,
+            description: `Send a cancellation email to
+            teachers and clients when a lesson
+            is cancelled.`,
+          },
+          {
+            title: `Cost Override`,
+            description: `Manually override a student's
+            default billing method when
+            scheduling a lesson.`,
+          },
+        ],
+      },
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your

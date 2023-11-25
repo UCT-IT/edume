@@ -15,12 +15,22 @@ import WebOneLeftComponent from "./websiteBookingOne/LeftComponent";
 import WebOneRightComponent from "./websiteBookingOne/RightComponent";
 import WebTwoLeftComponent from "./websiteBookingTwo/LeftComponent";
 import WebTwoRightComponent from "./websiteBookingTwo/RightComponent";
+import UptodateLeftComponent from "./uptodateRecords/LeftComponent";
+import UptodateRightComponent from "./uptodateRecords/RightComponent";
+import SamePageLeftComponent from "./samePage/LeftComponent";
+import SamePageRightComponent from "./samePage/RightComponent";
+import StayOrganizedLeftComponent from "./stayOrganized/LeftComponent";
+import StayOrganizedRightComponent from "./stayOrganized/RightComponent";
+import ZoneSupportLeftComponent from "./zoneSupport/LeftComponent";
+import ZoneSupportRightComponent from "./zoneSupport/RightComponent";
+import MoreFeaturesSection from "@/components/common/featuresPages/moreFeaturesSection/MoreFeaturesSection";
 
 const CalendarAndScheduling = () => {
   const data = {
     title: strings.calendarAndScheduling.heroContent.title,
     description: strings.calendarAndScheduling.heroContent.description,
   };
+  const moreFeatureData = strings.calendarAndScheduling.moreFeaturesSection;
   return (
     <React.Fragment>
       <HeroBackground>
@@ -75,6 +85,31 @@ const CalendarAndScheduling = () => {
         orderFirst="last"
         orderLast="first"
       />
+      <CommonSection
+        leftComponent={<UptodateLeftComponent />}
+        rightComponent={<UptodateRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<SamePageLeftComponent />}
+        rightComponent={<SamePageRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        leftComponent={<StayOrganizedLeftComponent />}
+        rightComponent={<StayOrganizedRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<ZoneSupportLeftComponent />}
+        rightComponent={<ZoneSupportRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <MoreFeaturesSection data={moreFeatureData} column="4" />
     </React.Fragment>
   );
 };
