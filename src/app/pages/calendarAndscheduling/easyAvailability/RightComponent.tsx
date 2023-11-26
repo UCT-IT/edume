@@ -9,12 +9,12 @@ const RightComponent = () => {
       <div className="w-3/4 mx-auto mt-4 md:mt-0">
         <Image
           src={calendarImg3}
-          alt=""
+          alt="Calendar Image"
           className="relative top-8 w-full rounded-md shadow-customShadow"
         />
         <Image
           src={calendarImg4}
-          alt=""
+          alt="Calendar Image"
           className="relative bottom-2 left-8 shadow-customShadow w-full rounded-md"
         />
       </div>
