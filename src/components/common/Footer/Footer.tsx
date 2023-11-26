@@ -4,8 +4,12 @@ import { ImFacebook } from "react-icons/im";
 import { strings } from "@/assets/locales/locales";
 import FooterGridItem from "./FooterGridItem";
 import { motion } from "framer-motion";
+<<<<<<< HEAD:src/components/home/Footer/Footer.tsx
+import CommonButton from "@/components/common/button/CommonButton";
+=======
 import CommonButton from "../button/CommonButton";
 
+>>>>>>> 6cc2b2570695ec1911029ade7c652b16431daecf:src/components/common/Footer/Footer.tsx
 const Footer = () => {
   const footerData = strings.footer;
   const footerColumns = footerData.footerColumns;
