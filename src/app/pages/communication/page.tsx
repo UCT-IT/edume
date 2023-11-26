@@ -7,11 +7,11 @@ import UserAccessLeftComponent from "./userAccess/LeftComponent";
 import EliminateLeftComponent from "./eliminateNoShows/LeftComponent";
 import EliminateRightComponent from "./eliminateNoShows/RightComponent";
 import StayInTuochRightComponent from "./stayInTouch/RightComponent";
-import StayInTuochLefttComponent from "./stayInTouch/LeftComponent";
-import AutomatedRightComponent from "./automatedReminders1/RightComponent";
-import AutomatedLefttComponent from "./automatedReminders1/LeftComponent";
-import AutomatedRightComponent2 from "./automatedReminders2/RightComponent";
-import AutomatedLefttComponent2 from "./automatedReminders2/LeftComponent";
+import StayInTouchLefttComponent from "./stayInTouch/LeftComponent";
+import AutomatedRemindersRightComponent from "./automatedReminders1/RightComponent";
+import AutomatedReminderLeftComponent from "./automatedReminders1/LeftComponent";
+import AutomatedReminderRightComponent2 from "./automatedReminders2/RightComponent";
+import AutomatedReminderLeftComponent2 from "./automatedReminders2/LeftComponent";
 import { strings } from "@/assets/locales/locales";
 import MoreFeaturesSections from "@/components/common/featurePages/moreFeaturesSections/MoreFeaturesSections";
 
@@ -52,19 +52,19 @@ const CommunicationPage = () => {
       />
       <CommonSection
         rightComponent={<StayInTuochRightComponent />}
-        leftComponent={<StayInTuochLefttComponent />}
+        leftComponent={<StayInTouchLefttComponent />}
         orderFirst="first"
         orderLast="last"
       />
       <CommonSection
-        rightComponent={<AutomatedRightComponent />}
-        leftComponent={<AutomatedLefttComponent />}
+        rightComponent={<AutomatedRemindersRightComponent />}
+        leftComponent={<AutomatedReminderLeftComponent />}
         orderFirst="last"
         orderLast="first"
       />
       <CommonSection
-        rightComponent={<AutomatedRightComponent2 />}
-        leftComponent={<AutomatedLefttComponent2 />}
+        rightComponent={<AutomatedReminderRightComponent2 />}
+        leftComponent={<AutomatedReminderLeftComponent2 />}
         orderFirst="first"
         orderLast="last"
       />
