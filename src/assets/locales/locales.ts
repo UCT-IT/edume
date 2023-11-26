@@ -195,7 +195,125 @@ export let strings = new LocalizedStrings({
         },
       ],
     },
-
+    overview: {
+      heroContent: {
+        title: `Manage & Grow Your Business
+        With Less Effort`,
+        description: `Teachworks helps education businesses of all sizes simplify management and scale 
+        their businesses.`,
+      },
+    },
+    communication: {
+      title: `Enhance & Automate 
+      Communication.`,
+      description: `Communication is an important part of any teaching organization. Teachworks will help your 
+      business communicate and provide teachers, students and parents with the information 
+      that they need.`,
+      btn: "Get Started Today",
+      userAccess: {
+        heading: `EASY USER ACCESS`,
+        title: `Personal, Online User 
+        Accounts`,
+        firstDescription: `Give your Teachers, Staff, Parents and Students personal online 
+        accounts with access to their own information based on their 
+        account type and permission settings.`,
+        secondDescription: `Customers can conveniently and easily access their calendar, 
+        lesson history, invoices and more from any computer with web-
+        access.`,
+        link: { text: "Try it for free", href: "#" },
+      },
+      eliminate: {
+        heading: `ELIMINATE NO-SHOWS`,
+        title: `Automatic Email 
+        Reminders to Improve 
+        Attendance`,
+        firstDescription: `Reduce absences and confusion about lesson times and locations 
+        with automated lesson reminders for students, parents and 
+        teachers.`,
+        secondDescription: `Reminder templates are fully customizable and you can adjust 
+        how many hours in advance your reminders are sent..`,
+        link: { text: "Open An Account", href: "#" },
+      },
+      stayInTouch: {
+        heading: `STAY IN TOUCH`,
+        title: `Provide Feedback with 
+        Lesson Notese`,
+        firstDescription: `After each lesson, teachers can save notes about the lesson and 
+        have the option to send the notes to parents or students by 
+        email.`,
+        secondDescription: `Parents love receiving regular feedback, and this convenient 
+        format provides them with a regular reminder of the value of 
+        your teaching services.`,
+        link: { text: "Sign Up", href: "#" },
+      },
+      automatedReminders: {
+        heading: `AUTOMATED REMINDERS`,
+        title: `Automatic SMS Lesson 
+        Reminders`,
+        firstDescription: `Enable the SMS Lesson Reminders Add-On and provide 
+        students, parents and teachers with timely reminders sent right 
+        to their mobile phones.`,
+        secondDescription: `Customize messages and adjust lead times for each type of 
+        recipient. Easily view delivery results for all of your reminders.`,
+        link: { text: "Try Teachworks for Free", href: "#" },
+      },
+      automatedReminders2: {
+        heading: `AUTOMATED REMINDERS`,
+        title: `Send Individual & Group 
+        Emails`,
+        firstDescription: `Send emails to one or more of your teachers, staff, students and 
+        parents.`,
+        secondDescription: `Save unlimited email templates for frequently used 
+        communications. Use merge tags to personalize messages for 
+        each recipient.`,
+        link: { text: "Strart Your free trial", href: "#" },
+      },
+      moreFeautesSections: {
+        heading: "Here are a few more ways Teachworks helps you communicate...",
+        contents: [
+          {
+            title: "Easy Notifications",
+            description:
+              "Sending notifications from your account can be either automated, or it's as simple as checking a box when saving a form.",
+          },
+          {
+            title: "Customizable Templates",
+            description:
+              "Customize your notifications with your own subject and message. Use merge tags to personalize each email.",
+          },
+          {
+            title: "View Email Logs",
+            description:
+              "View detailed records of all notifications sent from your account.",
+          },
+          {
+            title: "Track Deliverability",
+            description:
+              "Track which email addresses couldn't be delivered, so that you can correct your records.",
+          },
+          {
+            title: "Welcome Emails",
+            description:
+              "Automatically send welcome emails to new clients, students and teachers when setting up a new profile.",
+          },
+          {
+            title: "Invoice Emails",
+            description:
+              "Send invoices by email and allow your clients to save, print and pay online.",
+          },
+          {
+            title: "Payment Emails",
+            description:
+              "Automatically send an email to a customer when you've received a payment.",
+          },
+          {
+            title: "Teacher Payslips",
+            description:
+              "Send teachers their payslips by email including payment hours and details.",
+          },
+        ],
+      },
+    },
     calendarAndScheduling: {
       heroContent: {
         title: "Complex Scheduling Simplified.",
@@ -398,14 +516,6 @@ export let strings = new LocalizedStrings({
             scheduling a lesson.`,
           },
         ],
-
-    overview: {
-      heroContent: {
-        title: `Manage & Grow Your Business
-        With Less Effort`,
-        description: `Teachworks helps education businesses of all sizes simplify management and scale 
-        their businesses.`,
-
       },
     },
     footer: {
