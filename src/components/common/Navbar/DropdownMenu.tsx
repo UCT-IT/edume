@@ -5,6 +5,7 @@ import Link from "next/link";
 type DropdownMenuPropsType = {
   title: string;
   dropdownMenus: { menuName: string; menuLink: string }[];
+
 };
 
 const DropdownMenu = ({ title, dropdownMenus }: DropdownMenuPropsType) => {
@@ -20,6 +21,7 @@ const DropdownMenu = ({ title, dropdownMenus }: DropdownMenuPropsType) => {
       </div>
       {isHovered && (
         <ul className="md:absolute md:top-full w-full md:w-64 flex-col items-start space-y-5 px-10 py-5 lg:py-6 bg-secondary text-textColor">
+
           {dropdownMenus.map((menu) => (
             <li
               key={menu.menuName}

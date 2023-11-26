@@ -195,6 +195,7 @@ export let strings = new LocalizedStrings({
         },
       ],
     },
+
     calendarAndScheduling: {
       heroContent: {
         title: "Complex Scheduling Simplified.",
@@ -397,6 +398,14 @@ export let strings = new LocalizedStrings({
             scheduling a lesson.`,
           },
         ],
+
+    overview: {
+      heroContent: {
+        title: `Manage & Grow Your Business
+        With Less Effort`,
+        description: `Teachworks helps education businesses of all sizes simplify management and scale 
+        their businesses.`,
+
       },
     },
     footer: {

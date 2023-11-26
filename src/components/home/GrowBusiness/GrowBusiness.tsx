@@ -12,7 +12,7 @@ const GrowBusiness = () => {
   };
   return (
     <React.Fragment>
-      <div className="bg-[url('/home/businessWork.svg')] bg-clip-border bg-contain bg-no-repeat container mx-auto px-[20px] pb-16 md:px-0 bg-center text-center">
+      <div className="bg-[url('/home/businessWork.svg')] bg-clip-border bg-contain bg-no-repeat container mx-auto px-[20px] py-16 md:px-0 bg-center text-center">
         <h2 className="text-tertiary font-bold tracking-wide mb-5 ">
           {data.title}
         </h2>

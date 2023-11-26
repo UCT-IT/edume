@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const HeroBackground = ({ children }: { children: React.ReactNode }) => {
   return (
     <div

@@ -6,6 +6,7 @@ import { strings } from "@/assets/locales/locales";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+
 const Navbar = () => {
   const dropdownFeatures = {
     title: strings.dropdownFeatures.title,

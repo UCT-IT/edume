@@ -5,10 +5,12 @@ import { strings } from "@/assets/locales/locales";
 import FooterGridItem from "./FooterGridItem";
 import { motion } from "framer-motion";
 import CommonButton from "../button/CommonButton";
+
 const Footer = () => {
   const footerData = strings.footer;
   const footerColumns = footerData.footerColumns;
-
+  
+  
   return (
     <div
       className="bg-primary"
@@ -26,6 +28,7 @@ const Footer = () => {
             }}
             className="text-[35px] text-center whitespace-pre-wrap"
           >
+
             {footerData.footerHeader}
           </motion.h1>
 
