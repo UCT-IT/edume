@@ -6,7 +6,6 @@ import { strings } from "@/assets/locales/locales";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-
 const Navbar = () => {
   const dropdownFeatures = {
     title: strings.dropdownFeatures.title,
@@ -46,9 +45,11 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-2 flex items-center justify-between gap-4 lg:gap-10 text-base">
-          <h1 className="text-secondary font-semibold text-2xl md:text-lg lg:text-2xl">
-            {strings.nav.logo}
-          </h1>
+          <Link href="/">
+            <h1 className="text-secondary font-semibold text-2xl md:text-lg lg:text-2xl">
+              {strings.nav.logo}
+            </h1>
+          </Link>
           <div className="flex items-center gap-2 lg:gap-8 flex-grow text-sm lg:text-base">
             <DropdownMenu {...dropdownFeatures} />
             <DropdownMenu {...dropdownSolution} />

@@ -12,13 +12,13 @@ export let strings = new LocalizedStrings({
     dropdownFeatures: {
       title: "Features",
       dropdownMenus: [
-        { menuName: "Overview", menuLink: "#" },
+        { menuName: "Overview", menuLink: "/pages/overview" },
         {
           menuName: "Calendar & Scheduling",
-          menuLink: "pages/calendarAndscheduling",
+          menuLink: "/pages/calendarAndscheduling",
         },
-        { menuName: "Communication", menuLink: "#" },
-        { menuName: "Billing & Payroll", menuLink: "#" },
+        { menuName: "Communication", menuLink: "/pages/communication" },
+        { menuName: "Billing & Payroll", menuLink: "/pages/billingAndPayroll" },
         { menuName: "Records & Analytics", menuLink: "#" },
         { menuName: "Customize & white Label", menuLink: "#" },
         { menuName: "Automation", menuLink: "#" },
@@ -516,6 +516,57 @@ export let strings = new LocalizedStrings({
             scheduling a lesson.`,
           },
         ],
+      },
+    },
+    billingAndPayroll: {
+      heroContent: {
+        title: `Less Accounting. More Teaching.`,
+        description: `Teachworks streamlines & automates your invoicing, payments and payroll, giving you more
+        time to focus on other areas of your business.`,
+      },
+      flexibleBillingMethods: {
+        heading: `FLEXIBILE BILLING METHODS`,
+        title: `Efficient, Rule-Based
+        Billing`,
+        descriptionOne: `Teachworks supports a wide range of methods for charging
+        students including per hour by student or by service type, flat-
+        fee, and prepaid hours package. Student discounts and premiums
+        are also supported.`,
+        descriptionTwo: `Lesson costs are set automatically based on the student's
+        settings -- saving time and reducing clerical errors.`,
+        link: {
+          text: `Try it for Free`,
+          link: "#",
+        },
+      },
+      quickInvoicing: {
+        heading: `QUICK INVOICING`,
+        title: `Easy, Automated Invoices`,
+        descriptionOne: `Drastically reduce your time spent on invoicing with our flexible
+        invoicing system.`,
+        descriptionTwo: `Generate invoices for one or multiple clients. Add charges,
+        packages, or lessons pulled right from your calendar. Customize
+        your workflow with the option to review before approval and
+        sending.`,
+        descriptionThree: `Further automate your invoicing with our Invoice Autopilot to
+        generate invoices automatically on recurring basis.`,
+        link: {
+          text: `Start Your Free Trial to Learn More`,
+          link: "#",
+        },
+      },
+      customizableInvoices: {
+        heading: `CUSTOMIZABLE INVOICES`,
+        title: `Professional, Custom
+        Invoices`,
+        descriptionOne: `Extend your company's brand with Teachworks' professional,
+        customizable invoices. Add your company logo, contact details,
+        instructions and more. Invoices can be emailed, printed and
+        saved in PDF format.`,
+        link: {
+          text: `Open Your Account Today`,
+          link: "#",
+        },
       },
     },
     footer: {
