@@ -21,6 +21,9 @@ const config: Config = {
       fontFamily: {
         kalam: ["Kalam", "cursive"],
       },
+      boxShadow: {
+        customShadow: "0 0 0.75rem #D3D3D3",
+      },
     },
   },
   plugins: [],
