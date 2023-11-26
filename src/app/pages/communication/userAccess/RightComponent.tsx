@@ -11,11 +11,6 @@ const RightComponent = () => {
           alt=""
           className="relative w-full rounded-md shadow-customShadow"
         />
-        {/* <Image
-          src={calendarImg2}
-          alt=""
-          className="relative bottom-2 -left-8 shadow-customShadow w-full rounded-md"
-        /> */}
       </div>
     </React.Fragment>
   );
