@@ -19,7 +19,7 @@ const Clients = () => {
         <div>
           <h2 className="mb-4 font-medium text-2xl">{data.title}</h2>
           <ul>
-            {data.content?.map((data) => (
+            {data.content.map((data) => (
               <li
                 className="text-textColor mb-3 flex text-[16px] font-normal gap-3"
                 key={data}

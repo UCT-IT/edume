@@ -1,6 +1,5 @@
 import CommonButton from "@/components/common/button/CommonButton";
 import CommonSection from "@/components/common/featurePages/commonSection/CommonSection";
-import HeroBackground from "@/components/home/HeroBackground/HeroBackground";
 import React from "react";
 import UserAccessRightComponent from "./userAccess/RightComponent";
 import UserAccessLeftComponent from "./userAccess/LeftComponent";
@@ -14,6 +13,7 @@ import AutomatedReminderRightComponent2 from "./automatedReminders2/RightCompone
 import AutomatedReminderLeftComponent2 from "./automatedReminders2/LeftComponent";
 import { strings } from "@/assets/locales/locales";
 import MoreFeaturesSections from "@/components/common/featurePages/moreFeaturesSections/MoreFeaturesSections";
+import HeroBackground from "@/components/common/HeroBackground/HeroBackground";
 
 const CommunicationPage = () => {
   const data = strings.communication;

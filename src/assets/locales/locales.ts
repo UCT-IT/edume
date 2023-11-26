@@ -12,37 +12,40 @@ export let strings = new LocalizedStrings({
     dropdownFeatures: {
       title: "Features",
       dropdownMenus: [
-        "Overview",
-        "Calendar & Scheduling",
-        "Communication",
-        "Billing & Payroll",
-        "Records & Analytics",
-        "Customize & white Label",
-        "Automation",
-        "Multiple Branches",
-        "Integrations & Add-Ons",
-        "Website Plugins Demo",
+        { menuName: "Overview", menuLink: "#" },
+        {
+          menuName: "Calendar & Scheduling",
+          menuLink: "pages/calendarAndscheduling",
+        },
+        { menuName: "Communication", menuLink: "#" },
+        { menuName: "Billing & Payroll", menuLink: "#" },
+        { menuName: "Records & Analytics", menuLink: "#" },
+        { menuName: "Customize & white Label", menuLink: "#" },
+        { menuName: "Automation", menuLink: "#" },
+        { menuName: "Multiple Branches", menuLink: "#" },
+        { menuName: "Integrations & Add-Ons", menuLink: "#" },
+        { menuName: "Website Plugins Demo", menuLink: "#" },
       ],
     },
     dropdownSolution: {
       title: "Solution",
       dropdownMenus: [
-        "Tutoring",
-        "Language Schools",
-        "Test Preparation",
-        "Music Schools",
-        "Driving Schools",
+        { menuName: "Tutoring", menuLink: "#" },
+        { menuName: "Language Schools", menuLink: "#" },
+        { menuName: "Test Preparation", menuLink: "#" },
+        { menuName: "Music Schools", menuLink: "#" },
+        { menuName: "Driving Schools", menuLink: "#" },
       ],
     },
     dropdownSupport: {
       title: "Support",
       dropdownMenus: [
-        "Tutorials",
-        "Getting Started Guide",
-        "Knowledge Base",
-        "Contact Us",
-        "FAQs",
-        "Blog",
+        { menuName: "Tutorials", menuLink: "#" },
+        { menuName: "Getting Started Guide", menuLink: "#" },
+        { menuName: "Knowledge Base", menuLink: "#" },
+        { menuName: "Contact Us", menuLink: "#" },
+        { menuName: "FAQs", menuLink: "#" },
+        { menuName: "Blog", menuLink: "#" },
       ],
     },
     heroSection: {
@@ -192,6 +195,14 @@ export let strings = new LocalizedStrings({
         },
       ],
     },
+    overview: {
+      heroContent: {
+        title: `Manage & Grow Your Business
+        With Less Effort`,
+        description: `Teachworks helps education businesses of all sizes simplify management and scale 
+        their businesses.`,
+      },
+    },
     communication: {
       title: `Enhance & Automate 
       Communication.`,
@@ -299,6 +310,210 @@ export let strings = new LocalizedStrings({
             title: "Teacher Payslips",
             description:
               "Send teachers their payslips by email including payment hours and details.",
+          },
+        ],
+      },
+    },
+    calendarAndScheduling: {
+      heroContent: {
+        title: "Complex Scheduling Simplified.",
+        description: `Coordinating schedules with multiple teachers, students and locations can be a challenge.
+        Teachworks simplifies scheduling and ensures that everyone is on the same page.`,
+      },
+      flexibleViews: {
+        heading: `FLEXIBLE VIEWS`,
+        title: `Multiple Calendar Views &
+        Filters`,
+        descriptionOne: `Finding open spaces is quick & easy with over six different
+        calendar views including month, week agenda, daily agenda,
+        teachers, and locations.`,
+        descriptionTwo: `Plus calendar filters for students, teachers and locations.`,
+        link: {
+          text: `Try it for Free`,
+          link: "#",
+        },
+      },
+      easyAvailability: {
+        heading: `EASY AVAILABILITY`,
+        title: `Teacher Availability`,
+        description: `View teacher availability on the calendar for quickly finding
+        openings. Teachers can manage their availability from their
+        personal Teachworks accounts, so their availability is always up-
+        to-date.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      simplifiedScheduling: {
+        heading: `SIMPLIFIED SCHEDULING`,
+        title: `Quick and Easy
+        Scheduling`,
+        descriptionOne: `Manage schedule changes right from the calendar. Drag & Drop
+        lessons to a new time, teacher or location in seconds.`,
+        descriptionTwo: `Resize lessons to change duration. Click to schedule a new
+        lesson.`,
+        link: {
+          text: `Open an Account`,
+          link: "#",
+        },
+      },
+      eliminateClashes: {
+        heading: `ELIMINATE CLASHES`,
+        title: `Spot Scheduling Conflicts`,
+        descriptionOne: `When scheduling a new lesson, easily view a teacher's lesson
+        and availability conflicts and location conflicts with the click of a
+        button.`,
+        descriptionTwo: `Conflict details include the specific lessons, availabilities and
+        times of the conflicts.`,
+        link: {
+          text: `Try it Out`,
+          link: "#",
+        },
+      },
+      websiteBookingOne: {
+        heading: `WEBSITE BOOKING`,
+        title: `Booking Lessons from
+        Your Website`,
+        descriptionOne: `Allow students to book lessons with teachers directly from your
+        website based on your teachers' availability.`,
+        descriptionTwo: `Booking notifications are sent to the client, teacher and your
+        company and the lesson is scheduled on your calendar.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      websiteBookingTwo: {
+        heading: `WEBSITE BOOKING`,
+        title: `Joining Open Classes
+        from Your Website`,
+        descriptionOne: `Use our Website Booking Plugin to let students view and join
+        open classes directly from your website -- whenever it's most
+        convenient for them.`,
+        descriptionTwo: `Students can easily filter by date, teacher and class name, and
+        they can see the number of open spaces available.`,
+        link: {
+          text: `Start Today`,
+          link: "#",
+        },
+      },
+      uptodateRecords: {
+        heading: `UP-TO-DATE RECORDS`,
+        title: `Detailed Records`,
+        descriptionOne: `Track detailed records for each lesson including attendance
+        status, revenue, wage, teacher, students, location, subject and
+        more.`,
+        descriptionTwo: `Plus teachers can enter lesson notes to save and email to
+        students or parents.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      samePage: {
+        heading: `BE ON THE SAME PAGE`,
+        title: `Personal Calendars`,
+        descriptionOne: `Give teachers, parents, and students easy, online access to their
+        personal calendars.`,
+        descriptionTwo: `Scheduling changes are available instantly in all accounts, so
+        everyone will always be up-to-date.`,
+        link: {
+          text: `Start Today`,
+          link: "#",
+        },
+      },
+      stayOrganized: {
+        heading: `STAY ORGANIZED`,
+        title: `Schedule Confirmations`,
+        descriptionOne: `Reduce last minute cancellations and maintain open
+        communication with your customers with schedule
+        confirmation emails.`,
+        descriptionTwo: `The fully customizable email template gives your clients a quick
+        outlook of upcoming sessions.`,
+        link: {
+          text: `Start Your Free Trial`,
+          link: "#",
+        },
+      },
+      zoneSupport: {
+        heading: `MULTI TIME ZONE SUPPORT`,
+        title: `Support Multiple Time
+        Zones`,
+        descriptionOne: `Do you offer online tutoring with employees and students in
+        different time zones?Put an end to confusion about lesson times!`,
+        descriptionTwo: `Our User Time Zones Add-On simplifies scheduling across time
+        zones by displaying lessons in each user's local time.`,
+        link: {
+          text: `Try it Today`,
+          link: "#",
+        },
+      },
+      moreFeaturesSection: {
+        heading: `Plus many more time-saving features...`,
+        features: [
+          {
+            title: `Individuals & Groups`,
+            description: `Schedule lessons for individuals or
+            groups of students.`,
+          },
+          {
+            title: `Calendar Lock`,
+            description: `Lock calendar prior to date to
+            prevent changes to past periods.`,
+          },
+          {
+            title: `Repeating Lessons`,
+            description: `Create repeating lessons with
+            highly flexible repeat options.`,
+          },
+          {
+            title: `Color-Coding`,
+            description: `Color-code lessons by teacher,
+            student or location.`,
+          },
+          {
+            title: `Jump to Date`,
+            description: `Jump to any date quickly with the
+            calendar date picker.`,
+          },
+          {
+            title: `Calendar Feeds`,
+            description: `Access lessons from other devices
+            using calendar feeds.`,
+          },
+          {
+            title: `Adjustable Settings`,
+            description: `Set default calendar view, first hour,
+            time increments and more.`,
+          },
+          {
+            title: `Lesson Size`,
+            description: `Limit the number of students that
+            can join a lesson.`,
+          },
+          {
+            title: `Copy Lessons`,
+            description: `Copy settings from existing lesson
+            to create an identical lesson.`,
+          },
+          {
+            title: `Joinable Lessons`,
+            description: `Make lessons joinable and allow
+            students to view and enroll in open
+            lessons.`,
+          },
+          {
+            title: `Cancellation Emails`,
+            description: `Send a cancellation email to
+            teachers and clients when a lesson
+            is cancelled.`,
+          },
+          {
+            title: `Cost Override`,
+            description: `Manually override a student's
+            default billing method when
+            scheduling a lesson.`,
           },
         ],
       },
