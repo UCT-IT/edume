@@ -53,8 +53,8 @@ const HeroSection = () => {
               <CommonButton
                 text={data.btn}
                 href="#"
-                hover="[#97CE2C]"
-                color="tertiary"
+                hover="bg-[#97CE2C]"
+                color="bg-tertiary"
               />
               <p className="font-light">{data.tour}</p>
             </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const LeftComponent = () => {
-  const data = strings.calendarAndScheduling.websiteBookingOne;
+  const data = strings.billingAndPayroll.addPersonalTouch;
   return (
     <React.Fragment>
       <p className="text-tertiary font-semibold tracking-widest">

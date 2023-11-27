@@ -9,9 +9,25 @@ import QuickInvoicingLeftComponent from "./quickInvoicing/LeftComponent";
 import QuickInvoicingRightComponent from "./quickInvoicing/RightComponent";
 import CustomizableInvoicesLeftComponent from "./customizableInvoices/LeftComponent";
 import CustomizableInvoicesRightComponent from "./customizableInvoices/RightComponent";
+import InvoiceFlagsLeftComponent from "./invoiceFlags/LeftComponent";
+import InvoiceFlagsRightComponent from "./invoiceFlags/RightComponent";
+import OnlinePaymentsLeftComponent from "./onlinePayments/LeftComponent";
+import OnlinePaymentsRightComponent from "./onlinePayments/RightComponent";
+import ProcessInBulkLeftComponent from "./processInBulk/LeftComponent";
+import ProcessInBulkRightComponent from "./processInBulk/RightComponent";
+import LimitClericalErrorsLeftComponent from "./limitClericalErrors/LeftComponent";
+import LimitClericalErrorsRightComponent from "./limitClericalErrors/RightComponent";
+import AutomatedInvoicingLeftComponent from "./automatedInvoicing/LeftComponent";
+import AutomatedInvoicingRightComponent from "./automatedInvoicing/RightComponent";
+import AddPersonalTouchLeftComponent from "./addPersonalTouch/LeftComponent";
+import AddPersonalTouchRightComponent from "./addPersonalTouch/RightComponent";
+import CustomizableTemplatesLeftComponent from "./customizableTemplates/LeftComponent";
+import CustomizableTemplatesRightComponent from "./customizableTemplates/RightComponent";
+import MoreFeaturesSection from "@/components/common/featuresPages/moreFeaturesSection/MoreFeaturesSection";
 
 const page = () => {
   const data = strings.billingAndPayroll.heroContent;
+  const moreFeatureData = strings.billingAndPayroll.moreFeaturesSection;
   return (
     <React.Fragment>
       <HeroBackground>
@@ -24,8 +40,8 @@ const page = () => {
             <CommonButton
               text="Get Started for Free"
               href="#"
-              hover="#97CE2C"
-              color="tertiary"
+              hover="bg-[#97CE2C]"
+              color="bg-tertiary"
             />
           </div>
         </div>
@@ -48,6 +64,49 @@ const page = () => {
         orderFirst="first"
         orderLast="last"
       />
+      <CommonSection
+        leftComponent={<InvoiceFlagsLeftComponent />}
+        rightComponent={<InvoiceFlagsRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        leftComponent={<OnlinePaymentsLeftComponent />}
+        rightComponent={<OnlinePaymentsRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<ProcessInBulkLeftComponent />}
+        rightComponent={<ProcessInBulkRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        leftComponent={<LimitClericalErrorsLeftComponent />}
+        rightComponent={<LimitClericalErrorsRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<AutomatedInvoicingLeftComponent />}
+        rightComponent={<AutomatedInvoicingRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <CommonSection
+        leftComponent={<AddPersonalTouchLeftComponent />}
+        rightComponent={<AddPersonalTouchRightComponent />}
+        orderFirst="first"
+        orderLast="last"
+      />
+      <CommonSection
+        leftComponent={<CustomizableTemplatesLeftComponent />}
+        rightComponent={<CustomizableTemplatesRightComponent />}
+        orderFirst="last"
+        orderLast="first"
+      />
+      <MoreFeaturesSection data={moreFeatureData} column="4" />
     </React.Fragment>
   );
 };

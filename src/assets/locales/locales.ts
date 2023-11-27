@@ -568,6 +568,150 @@ export let strings = new LocalizedStrings({
           link: "#",
         },
       },
+      invoiceFlags: {
+        heading: `INVOICE FLAGS`,
+        title: `Highlighted Invoice
+        Changes`,
+        descriptionOne: `Flagged invoices let administrators or staff easily spot when
+        changes to lessons on the calendar affect invoice totals.`,
+        descriptionTwo: `When viewing a flagged invoice, the changes to the affected
+        lessons and the invoice total are clearly highlighted and the
+        recommended action is indicated.`,
+        link: {
+          text: `Start Today`,
+          link: "#",
+        },
+      },
+      onlinePayments: {
+        heading: `ONLINE PAYMENTS`,
+        title: `Accept Credit Card
+        Payments`,
+        descriptionOne: `Offer your clients more convenience by accepting online credit
+        card payments.`,
+        descriptionTwo: `Teachworks is integrated with Stripe so you can begin accepting
+        credit cards in minutes without a merchant account.`,
+        descriptionThree: `Clients can pay quickly directly from their online invoices, or you
+        can save their credit cards and charge payments on their behalf.`,
+        link: {
+          text: `Start Today`,
+          link: "#",
+        },
+      },
+      processInBulk: {
+        heading: `PROCESS IN BULK`,
+        title: `Bulk Pay Invoices`,
+        descriptionOne: `Save time by charging client credit cards for all of your invoices
+        at once with our bulk invoice payments feature.`,
+        descriptionTwo: `Simply select the invoices to pay and the payments will be
+        processed in the background. Review payment results to identify
+        any declined transactions.`,
+        link: {
+          text: `Try it For Free`,
+          link: "#",
+        },
+      },
+      limitClericalErrors: {
+        heading: `LIMIT CLERICAL ERRORS`,
+        title: `Automated Timesheets &
+        Teacher Payments`,
+        descriptionOne: `There's no need to collect time sheets from your teachers
+        because teacher hours are pulled right from the lessons on the
+        calendar.`,
+        descriptionTwo: `Calculating teacher payments is as easy as selecting the payment
+        time period, checking the lessons to include, and submitting the
+        payment form.`,
+        link: {
+          text: `Try it For Free`,
+          link: "#",
+        },
+      },
+      automatedInvoicing: {
+        heading: `AUTOMATED INVOICING`,
+        title: `Invoice Autopilot`,
+        descriptionOne: `Teachworks' Invoice Autopilot add-on allows you to
+        automatically generate invoices according to a customizable
+        schedule.`,
+        descriptionTwo: `Flexible schedule options & customizable invoice settings help
+        you reduce the amount of time you spend on invoicing.`,
+        link: {
+          text: `Start Today`,
+          link: "#",
+        },
+      },
+      addPersonalTouch: {
+        heading: `ADD YOUR PERSONAL TOUCH`,
+        title: `Custom Invoices`,
+        descriptionOne: `Our Custom Invoices Add-On allows you to customize the
+        appearance & layout of your invoices.`,
+        descriptionTwo: `Plus, you can fully customize the text & labels that appear on
+        invoices, making it a great solution for providing invoices in a
+        foreign language.`,
+        link: {
+          text: `Start Your Trial`,
+          link: "#",
+        },
+      },
+      customizableTemplates: {
+        heading: `CUSTOMIZABLE TEMPLATES`,
+        title: `Custom Invoice Email
+        Templates`,
+        descriptionOne: `Personalize invoice notifications by customizing email templates
+        for different scenarios such as sending a customer their first
+        invoice, invoice reminders, final notices and more!`,
+        link: {
+          text: `Try it For Free`,
+          link: "#",
+        },
+      },
+      moreFeaturesSection: {
+        heading: `Other time-saving features include...`,
+        features: [
+          {
+            title: `Balances & Transactions`,
+            description: `Quickly view customer balances or
+            view complete list of customer
+            transactions.`,
+          },
+          {
+            title: `Record Payments Automatically`,
+            description: `Payments processed online through
+            your Teachworks account are
+            recorded automatically.`,
+          },
+          {
+            title: `Prepaid Packages`,
+            description: `Sell packages of hours for your
+            teaching services and monitor
+            customer balances.`,
+          },
+          {
+            title: `Editable Invoices`,
+            description: `Easily make changes or updates to
+            invoices including invoice items.`,
+          },
+          {
+            title: `Adjustable Invoice Numbers`,
+            description: `Set your own number format and
+            starting number for invoices.`,
+          },
+          {
+            title: `Overdue Invoice Reminders`,
+            description: `Improve collections with
+            customizable overdue invoice reminders.`,
+          },
+          {
+            title: `PDF Invoices`,
+            description: `Convert invoices to PDF files for
+            saving or sending with the click of a
+            button.`,
+          },
+          {
+            title: `View Uninvoiced Lessons`,
+            description: `Prevent lessons from going unpaid
+            by finding all uninvoiced lessons.`,
+          },
+        ],
+      },
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your

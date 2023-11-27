@@ -34,14 +34,14 @@ const Footer = () => {
             <CommonButton
               text={footerData.footerBtn1}
               href="#"
-              hover="[#97CE2C]"
-              color="tertiary"
+              hover="bg-[#97CE2C]"
+              color="bg-tertiary"
             />
             <CommonButton
               text={footerData.footerBtn2}
               href="#"
-              hover="[#4C7DB6]"
-              color="[#2574a3]"
+              hover="bg-[#4C7DB6]"
+              color="bg-[#2574a3]"
             />
           </div>
         </div>
