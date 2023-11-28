@@ -21,13 +21,12 @@ const page = () => {
           </div>
         </div>
       </HeroBackground>
-      <div className="w-[90%] md:w-3/4 lg:w-[845px] h-[186px] md:h-[476px] mx-auto my-28">
+      <div className="w-[90%] md:w-3/4 mx-auto my-28">
         <iframe
           width="100%"
-          height="100%"
-          src="https://www.youtube-nocookie.com/embed/NW2LquT5qKs?si=-FlAbUfQNnziI-Hc"
+          height="515"
+          src="https://www.youtube.com/embed/NW2LquT5qKs?si=3Fh8_e04qjsQp9AB"
           title="YouTube video player"
-          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img from "../../../../../public/featurePages/communication/eliminate.png";
+import img from "../../../../../public/featuresPages/communication/eliminate.png";
 
 const RightComponent = () => {
   return (

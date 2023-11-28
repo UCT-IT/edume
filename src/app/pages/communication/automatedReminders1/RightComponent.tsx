@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import automated1 from "../../../../../public/featurePages/communication/automated1.png";
-import automated2 from "../../../../../public/featurePages/communication/automated2.png";
+import automated1 from "../../../../../public/featuresPages/communication/automated1.png";
+import automated2 from "../../../../../public/featuresPages/communication/automated2.png";
 
 const RightComponent = () => {
   return (

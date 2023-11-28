@@ -1,5 +1,4 @@
 import CommonButton from "@/components/common/button/CommonButton";
-import CommonSection from "@/components/common/featurePages/commonSection/CommonSection";
 import React from "react";
 import UserAccessRightComponent from "./userAccess/RightComponent";
 import UserAccessLeftComponent from "./userAccess/LeftComponent";
@@ -12,8 +11,9 @@ import AutomatedReminderLeftComponent from "./automatedReminders1/LeftComponent"
 import AutomatedReminderRightComponent2 from "./automatedReminders2/RightComponent";
 import AutomatedReminderLeftComponent2 from "./automatedReminders2/LeftComponent";
 import { strings } from "@/assets/locales/locales";
-import MoreFeaturesSections from "@/components/common/featurePages/moreFeaturesSections/MoreFeaturesSections";
 import HeroBackground from "@/components/common/HeroBackground/HeroBackground";
+import CommonSection from "@/components/common/featuresPages/commonSection/CommonSection";
+import MoreFeaturesSections from "@/components/common/featuresPages/moreFeaturesSection/MoreFeaturesSection";
 
 const CommunicationPage = () => {
   const data = strings.communication;
@@ -68,10 +68,7 @@ const CommunicationPage = () => {
         orderFirst="first"
         orderLast="last"
       />
-      <MoreFeaturesSections
-        featureData={moreFeaturesSectionsData}
-        column="grid-cols-4"
-      />
+      <MoreFeaturesSections data={moreFeaturesSectionsData} column="4" />
     </React.Fragment>
   );
 };

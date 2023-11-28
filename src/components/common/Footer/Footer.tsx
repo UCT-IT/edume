@@ -4,17 +4,12 @@ import { ImFacebook } from "react-icons/im";
 import { strings } from "@/assets/locales/locales";
 import FooterGridItem from "./FooterGridItem";
 import { motion } from "framer-motion";
-<<<<<<< HEAD:src/components/home/Footer/Footer.tsx
-import CommonButton from "@/components/common/button/CommonButton";
-=======
 import CommonButton from "../button/CommonButton";
 
->>>>>>> 6cc2b2570695ec1911029ade7c652b16431daecf:src/components/common/Footer/Footer.tsx
 const Footer = () => {
   const footerData = strings.footer;
   const footerColumns = footerData.footerColumns;
-  
-  
+
   return (
     <div
       className="bg-primary"
@@ -32,7 +27,6 @@ const Footer = () => {
             }}
             className="text-[35px] text-center whitespace-pre-wrap"
           >
-
             {footerData.footerHeader}
           </motion.h1>
 
@@ -40,14 +34,14 @@ const Footer = () => {
             <CommonButton
               text={footerData.footerBtn1}
               href="#"
-              hover="[#97CE2C]"
-              color="tertiary"
+              hover="bg-[#97CE2C]"
+              color="bg-tertiary"
             />
             <CommonButton
               text={footerData.footerBtn2}
               href="#"
-              hover="[#4C7DB6]"
-              color="[#2574a3]"
+              hover="bg-[#4C7DB6]"
+              color="bg-[#2574a3]"
             />
           </div>
         </div>

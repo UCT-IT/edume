@@ -45,7 +45,7 @@ const Clients = () => {
           <CommonButton
             href="/"
             text={data.btn as string}
-            hover="#5AA8EC"
+            hover="[#5AA8EC]"
             color="primary"
           />
         </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img from "../../../../../public/featurePages/communication/stayInTouch.png";
+import img from "../../../../../public/featuresPages/communication/stayInTouch.png";
 const RightComponent = () => {
   return (
     <React.Fragment>
