@@ -28,6 +28,7 @@ import MoreFeaturesSection from "@/components/common/featuresPages/moreFeaturesS
 const page = () => {
   const data = strings.billingAndPayroll.heroContent;
   const moreFeatureData = strings.billingAndPayroll.moreFeaturesSection;
+
   return (
     <React.Fragment>
       <HeroBackground>

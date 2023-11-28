@@ -63,6 +63,7 @@ export let strings = new LocalizedStrings({
       and more!`,
       btn: "Try It for free",
       tour: "or Take a Quick Tour",
+      altText: "Hero Section Banner Image",
     },
     features: {
       title: "OUR FEATURES",
@@ -517,6 +518,7 @@ export let strings = new LocalizedStrings({
           },
         ],
       },
+      altText: "Calendar Image",
     },
     billingAndPayroll: {
       heroContent: {
@@ -712,6 +714,7 @@ export let strings = new LocalizedStrings({
           },
         ],
       },
+      altText: "Billing and Payroll image",
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your
