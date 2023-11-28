@@ -43,8 +43,8 @@ const CalendarAndScheduling = () => {
             <CommonButton
               text="Start Your Free Trial"
               href="#"
-              hover="#97CE2C"
-              color="tertiary"
+              hover="bg-[#97CE2C]"
+              color="bg-tertiary"
             />
           </div>
         </div>

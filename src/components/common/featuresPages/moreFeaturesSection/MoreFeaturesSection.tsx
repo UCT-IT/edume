@@ -17,7 +17,9 @@ const MoreFeaturesSection = ({ data, column }: moreFeaturesSectionProps) => {
       >
         {data.features.map((feature) => (
           <div key={feature.title} className="text-center md:text-left">
-            <h2 className="font-light text-xl text-primary">{feature.title}</h2>
+            <h2 className="font-light text-xl text-primary whitespace-nowrap">
+              {feature.title}
+            </h2>
             <p className="font-light leading-7 mt-4 md:whitespace-pre-line">
               {feature.description}
             </p>

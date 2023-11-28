@@ -10,13 +10,8 @@ import CommonButton from "@/components/common/button/CommonButton";
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
-  const data = {
-    title: strings.heroSection.title,
-    animatedText: strings.heroSection.animatedText,
-    description: strings.heroSection.description,
-    btn: strings.heroSection.btn,
-    tour: strings.heroSection.tour,
-  };
+
+  const data = strings.heroSection;
   useEffect(() => {
     const interval = setInterval(() => {
       setFadeOut(true);
@@ -53,16 +48,16 @@ const HeroSection = () => {
               <CommonButton
                 text={data.btn}
                 href="#"
-                hover="[#97CE2C]"
-                color="tertiary"
+                hover="bg-[#97CE2C]"
+                color="bg-tertiary"
               />
-              <p className="font-light">{data.tour}</p>
+              <p className="font-light mt-5 pl-2">{data.tour}</p>
             </div>
             <div className="w-full">
               <Image
                 src={heroSectionImage}
                 priority
-                alt="Hero Section Banner Image"
+                alt={data.altText}
                 className="w-full h-full lg:w-3/4 lg:absolute right-0 lg:-bottom-12"
               />
             </div>
