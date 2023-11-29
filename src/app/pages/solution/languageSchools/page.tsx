@@ -17,6 +17,8 @@ import SpeedUpInvoicingRightComponent from "@/app/pages/solution/languageSchools
 import TopOfMindLeftComponent from "@/app/pages/solution/languageSchools/topOfMind/LeftComponent";
 import TopOfMindRightComponent from "@/app/pages/solution/languageSchools/topOfMind/RightComponent";
 import MoreFeaturesSection from "@/components/common/featuresPages/moreFeaturesSection/MoreFeaturesSection";
+import carouselData from "@/assets/locales/data/languageSchool.json";
+import CommonCarousel from "@/components/common/commonCarousel/commonCarousel";
 
 const page = () => {
   const data = strings.solutionPages.languageSchools.heroContent;
@@ -78,6 +80,13 @@ const page = () => {
         orderLast="first"
       />
       <MoreFeaturesSection data={moreFeatureData} column="3" />
+      <CommonCarousel
+        headingSize="text-[15px]"
+        headingWeight="font-bold"
+        carouselData={carouselData}
+        headingColor="text-tertiary"
+        carouselBg="transparent"
+      />
     </React.Fragment>
   );
 };
