@@ -5,23 +5,30 @@ import Link from "next/link";
 type DropdownMenuPropsType = {
   title: string;
   dropdownMenus: { menuName: string; menuLink: string }[];
-
 };
 
 const DropdownMenu = ({ title, dropdownMenus }: DropdownMenuPropsType) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleAccessiblity = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      setIsHovered(!isHovered);
+    }
+  };
+
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative"
+      className="relative text-left"
+      tabIndex={0}
+      onKeyDown={handleAccessiblity}
     >
       <div className="cursor-pointer font-light md:text-secondary md:text-sm lg:text-base hover:text-[#122634] flex justify-between items-center lg:gap-1">
         <span>{title}</span> <IoIosArrowDown />
       </div>
       {isHovered && (
         <ul className="md:absolute md:top-full w-full md:w-64 flex-col items-start space-y-5 px-10 py-5 lg:py-6 bg-secondary text-textColor">
-
           {dropdownMenus.map((menu) => (
             <li
               key={menu.menuName}
