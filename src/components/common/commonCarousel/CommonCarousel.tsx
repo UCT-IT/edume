@@ -76,10 +76,10 @@ const CommonCarousel = ({
                   <p className="text-black text-[18px] md:text-[25px] whitespace-pre-wrap font-semibold px-0 md:px-10   lg:px-[150px]  ">
                     {item.title}
                   </p>
-                  <p className="text-tertiary font-semibold text-[20px] mt-7">
-                    {item.text}
+                  <p className="text-tertiary font-semibold mt-7">
+                    {item.name}
                   </p>
-                  <p className="pb-7">{item.name}</p>
+                  <p className="mb-7">{item.text}</p>
                 </div>
               </motion.div>
             ))}
