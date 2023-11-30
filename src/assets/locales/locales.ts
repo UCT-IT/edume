@@ -15,7 +15,7 @@ export let strings = new LocalizedStrings({
         { menuName: "Overview", menuLink: "/pages/features/overview" },
         {
           menuName: "Calendar & Scheduling",
-          menuLink: "/pages/features/calendarAndscheduling",
+          menuLink: "/pages/features/calendar-and-scheduling",
         },
         {
           menuName: "Communication",
@@ -23,7 +23,7 @@ export let strings = new LocalizedStrings({
         },
         {
           menuName: "Billing & Payroll",
-          menuLink: "/pages/features/billingAndPayroll",
+          menuLink: "/pages/features/billing-and-payroll",
         },
         { menuName: "Records & Analytics", menuLink: "#" },
         { menuName: "Customize & white Label", menuLink: "#" },
@@ -39,7 +39,7 @@ export let strings = new LocalizedStrings({
         { menuName: "Tutoring", menuLink: "#" },
         {
           menuName: "Language Schools",
-          menuLink: "/pages/solution/languageSchools",
+          menuLink: "/pages/solution/language-schools",
         },
         { menuName: "Test Preparation", menuLink: "#" },
         { menuName: "Music Schools", menuLink: "#" },
