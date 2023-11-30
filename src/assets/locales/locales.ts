@@ -626,46 +626,64 @@ export let strings = new LocalizedStrings({
         features: [
           {
             title: "User Time Zones",
+            isLink: true,
+            linkPath: "#",
             description:
               "Simplify scheduling across time zones. Ideal for online tutors.",
           },
           {
             title: "Online Lesson Space",
+            isLink: true,
+            linkPath: "#",
             description:
               "Conduct online sessions with ease. Ideal for online tutors.",
           },
           {
             title: "LaTeX Lesson Notes",
+            isLink: true,
+            linkPath: "#",
             description:
               "Convert text in lesson notes to math equations. Ideal for math tutors.",
           },
           {
             title: "QuickBooks Online",
+            isLink: true,
+            linkPath: "#",
             description:
               "Sync customers, invoices, payments and more to QuickBooks Online.",
           },
           {
             title: "Results Tracking",
+            isLink: true,
+            linkPath: "#",
             description:
               "Easily track student progress over time. Ideal for test preparation centres.",
           },
           {
             title: "Schedule Confirmations",
+            isLink: true,
+            linkPath: "#",
             description:
               "Provide students with a snapshot of their upcoming lessons.",
           },
           {
             title: "Lesson Requests",
+            isLink: true,
+            linkPath: "#",
             description:
               "Allow students and their parents to easily request lessons through Teachworks.",
           },
           {
             title: "Online Lesson Booking",
+            isLink: true,
+            linkPath: "#",
             description:
               "Allow students to book lessons or join classes/courses right from your website.",
           },
           {
             title: "Stripe",
+            isLink: true,
+            linkPath: "#",
             description:
               "Collect payments the easy way by processing payments through Stripe.",
           },
