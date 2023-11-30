@@ -46,38 +46,32 @@ const TutorinPage = () => {
       <CommonSection
         leftComponent={<SaveTimeLeftComponent />}
         rightComponent={<SaveTimeRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<ImpressionLeftComponent />}
         rightComponent={<ImpressionRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<NoShowsLeftComponent />}
         rightComponent={<NoShowsRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<HeadacheLeftComponent />}
         rightComponent={<HeadacheRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<InvoiceLeftComponent />}
         rightComponent={<InvoiceRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<TeachworkLeftComponent />}
         rightComponent={<TeachworRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <MoreFeaturesSections data={moreFeatureSectionData} column="3" />
       <CommonCarousel

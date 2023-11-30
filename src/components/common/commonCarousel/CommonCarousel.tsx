@@ -7,7 +7,7 @@ import Link from "next/link";
 import NextArrow from "../carouselArrows/NextArrow";
 import PrevArrow from "../carouselArrows/PrevArrow";
 
-type carousel = {
+type Carousel = {
   carouselData: {
     heading: string;
     content: { title: string; name: string; text: string }[];
@@ -25,7 +25,7 @@ const CommonCarousel = ({
   headingWeight,
   headingColor,
   carouselBg,
-}: carousel) => {
+}: Carousel) => {
   const settings = {
     infinite: true,
     speed: 500,

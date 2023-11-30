@@ -52,62 +52,52 @@ const CalendarAndScheduling = () => {
       <CommonSection
         leftComponent={<FlexibleLeftComponent />}
         rightComponent={<FlexibleRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<EasyLeftComponent />}
         rightComponent={<EasyRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<SimplifiedLeftComponent />}
         rightComponent={<SimplifiedRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<EliminateLeftComponent />}
         rightComponent={<EliminateRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<WebOneLeftComponent />}
         rightComponent={<WebOneRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<WebTwoLeftComponent />}
         rightComponent={<WebTwoRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<UptodateLeftComponent />}
         rightComponent={<UptodateRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<SamePageLeftComponent />}
         rightComponent={<SamePageRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<StayOrganizedLeftComponent />}
         rightComponent={<StayOrganizedRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<ZoneSupportLeftComponent />}
         rightComponent={<ZoneSupportRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <MoreFeaturesSection data={moreFeatureData} column="4" />
     </React.Fragment>

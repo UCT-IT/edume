@@ -41,32 +41,27 @@ const CommunicationPage = () => {
       <CommonSection
         rightComponent={<UserAccessRightComponent />}
         leftComponent={<UserAccessLeftComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         rightComponent={<EliminateRightComponent />}
         leftComponent={<EliminateLeftComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         rightComponent={<StayInTuochRightComponent />}
         leftComponent={<StayInTouchLefttComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         rightComponent={<AutomatedRemindersRightComponent />}
         leftComponent={<AutomatedReminderLeftComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         rightComponent={<AutomatedReminderRightComponent2 />}
         leftComponent={<AutomatedReminderLeftComponent2 />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <MoreFeaturesSections data={moreFeaturesSectionsData} column="4" />
     </React.Fragment>
