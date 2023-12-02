@@ -51,62 +51,52 @@ const page = () => {
       <CommonSection
         leftComponent={<BillingMethodsLeftComponent />}
         rightComponent={<BillingMethodsRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<QuickInvoicingLeftComponent />}
         rightComponent={<QuickInvoicingRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<CustomizableInvoicesLeftComponent />}
         rightComponent={<CustomizableInvoicesRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<InvoiceFlagsLeftComponent />}
         rightComponent={<InvoiceFlagsRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<OnlinePaymentsLeftComponent />}
         rightComponent={<OnlinePaymentsRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<ProcessInBulkLeftComponent />}
         rightComponent={<ProcessInBulkRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<LimitClericalErrorsLeftComponent />}
         rightComponent={<LimitClericalErrorsRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<AutomatedInvoicingLeftComponent />}
         rightComponent={<AutomatedInvoicingRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         leftComponent={<AddPersonalTouchLeftComponent />}
         rightComponent={<AddPersonalTouchRightComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         leftComponent={<CustomizableTemplatesLeftComponent />}
         rightComponent={<CustomizableTemplatesRightComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <MoreFeaturesSection data={moreFeatureData} column="4" />
     </React.Fragment>
