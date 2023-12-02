@@ -45,8 +45,8 @@ const TutorTeacher = () => {
           <CommonButton
             href="/"
             text={data.btn as string}
-            hover="#5AA8EC"
-            color="primary"
+            hover="bg-[#5AA8EC]"
+            color="bg-primary"
           />
         </div>
       </div>
