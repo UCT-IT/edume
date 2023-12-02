@@ -29,6 +29,12 @@ const Navbar = () => {
     setIsScrolled(scrollPosition > 20);
   };
 
+  const handleAccessibility = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter") {
+      setIsMenuOpen(!isMenuOpen);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -90,6 +96,8 @@ const Navbar = () => {
           <div
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="cursor-pointer"
+            tabIndex={0}
+            onKeyDown={handleAccessibility}
           >
             {isMenuOpen ? <HiOutlineX /> : <HiMenu />}
           </div>
