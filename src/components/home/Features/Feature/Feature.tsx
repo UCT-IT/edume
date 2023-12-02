@@ -53,7 +53,7 @@ const Feature = () => {
           </ul>
           <CommonButton
             href="/"
-            text={featureData.btn as string}
+            text={featureData.btn}
             hover="bg-[#5AA8EC]"
             color="bg-primary"
           />

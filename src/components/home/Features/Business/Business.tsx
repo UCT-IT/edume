@@ -51,7 +51,7 @@ const Business = () => {
           </ul>
           <CommonButton
             href="/"
-            text={data.btn as string}
+            text={data.btn}
             hover="bg-[#5AA8EC]"
             color="bg-primary"
           />
