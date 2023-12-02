@@ -1,12 +1,19 @@
 import { strings } from "@/assets/locales/locales";
+import Link from "next/link";
 import React from "react";
 
-type moreFeaturesSectionProps = {
-  data: { heading: string; features: { title: string; description: string }[] };
+type MoreFeaturesSectionProps = {
+  data: {
+    heading: string;
+    features: {
+      title: string;
+      description: string;
+    }[];
+  };
   column: string;
 };
 
-const MoreFeaturesSection = ({ data, column }: moreFeaturesSectionProps) => {
+const MoreFeaturesSection = ({ data, column }: MoreFeaturesSectionProps) => {
   return (
     <div className="container mx-auto my-5 px-2">
       <h2 className="font-semibold text-4xl text-center py-5">
@@ -17,9 +24,7 @@ const MoreFeaturesSection = ({ data, column }: moreFeaturesSectionProps) => {
       >
         {data.features.map((feature) => (
           <div key={feature.title} className="text-center md:text-left">
-            <h2 className="font-light text-xl text-primary whitespace-nowrap">
-              {feature.title}
-            </h2>
+            {feature.title}
             <p className="font-light leading-7 mt-4 md:whitespace-pre-line">
               {feature.description}
             </p>

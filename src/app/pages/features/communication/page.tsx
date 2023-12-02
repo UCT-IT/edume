@@ -12,8 +12,8 @@ import AutomatedReminderLeftComponent from "./automatedReminders1/LeftComponent"
 import AutomatedReminderRightComponent2 from "./automatedReminders2/RightComponent";
 import AutomatedReminderLeftComponent2 from "./automatedReminders2/LeftComponent";
 import { strings } from "@/assets/locales/locales";
-import MoreFeaturesSections from "@/components/common/featuresPages/moreFeaturesSection/MoreFeaturesSection";
 import HeroBackground from "@/components/common/HeroBackground/HeroBackground";
+import MoreFeaturesSections from "@/components/common/featuresPages/moreFeaturesSection/MoreFeaturesSection";
 
 const CommunicationPage = () => {
   const data = strings.featuresPages.communication;
@@ -42,37 +42,29 @@ const CommunicationPage = () => {
       <CommonSection
         rightComponent={<UserAccessRightComponent />}
         leftComponent={<UserAccessLeftComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         rightComponent={<EliminateRightComponent />}
         leftComponent={<EliminateLeftComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         rightComponent={<StayInTuochRightComponent />}
         leftComponent={<StayInTouchLefttComponent />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
       <CommonSection
         rightComponent={<AutomatedRemindersRightComponent />}
         leftComponent={<AutomatedReminderLeftComponent />}
-        orderFirst="last"
-        orderLast="first"
+        order={false}
       />
       <CommonSection
         rightComponent={<AutomatedReminderRightComponent2 />}
         leftComponent={<AutomatedReminderLeftComponent2 />}
-        orderFirst="first"
-        orderLast="last"
+        order={true}
       />
-      <MoreFeaturesSections
-        data={moreFeaturesSectionsData}
-        column="grid-cols-4"
-      />
+      <MoreFeaturesSections data={moreFeaturesSectionsData} column="4" />
     </React.Fragment>
   );
 };

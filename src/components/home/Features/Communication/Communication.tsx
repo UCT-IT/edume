@@ -51,9 +51,9 @@ const Communication = () => {
           </ul>
           <CommonButton
             href="/"
-            text={data.btn as string}
-            hover="#5AA8EC"
-            color="primary"
+            text={data.btn}
+            hover="bg-[#5AA8EC]"
+            color="bg-primary"
           ></CommonButton>
         </div>
       </div>
