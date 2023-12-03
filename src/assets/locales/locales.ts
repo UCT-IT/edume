@@ -929,10 +929,10 @@ export let strings = new LocalizedStrings({
         title: `Streamline Frequent 
         Administrative Tasks`,
         contents: [
-          "Quickly schedule one-on-one sessions, group lessons or",
+          "**Quickly** schedule one-on-one sessions, group lessons or",
           "Import and update client and employee records in bulk.",
           `Keep your books up-to-date and avoid double data 
-          capturing with our QuickBooks Online Integration.`,
+          capturing with our [QuickBooks Online](#) Integration.`,
         ],
         link: { text: "Try it for free", path: "#" },
       },
@@ -973,7 +973,7 @@ export let strings = new LocalizedStrings({
         title: `Manage Staff & Tutors 
         More Effectively`,
         contents: [
-          `Create a custom application form to allow prospective 
+          `[Create a custom application](#) form to allow prospective 
           tutors to apply with ease.`,
           `Expand staff and tutor profiles with custom profile fields 
           to capture the most important information.`,
