@@ -41,7 +41,10 @@ export let strings = new LocalizedStrings({
           menuName: "Language Schools",
           menuLink: "/pages/solution/language-schools",
         },
-        { menuName: "Test Preparation", menuLink: "#" },
+        {
+          menuName: "Test Preparation",
+          menuLink: "/pages/solution/test-preparation",
+        },
         { menuName: "Music Schools", menuLink: "#" },
         { menuName: "Driving Schools", menuLink: "#" },
       ],
@@ -910,6 +913,164 @@ export let strings = new LocalizedStrings({
           ],
         },
         altText: "Language Schools page Image",
+      },
+      testPreparation: {
+        title: `Simple Tools For Test Prep Companies`,
+        description: `Thousands of test preparation companies use Teachworks to simplify, automate and grow their 
+        business.`,
+        btn: "Start your free trial",
+        studentScheduling: {
+          title: `Student Scheduling Software 
+        for Your Test Preparation 
+        Centre`,
+          description: `Teachworks is easy-to-use software that helps you grow your test 
+        preparation centre. Simplify student and tutor management, scheduling, 
+        online teaching, billing and more!`,
+        },
+        saveTime: {
+          heading: "SAVE TIME",
+          title: `Simplify Frequent 
+          Administrative Tasks`,
+          contents: [
+            `Use our time-saving features to speed up scheduling for 
+            single lessons, group lessons and other meetings.`,
+            `Create and save student groups for streamlined group 
+            lesson scheduling.`,
+            `Import and update family, student and employee records 
+            in bulk.`,
+            `Sync invoices, payments and other records to QuickBooks 
+            Online and avoid double data capturing.`,
+          ],
+          link: { text: "Try it for free", path: "#" },
+        },
+        impression: {
+          heading: "MAKE A LASTING IMPRESSION",
+          title: `Build Lasting Relationships 
+          With Clients`,
+          contents: [
+            `Provide clients with quick and easy ways to book/request 
+            lessons, enroll in courses and reach out`,
+            `Use our Results Tracking Add-On to keep better track of 
+            student progress over time.`,
+            `Customize and automate notifications to keep your 
+            clients updated about their schedule, billing and more.`,
+            `Provide students with detailed notes and resources after 
+            each lesson.`,
+          ],
+          link: { text: "Start Your Free Trial", path: "#" },
+        },
+        noShows: {
+          heading: "IMPROVE ATTENDANCE",
+          title: `Reduce No-Shows`,
+          contents: [
+            `Remind students about their upcoming lessons through 
+            automated lesson reminder emails or text messages.`,
+            `Provide clients with quick and convenient ways to sign up, 
+          book lessons/courses, manage their schedules and 
+          reach out.`,
+            `Use our Schedule Confirmation Add-On to send students 
+            a snapshot of their upcoming lessons to avoid confusion 
+            and clashes in advance.`,
+          ],
+          link: { text: "Open an account", path: "#" },
+        },
+        headaches: {
+          heading: "REDUCE HEADACHES",
+          title: `Manage Staff & Tutors 
+        More Effectively`,
+          contents: [
+            `Simplify the application process through custom 
+            application forms and attract top talent.`,
+            `Enable user access for employees with custom 
+            permissions related to their specific role.`,
+            `Enable user access and customize permission settings.`,
+            `Use our Calendar Feeds Add-On to allow employees to 
+            view their schedules in their calendar program of choice.`,
+            `Employee hours & earnings are calculated automatically 
+            as calendar events are scheduled and completed.`,
+          ],
+          link: { text: "Try It Out", path: "#" },
+        },
+        invoicing: {
+          heading: "SPEED UP INVOICING",
+          title: `Enjoy Quick And Easy 
+          Invoicing Solutions`,
+          contents: [
+            `Create single or multiple invoices and add individual 
+            lessons, packages or flat fees with ease.`,
+            `Automate invoicing with our Invoice Autopilot Add-On to 
+            free up more time to focus on other areas of your test 
+            preparation centre.`,
+            `Allow clients to pay online through Stripe or process 
+            payments on their behalf.`,
+          ],
+          link: { text: "Start Your Free Trial", path: "#" },
+        },
+        teachworks: {
+          heading: "KEEP YOUR BRAND TOP OF MIND",
+          title: `Integrate Teachworks 
+          With Your Test Preparation 
+          Centre Website`,
+          description: `Teachworks offers multiple features that can be integrated with 
+          your test preparation company’s website. These features can be 
+          tweaked visually in Teachworks, allowing you to add additional 
+          functionality to your website with ease.
+          
+          View a Live Demo`,
+          link: { text: "Start Today", path: "#" },
+        },
+        moreFeautesSections: {
+          heading: `And many more free Integrations & Add-Ons for your test preparation 
+          company...`,
+          features: [
+            {
+              title: "Website Bookings",
+              description:
+                "Let students book lessons or join courses from your website.",
+            },
+            {
+              title: "Lesson Requests",
+              description:
+                "Let students request lessons directly from their Teachworks account.",
+            },
+            {
+              title: "Profile Attachments",
+              description:
+                "Attach resources and other files to client profiles quickly and efficiently.",
+            },
+            {
+              title: "Open Classes",
+              description:
+                "Make lessons joinable and allow students to view and enroll in open lessons",
+            },
+            {
+              title: "Send Email",
+              description:
+                "Email employees, families or students with key information. Save templates for regular emails.",
+            },
+            {
+              title: "Package Balance Alerts",
+              description:
+                "Send an automatic notification when package balances reach a specified number of lessons/hours.",
+            },
+            {
+              title: "Custom Invoices",
+              description:
+                "Customize the layout and labels that appear on invoices to match your unique requirements.",
+            },
+            {
+              title: "LaTeX Lesson Notes",
+              description:
+                "Automatically convert text in lesson notes to math equations.",
+            },
+            {
+              title: "Stripe",
+              description:
+                "Collect payments the easy way by processing payments through Stripe.",
+            },
+          ],
+        },
+        altImage: "Test preparation Image",
       },
     },
     tutoring: {
