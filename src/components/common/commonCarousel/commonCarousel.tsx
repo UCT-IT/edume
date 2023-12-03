@@ -7,7 +7,7 @@ import Link from "next/link";
 import NextArrow from "../carouselArrows/NextArrow";
 import PrevArrow from "../carouselArrows/PrevArrow";
 
-type carousel = {
+type Carousel = {
   carouselData: {
     heading: string;
     content: { title: string; name: string; text: string }[];
@@ -25,7 +25,7 @@ const CommonCarousel = ({
   headingWeight,
   headingColor,
   carouselBg,
-}: carousel) => {
+}: Carousel) => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -76,10 +76,10 @@ const CommonCarousel = ({
                   <p className="text-black text-[18px] md:text-[25px] whitespace-pre-wrap font-semibold px-0 md:px-10   lg:px-[150px]  ">
                     {item.title}
                   </p>
-                  <p className="text-tertiary font-semibold text-[20px] mt-7">
+                  <p className="text-tertiary font-semibold mt-7">
                     {item.name}
                   </p>
-                  <p className="pb-7">{item.text}</p>
+                  <p className="mb-7">{item.text}</p>
                 </div>
               </motion.div>
             ))}
