@@ -1,10 +1,13 @@
 import { strings } from "@/assets/locales/locales";
+import { formatContent } from "@/components/utils/formatContent";
 import Link from "next/link";
 import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
 
 const LeftComponent = () => {
   const data = strings.tutoring.saveTime;
+  const customHrefs = ["/"];
+
   return (
     <React.Fragment>
       <p className="text-tertiary font-semibold tracking-widest">
@@ -14,15 +17,15 @@ const LeftComponent = () => {
         {data.title}
       </h2>
       <ul>
-        {data.contents.map((data) => (
+        {data.contents.map((content, index) => (
           <li
-            className="text-textColor mb-3 flex text-[16px] font-normal gap-3 whitespace-pre-line"
-            key={data}
+            className="text-textColor flex gap-3 mb-3 text-[16px] font-normal  whitespace-pre-line"
+            key={index}
           >
             <span className="font-bold text-black text-[24px]">
               <IoMdCheckmark />
             </span>
-            {data}
+            <span>{formatContent({ content, customHrefs })}</span>
           </li>
         ))}
       </ul>
