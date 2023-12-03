@@ -4,7 +4,7 @@ import img from "../../../../../../public/solutionPages/testPreparation/impressi
 import { strings } from "@/assets/locales/locales";
 
 const RightComponent = () => {
-  const altText = strings.tutoring.altImage;
+  const altText = strings.solutionPages.testPreparation.altImage;
   return (
     <React.Fragment>
       <div className="w-3/4 mx-auto mt-4 md:mt-0 ">

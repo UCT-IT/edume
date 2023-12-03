@@ -20,8 +20,9 @@ import MoreFeaturesSections from "@/components/common/featuresPages/moreFeatures
 import CarouselData from "@/assets/locales/data/tutorTestimonial.json";
 import CommonCarousel from "@/components/common/commonCarousel/CommonCarousel";
 const TutorinPage = () => {
-  const data = strings.tutoring;
-  const moreFeatureSectionData = strings.tutoring.moreFeautesSections;
+  const data = strings.solutionPages.tutoring;
+  const moreFeatureSectionData =
+    strings.solutionPages.tutoring.moreFeautesSections;
   return (
     <React.Fragment>
       <HeroBackground>

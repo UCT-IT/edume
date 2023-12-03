@@ -2,7 +2,7 @@ import { strings } from "@/assets/locales/locales";
 import React from "react";
 
 const TutorScheduling = () => {
-  const data = strings.tutoring.tutorScheduling;
+  const data = strings.solutionPages.tutoring.tutorScheduling;
   return (
     <div className="container mx-auto  relative -top-4 px-5 pb-10 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="w-full md:w-[90%]">

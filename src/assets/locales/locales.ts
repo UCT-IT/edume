@@ -914,6 +914,179 @@ export let strings = new LocalizedStrings({
         },
         altText: "Language Schools page Image",
       },
+      tutoring: {
+        title: `Easy Tutor Management Software`,
+        description: `Thousands of tutors and tutoring companies rely on Teachworks to organize and grow their
+       tutoring businesses.`,
+        btn: "Start your free trial",
+        tutorScheduling: {
+          title: `Tutor Scheduling Software 
+        for your Tutoring Business`,
+          description: `Teachworks provides easy-to-use software tools to manage your tutoring 
+        business more efficiently. Speed up student and tutor management, 
+        scheduling, online teaching, billing and more!`,
+        },
+        saveTime: {
+          heading: "SAVE TIME",
+          title: `Streamline Frequent 
+        Administrative Tasks`,
+          contents: [
+            "Quickly schedule one-on-one sessions, group lessons or",
+            "Import and update client and employee records in bulk.",
+            `Keep your books up-to-date and avoid double data 
+          capturing with our QuickBooks Online Integration.`,
+          ],
+          link: { text: "Try it for free", path: "#" },
+        },
+        impression: {
+          heading: "MAKE A LASTING IMPRESSION",
+          title: `Build Lasting Relationships 
+        With Your Students`,
+          contents: [
+            `Customize and automate notifications to keep your 
+          clients in the loop at all times about upcoming lessons, cancelled lessons, 
+          new invoices and more.`,
+            `Provide clients with quick and convenient ways to sign up, 
+          book lessons/courses, manage their schedules and 
+          reach out.`,
+            `Leave a lasting impression with detailed, helpful notes 
+          after each lesson.`,
+          ],
+          link: { text: "Start Today", path: "#" },
+        },
+        noShows: {
+          heading: "REDUCE NO-SHOWS",
+          title: `Improve Student 
+        Attendance`,
+          contents: [
+            `Reduce no-shows by reminding clients about 
+          their upcoming lessons through customizable, automated 
+          reminder emails.`,
+            `Provide clients with quick and convenient ways to sign up, 
+          book lessons/courses, manage their schedules and 
+          reach out.`,
+            `Automatically remind clients about upcoming lessons by 
+          text using our SMS Lesson Reminders Add-On.`,
+          ],
+          link: { text: "Start Today", path: "#" },
+        },
+        headaches: {
+          heading: "REDUCE HEADACHES",
+          title: `Manage Staff & Tutors 
+        More Effectively`,
+          contents: [
+            `Create a custom application form to allow prospective 
+          tutors to apply with ease.`,
+            `Expand staff and tutor profiles with custom profile fields 
+          to capture the most important information.`,
+            `Enable user access and customize permission settings.`,
+            `Employee hours & earnings are calculated automatically 
+          based on your settings.`,
+            `Use our Task Manager Add-On to delegate tasks to staff 
+          and tutors easily and efficiently.`,
+          ],
+          link: { text: "Start Today", path: "#" },
+        },
+        invoicing: {
+          heading: "SPEED UP INVOICING",
+          title: `Enjoy Flexible Invoicing 
+        Solutions`,
+          contents: [
+            `Easily generate invoices one-by-one or in bulk for specific 
+          lessons, packages or flat fees.`,
+            `Automate invoicing with our Invoice Autopilot Add-On 
+          and free up more time to spend on other areas of your 
+          tutoring business.`,
+            `Collect credit card payments online through our Stripe 
+          Integration. Allow clients to pay online or process 
+          payments on their behalf.`,
+          ],
+          link: { text: "Start Today", path: "#" },
+        },
+        teachworks: {
+          heading: "KEEP YOUR BRAND TOP OF MIND",
+          title: `Integrate Teachworks 
+        With Your Tutoring 
+        Website`,
+          description: `Teachworks offers several features that can be integrated 
+        directly with your tutoring website and styled in Teachworks.
+
+        View a Live Demo
+
+        Need something custom? Use our API to build additional 
+        solutions for your tutoring business.`,
+          link: { text: "Start Today", path: "#" },
+        },
+        moreFeautesSections: {
+          heading: "And many more features for your Tutoring Business...",
+          features: [
+            {
+              title: "User Time Zones",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Simplify scheduling across time zones. Ideal for online tutors.",
+            },
+            {
+              title: "Online Lesson Space",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Conduct online sessions with ease. Ideal for online tutors.",
+            },
+            {
+              title: "LaTeX Lesson Notes",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Convert text in lesson notes to math equations. Ideal for math tutors.",
+            },
+            {
+              title: "QuickBooks Online",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Sync customers, invoices, payments and more to QuickBooks Online.",
+            },
+            {
+              title: "Results Tracking",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Easily track student progress over time. Ideal for test preparation centres.",
+            },
+            {
+              title: "Schedule Confirmations",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Provide students with a snapshot of their upcoming lessons.",
+            },
+            {
+              title: "Lesson Requests",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Allow students and their parents to easily request lessons through Teachworks.",
+            },
+            {
+              title: "Online Lesson Booking",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Allow students to book lessons or join classes/courses right from your website.",
+            },
+            {
+              title: "Stripe",
+              isLink: true,
+              linkPath: "#",
+              description:
+                "Collect payments the easy way by processing payments through Stripe.",
+            },
+          ],
+        },
+        altImage: "Tutoring Management Image",
+      },
       testPreparation: {
         title: `Simple Tools For Test Prep Companies`,
         description: `Thousands of test preparation companies use Teachworks to simplify, automate and grow their 
@@ -1072,179 +1245,6 @@ export let strings = new LocalizedStrings({
         },
         altImage: "Test preparation Image",
       },
-    },
-    tutoring: {
-      title: `Easy Tutor Management Software`,
-      description: `Thousands of tutors and tutoring companies rely on Teachworks to organize and grow their
-       tutoring businesses.`,
-      btn: "Start your free trial",
-      tutorScheduling: {
-        title: `Tutor Scheduling Software 
-        for your Tutoring Business`,
-        description: `Teachworks provides easy-to-use software tools to manage your tutoring 
-        business more efficiently. Speed up student and tutor management, 
-        scheduling, online teaching, billing and more!`,
-      },
-      saveTime: {
-        heading: "SAVE TIME",
-        title: `Streamline Frequent 
-        Administrative Tasks`,
-        contents: [
-          "Quickly schedule one-on-one sessions, group lessons or",
-          "Import and update client and employee records in bulk.",
-          `Keep your books up-to-date and avoid double data 
-          capturing with our QuickBooks Online Integration.`,
-        ],
-        link: { text: "Try it for free", path: "#" },
-      },
-      impression: {
-        heading: "MAKE A LASTING IMPRESSION",
-        title: `Build Lasting Relationships 
-        With Your Students`,
-        contents: [
-          `Customize and automate notifications to keep your 
-          clients in the loop at all times about upcoming lessons, cancelled lessons, 
-          new invoices and more.`,
-          `Provide clients with quick and convenient ways to sign up, 
-          book lessons/courses, manage their schedules and 
-          reach out.`,
-          `Leave a lasting impression with detailed, helpful notes 
-          after each lesson.`,
-        ],
-        link: { text: "Start Today", path: "#" },
-      },
-      noShows: {
-        heading: "REDUCE NO-SHOWS",
-        title: `Improve Student 
-        Attendance`,
-        contents: [
-          `Reduce no-shows by reminding clients about 
-          their upcoming lessons through customizable, automated 
-          reminder emails.`,
-          `Provide clients with quick and convenient ways to sign up, 
-          book lessons/courses, manage their schedules and 
-          reach out.`,
-          `Automatically remind clients about upcoming lessons by 
-          text using our SMS Lesson Reminders Add-On.`,
-        ],
-        link: { text: "Start Today", path: "#" },
-      },
-      headaches: {
-        heading: "REDUCE HEADACHES",
-        title: `Manage Staff & Tutors 
-        More Effectively`,
-        contents: [
-          `Create a custom application form to allow prospective 
-          tutors to apply with ease.`,
-          `Expand staff and tutor profiles with custom profile fields 
-          to capture the most important information.`,
-          `Enable user access and customize permission settings.`,
-          `Employee hours & earnings are calculated automatically 
-          based on your settings.`,
-          `Use our Task Manager Add-On to delegate tasks to staff 
-          and tutors easily and efficiently.`,
-        ],
-        link: { text: "Start Today", path: "#" },
-      },
-      invoicing: {
-        heading: "SPEED UP INVOICING",
-        title: `Enjoy Flexible Invoicing 
-        Solutions`,
-        contents: [
-          `Easily generate invoices one-by-one or in bulk for specific 
-          lessons, packages or flat fees.`,
-          `Automate invoicing with our Invoice Autopilot Add-On 
-          and free up more time to spend on other areas of your 
-          tutoring business.`,
-          `Collect credit card payments online through our Stripe 
-          Integration. Allow clients to pay online or process 
-          payments on their behalf.`,
-        ],
-        link: { text: "Start Today", path: "#" },
-      },
-      teachworks: {
-        heading: "KEEP YOUR BRAND TOP OF MIND",
-        title: `Integrate Teachworks 
-        With Your Tutoring 
-        Website`,
-        description: `Teachworks offers several features that can be integrated 
-        directly with your tutoring website and styled in Teachworks.
-
-        View a Live Demo
-
-        Need something custom? Use our API to build additional 
-        solutions for your tutoring business.`,
-        link: { text: "Start Today", path: "#" },
-      },
-      moreFeautesSections: {
-        heading: "And many more features for your Tutoring Business...",
-        features: [
-          {
-            title: "User Time Zones",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Simplify scheduling across time zones. Ideal for online tutors.",
-          },
-          {
-            title: "Online Lesson Space",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Conduct online sessions with ease. Ideal for online tutors.",
-          },
-          {
-            title: "LaTeX Lesson Notes",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Convert text in lesson notes to math equations. Ideal for math tutors.",
-          },
-          {
-            title: "QuickBooks Online",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Sync customers, invoices, payments and more to QuickBooks Online.",
-          },
-          {
-            title: "Results Tracking",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Easily track student progress over time. Ideal for test preparation centres.",
-          },
-          {
-            title: "Schedule Confirmations",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Provide students with a snapshot of their upcoming lessons.",
-          },
-          {
-            title: "Lesson Requests",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Allow students and their parents to easily request lessons through Teachworks.",
-          },
-          {
-            title: "Online Lesson Booking",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Allow students to book lessons or join classes/courses right from your website.",
-          },
-          {
-            title: "Stripe",
-            isLink: true,
-            linkPath: "#",
-            description:
-              "Collect payments the easy way by processing payments through Stripe.",
-          },
-        ],
-      },
-      altImage: "Tutoring Management Image",
     },
     footer: {
       footerHeader: `Simplify management, save time, and grow your
