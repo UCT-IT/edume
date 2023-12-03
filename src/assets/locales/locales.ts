@@ -43,7 +43,10 @@ export let strings = new LocalizedStrings({
         },
         { menuName: "Test Preparation", menuLink: "#" },
         { menuName: "Music Schools", menuLink: "#" },
-        { menuName: "Driving Schools", menuLink: "#" },
+        {
+          menuName: "Driving Schools",
+          menuLink: "/pages/solution/driving-schools",
+        },
       ],
     },
     dropdownSupport: {
@@ -910,6 +913,189 @@ export let strings = new LocalizedStrings({
           ],
         },
         altText: "Language Schools page Image",
+      },
+      drivingSchools: {
+        heroContent: {
+          title: `Simple Driving School Software`,
+          description: `Driving schools around the world use Teachworks to manage their students, schedules, billing
+          and more.`,
+        },
+        businessSoftware: {
+          title: `Driving School Software for
+          Your Business`,
+          description: `Teachworks offers an easy-to-use driving school management system for
+          your business. Simplify student and instructor management, speed up in-
+          car lesson scheduling, automate billing and more!`,
+        },
+        saveTime: {
+          heading: `SAVE TIME`,
+          title: `Simplify Frequent
+          Administrative Tasks`,
+          descriptions: [
+            `Easily schedule behind-the-wheel lessons using one of our
+             many scheduling time-savers.`,
+            `Enable our Vehicle Manager Add-On to record detailed
+             information about each of your vehicles and assign them
+             to lessons quickly and efficiently.`,
+            `Use the dedicated vehicle calendar to spot scheduling
+             vacancies and vehicle availability with ease.`,
+            `Import and update client and employee records in bulk.`,
+          ],
+          link: {
+            text: `Try it For Free`,
+            link: "#",
+          },
+        },
+        lastingImpression: {
+          heading: `MAKE A LASTING IMPRESSION`,
+          title: `Leave A Lasting
+          Impression On Future
+          Drivers`,
+          descriptions: [
+            `Provide clients with quick and convenient ways to sign up,
+             book driving lessons, enroll in full courses and reach out.`,
+            `Customize and automate notifications to keep your
+             clients in the loop at all times about upcoming lessons,
+             cancelled lessons, new invoices and more.`,
+            `Provide students and their parents with detailed notes
+             after each driving lesson.`,
+          ],
+          link: {
+            text: `Start Your Free Trial`,
+            link: "#",
+          },
+        },
+        reduceNoShows: {
+          heading: `REDUCE NO-SHOWS`,
+          title: `Improve Student
+          Attendance`,
+          descriptions: [
+            `Reduce absences by reminding clients about their
+             upcoming driving lessons through a customized email or
+             SMS message.`,
+            `Provide students with a snapshot of their upcoming
+             driving lessons to help prevent scheduling confusion and
+             clashes using our Schedule Confirmation Add-On.`,
+          ],
+          link: {
+            text: `Open an Account`,
+            link: "#",
+          },
+        },
+        reduceHeadaches: {
+          heading: `REDUCE HEADACHES`,
+          title: `Manage Staff & Driving
+          Instructors More Efficiently`,
+          descriptions: [
+            `Manage new employee applications through Teachworks
+             by creating a custom application form.`,
+            `Create custom profile fields to expand employee profiles
+             and custom forms.`,
+            `Enable user access and tweak permission settings based
+             on each employee's specific role.`,
+            `Employee hours & earnings are calculated automatically
+             as lessons are added to the calendar.`,
+          ],
+          link: {
+            text: `Try it Out`,
+            link: "#",
+          },
+        },
+        speedUpInvoicing: {
+          heading: `SPEED UP INVOICING`,
+          title: `Enjoy Flexible Invoicing
+          Solutions`,
+          descriptions: [
+            `Generate single or multiple invoices for individual lessons,
+             packages or flat fees.`,
+            `Automate invoicing with our Invoice Invoice Autopilot
+             Add-On and free up more time to spend on other areas of
+             your driving school.`,
+            `Accept and process credit card payments through our
+             Stripe Integration.`,
+          ],
+          link: {
+            text: `Start Today`,
+            link: "#",
+          },
+        },
+        topOfMind: {
+          heading: `KEEP YOUR BRAND TOP OF MIND`,
+          title: `Integrate Teachworks
+          With Your Driving School
+          Website`,
+          descriptionOne: `Teachworks offers a number of features that can easily be
+          integrated with your driving school website. These features can
+          be customized visually in Teachworks, so no coding is required.`,
+          descriptionTwo: `View a Live Demo`,
+          link: {
+            text: `Start Today`,
+            link: "#",
+          },
+        },
+        moreFeaturesSection: {
+          heading: `And many more free Integrations & Add-Ons for your driving school...`,
+          features: [
+            {
+              title: `Website Bookings`,
+              link: "#",
+              description: `Allow students to book lessons or join
+              classes/courses right from your website.`,
+            },
+            {
+              title: `Lesson Requests`,
+              link: "#",
+              description: `Allow students and their parents to easily
+              request lessons through Teachworks.`,
+            },
+            {
+              title: `QuickBooks Online`,
+              link: "#",
+              description: `Avoid double data-capturing and keep your
+              books balanced.`,
+            },
+            {
+              title: `Profile Attachments`,
+              link: "#",
+              description: `Attach assessments and resources to
+              student profiles with ease.`,
+            },
+            {
+              title: `Send Email`,
+              link: "#",
+              description: `Email employees, families or students with
+              key information. Save templates for regular
+              emails.`,
+            },
+            {
+              title: `Client Follow-Up`,
+              link: "#",
+              description: `Add a follow up date and note to client
+              profiles to reach out with ease.`,
+            },
+            {
+              title: `Package Balance Alerts`,
+              link: "#",
+              description: `Get notified when package balances reach a
+              specified number of lessons/hours.`,
+            },
+            {
+              title: `Custom Invoices`,
+              link: "#",
+              description: `Customize the layout and labels that appear
+              on invoices to match your specific
+              requirements.`,
+            },
+            {
+              title: `Stripe`,
+              link: "#",
+              description: `Collect payments the easy way by
+              processing payments through Stripe.`,
+            },
+          ],
+        },
+
+        altText: "Driving Schools page Image",
       },
     },
     tutoring: {
