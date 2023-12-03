@@ -1,8 +1,8 @@
 import { strings } from "@/assets/locales/locales";
 import React from "react";
 
-const TutorScheduling = () => {
-  const data = strings.solutionPages.tutoring.tutorScheduling;
+const StudentScheduling = () => {
+  const data = strings.solutionPages.testPreparation.studentScheduling;
   return (
     <div className="container mx-auto  relative -top-4 px-5 pb-10 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="w-full md:w-[90%]">
@@ -29,4 +29,4 @@ const TutorScheduling = () => {
   );
 };
 
-export default TutorScheduling;
+export default StudentScheduling;

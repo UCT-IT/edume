@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import img from "../../../../../../public/solutionPages/tutoring/invoice.png";
+import img from "../../../../../../public/solutionPages/testPreparation/impression.png";
 import { strings } from "@/assets/locales/locales";
 
 const RightComponent = () => {
-  const altText = strings.solutionPages.tutoring.altImage;
+  const altText = strings.solutionPages.testPreparation.altImage;
   return (
     <React.Fragment>
       <div className="w-3/4 mx-auto mt-4 md:mt-0 ">

@@ -4,7 +4,7 @@ import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
 
 const LeftComponent = () => {
-  const data = strings.solutionPages.tutoring.noShows;
+  const data = strings.solutionPages.testPreparation.impression;
   return (
     <React.Fragment>
       <p className="text-tertiary font-semibold tracking-widest">

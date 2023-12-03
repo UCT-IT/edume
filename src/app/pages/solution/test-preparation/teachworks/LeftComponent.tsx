@@ -4,7 +4,7 @@ import React from "react";
 import { IoMdCheckmark } from "react-icons/io";
 
 const LeftComponent = () => {
-  const data = strings.solutionPages.tutoring.noShows;
+  const data = strings.solutionPages.testPreparation.teachworks;
   return (
     <React.Fragment>
       <p className="text-tertiary font-semibold tracking-widest">
@@ -13,19 +13,9 @@ const LeftComponent = () => {
       <h2 className="font-semibold text-4xl md:whitespace-pre-line leading-normal">
         {data.title}
       </h2>
-      <ul>
-        {data.contents.map((data) => (
-          <li
-            className="text-textColor mb-3 flex text-[16px] font-normal gap-3 whitespace-pre-line"
-            key={data}
-          >
-            <span className="font-bold text-black text-[24px]">
-              <IoMdCheckmark />
-            </span>
-            {data}
-          </li>
-        ))}
-      </ul>
+      <p className="font-normal text-textColor whitespace-pre-line">
+        {data.description}
+      </p>
       <p className="text-primary hover:text-black">
         <Link href={data.link.path}>{data.link.text}</Link>
       </p>
