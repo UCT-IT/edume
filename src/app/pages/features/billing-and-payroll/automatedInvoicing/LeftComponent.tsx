@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const LeftComponent = () => {
-  const data = strings.billingAndPayroll.automatedInvoicing;
+  const data = strings.featuresPages.billingAndPayroll.automatedInvoicing;
   return (
     <React.Fragment>
       <p className="text-tertiary font-semibold tracking-widest">
